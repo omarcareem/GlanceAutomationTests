@@ -38,7 +38,9 @@ public class ReadPropertyFile {
 		chromeDriverPath = driverCommonPath+ getDataRepository().getProperty("chromeDriverPath");
 		ieDriverPath = driverCommonPath+ getDataRepository().getProperty("ieDriverPath");
 		userName=getDataRepository().getProperty("userName");
+		System.out.println(userName);
 		password=getDataRepository().getProperty("password");
+		System.out.println(password);
 		
 	}
 

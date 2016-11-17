@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25959" started-at="2016-11-16T12:37:21Z" finished-at="2016-11-16T12:37:47Z">
+  <suite name="Default suite" duration-ms="19492" started-at="2016-11-17T08:52:59Z" finished-at="2016-11-17T08:53:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25959" started-at="2016-11-16T12:37:21Z" finished-at="2016-11-16T12:37:47Z">
+    <test name="Default test" duration-ms="19492" started-at="2016-11-17T08:52:59Z" finished-at="2016-11-17T08:53:19Z">
       <class name="com.glance.dashboard.tests.VerifyAddElementWizard">
-        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@633cae19]" name="testStartUp" is-config="true" duration-ms="14" started-at="2016-11-16T18:07:21Z" finished-at="2016-11-16T18:07:21Z">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@108c53f9]" name="testStartUp" is-config="true" duration-ms="19" started-at="2016-11-17T14:22:59Z" finished-at="2016-11-17T14:22:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStartUp -->
-        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@633cae19]" name="initializeTest" is-config="true" duration-ms="19094" started-at="2016-11-16T18:07:21Z" finished-at="2016-11-16T18:07:41Z">
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@108c53f9]" name="initializeTest" is-config="true" duration-ms="12783" started-at="2016-11-17T14:22:59Z" finished-at="2016-11-17T14:23:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method status="PASS" signature="myFirstTest()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@633cae19]" name="myFirstTest" duration-ms="6680" started-at="2016-11-16T18:07:41Z" finished-at="2016-11-16T18:07:47Z">
+        <test-method status="PASS" signature="verifyAddNewDashboardElement()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@108c53f9]" name="verifyAddNewDashboardElement" duration-ms="6682" started-at="2016-11-17T14:23:12Z" finished-at="2016-11-17T14:23:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- myFirstTest -->
+        </test-method> <!-- verifyAddNewDashboardElement -->
       </class> <!-- com.glance.dashboard.tests.VerifyAddElementWizard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

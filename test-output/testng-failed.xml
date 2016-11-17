@@ -6,6 +6,8 @@
       <class name="com.glance.dashboard.tests.VerifyAddElementWizard">
         <methods>
           <include name="myFirstTest"/>
+          <include name="initializeTest"/>
+          <include name="testStartUp"/>
         </methods>
       </class> <!-- com.glance.dashboard.tests.VerifyAddElementWizard -->
     </classes>
