@@ -1,0 +1,49 @@
+2016-11-16 17:17:26 INFO  TestLog:53 - Openning browser
+2016-11-16 17:17:26 INFO  TestLog:56 - Creating firefox profile
+2016-11-16 17:17:26 INFO  TestLog:59 - Created a new firefox profile
+2016-11-16 17:17:26 INFO  TestLog:60 - Accepting untrusted cert
+2016-11-16 17:17:37 INFO  TestLog:67 - Firefox browser started
+2016-11-16 17:17:37 INFO  TestLog:85 - Maximizing the window
+2016-11-16 17:17:37 INFO  TestLog:87 - Navigating to; http://localhost/glance/index.php
+2016-11-16 17:17:38 INFO  TestLog:135 - Entering footer
+2016-11-16 17:17:48 INFO  TestLog:140 - Unable to enter the footer. Due to: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"ele_str_footer"}
+Command duration or timeout: 10.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDABKAREEM', ip: '172.22.176.30', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_03'
+*** Element info: {Using=id, value=ele_str_footer}
+Session ID: 0ba087fc-13fa-4a3e-bccd-d1fb3ab2977f
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0.1, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+2016-11-16 17:28:37 INFO  TestLog:45 - Openning browser
+2016-11-16 17:28:51 INFO  TestLog:83 - Not able to open the browser: session not created exception
+from unknown error: Runtime.executionContextCreated has invalid 'context': {"auxData":{"frameId":"388.1","isDefault":true},"id":1,"name":"","origin":"://"}
+  (Session info: chrome=54.0.2840.71)
+  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 11.64 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDABKAREEM', ip: '172.22.176.30', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_03'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+2016-11-16 17:28:52 INFO  TestLog:135 - Entering footer
+2016-11-16 17:28:52 INFO  TestLog:140 - Unable to enter the footer. Due to: java.lang.NullPointerException
+2016-11-16 17:30:29 INFO  TestLog:45 - Openning browser
+2016-11-16 17:30:37 INFO  TestLog:83 - Not able to open the browser: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDABKAREEM', ip: '172.22.176.30', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_03'
+Driver info: driver.version: ChromeDriver
+2016-11-16 17:30:37 INFO  TestLog:135 - Entering footer
+2016-11-16 17:30:37 INFO  TestLog:140 - Unable to enter the footer. Due to: java.lang.NullPointerException
+2016-11-16 18:07:22 INFO  TestLog:28 - Openning browser
+2016-11-16 18:07:22 INFO  TestLog:31 - Creating firefox profile
+2016-11-16 18:07:22 INFO  TestLog:34 - Created a new firefox profile
+2016-11-16 18:07:22 INFO  TestLog:35 - Accepting untrusted cert
+2016-11-16 18:07:38 INFO  TestLog:42 - Firefox browser started
+2016-11-16 18:07:38 INFO  TestLog:60 - Maximizing the window
+2016-11-16 18:07:38 INFO  TestLog:62 - Navigating to; http://localhost/glance/index.php
+2016-11-16 18:07:41 INFO  TestLog:135 - Entering footer
+2016-11-16 18:07:47 INFO  TestLog:140 - Unable to enter the footer. Due to: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDABKAREEM', ip: '172.22.176.30', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_03'
+Driver info: driver.version: RemoteWebDriver
+Session ID: 23d44ee7-659e-4755-8d9a-fec24817508b
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0.1, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
