@@ -26,6 +26,7 @@ public class BaseTest extends ReadPropertyFile {
 				TestLog.log.info("Openning browser");
 				try {
 					if (browser.equalsIgnoreCase("firefox")) {
+						System.setProperty("webdriver.gecko.driver", geckoDriverPath);
 						TestLog.log.info("Creating firefox profile");
 
 						FirefoxProfile profile = new FirefoxProfile();
