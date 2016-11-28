@@ -16,6 +16,7 @@ public class ReadPropertyFile {
 	public static WebDriver driver;
 	public static String chromeDriverPath;
 	public static String ieDriverPath;
+	public static String geckoDriverPath;
 	public static String baseUrl;
 	public static String browser;
 	public static String userName;
@@ -38,6 +39,7 @@ public class ReadPropertyFile {
 		browser = getDataRepository().getProperty("browser");
 		chromeDriverPath = driverCommonPath+ getDataRepository().getProperty("chromeDriverPath");
 		ieDriverPath = driverCommonPath+ getDataRepository().getProperty("ieDriverPath");
+		geckoDriverPath = driverCommonPath+ getDataRepository().getProperty("geckoDriverPath");
 		userName=getDataRepository().getProperty("userName");
 		System.out.println(userName);
 		password=getDataRepository().getProperty("password");
