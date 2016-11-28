@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 
@@ -64,14 +65,23 @@ public class BaseTest extends ReadPropertyFile {
 				}
 			}
 
-		} catch (Exception e) {
-			System.out.println("Exception: " + e);
+		} catch (Exception ex) {
+			System.out.println("Exception: " + ex);
+			TestLog.log.info("Exception: " + ex);
 		}
 
 	}
 	
-	
+	@AfterClass(alwaysRun = true)
 	public void finishTest(){
+		try{
+			if(driver!=null){
+				driver.close();
+				driver.quit();
+			}
+		}catch(Exception ex){
+			TestLog.log.info("Unable to quit the driver. "+ex);
+		}
 		
 	}
 
