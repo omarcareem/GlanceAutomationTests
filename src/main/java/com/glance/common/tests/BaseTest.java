@@ -9,10 +9,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
-
+import com.glance.pageobjects.dashboard.CommonPageLeftPane;
 import com.glance.pageobjects.logs.TestLog;
+import com.glance.pageobjects.userlogin.LoginPage;
 
 public class BaseTest extends ReadPropertyFile {
 
@@ -70,9 +74,29 @@ public class BaseTest extends ReadPropertyFile {
 
 	}
 	
+	@BeforeMethod
+	public void testLogin(){
+		LoginPage loginPage;
+		loginPage = new LoginPage(driver);
+		loginPage.enterUsername(userName);
+		loginPage.enterPassword(password);
+		loginPage.clickLoginBtn();
+	}
 	
+	@AfterMethod
+	public void testLogout(){
+		CommonPageLeftPane commonPageLeftPane;
+		commonPageLeftPane = new CommonPageLeftPane(driver);
+		commonPageLeftPane.clickLogout();
+	}
+	
+	@AfterClass
 	public void finishTest(){
 		
+		if(driver!=null){
+			driver.quit();
+		}
 	}
 
+	
 }
