@@ -20,6 +20,7 @@ public class ReadPropertyFile {
 	public static String browser;
 	public static String userName;
 	public static String password;
+	
 
 	public static Properties getDataRepository() throws IOException {
 		// Read object repository file
