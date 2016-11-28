@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19492" started-at="2016-11-17T08:52:59Z" finished-at="2016-11-17T08:53:19Z">
+  <suite name="Default suite" duration-ms="42795" started-at="2016-11-28T09:12:33Z" finished-at="2016-11-28T09:13:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19492" started-at="2016-11-17T08:52:59Z" finished-at="2016-11-17T08:53:19Z">
-      <class name="com.glance.dashboard.tests.VerifyAddElementWizard">
-        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@108c53f9]" name="testStartUp" is-config="true" duration-ms="19" started-at="2016-11-17T14:22:59Z" finished-at="2016-11-17T14:22:59Z">
+    <test name="Default test" duration-ms="42795" started-at="2016-11-28T09:12:33Z" finished-at="2016-11-28T09:13:16Z">
+      <class name="com.glance.datamanagement.tests.VerifyAddSocketDetailsPage">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="testStartUp" is-config="true" duration-ms="12" started-at="2016-11-28T14:42:33Z" finished-at="2016-11-28T14:42:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStartUp -->
-        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@108c53f9]" name="initializeTest" is-config="true" duration-ms="12783" started-at="2016-11-17T14:22:59Z" finished-at="2016-11-17T14:23:12Z">
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="initializeTest" is-config="true" duration-ms="5043" started-at="2016-11-28T14:42:33Z" finished-at="2016-11-28T14:42:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method status="PASS" signature="verifyAddNewDashboardElement()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@108c53f9]" name="verifyAddNewDashboardElement" duration-ms="6682" started-at="2016-11-17T14:23:12Z" finished-at="2016-11-17T14:23:19Z">
+        <test-method status="PASS" signature="waitingForPageLoad()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="waitingForPageLoad" is-config="true" duration-ms="15" started-at="2016-11-28T14:42:39Z" finished-at="2016-11-28T14:42:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddNewDashboardElement -->
-      </class> <!-- com.glance.dashboard.tests.VerifyAddElementWizard -->
+        </test-method> <!-- waitingForPageLoad -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="login" is-config="true" duration-ms="1267" started-at="2016-11-28T14:42:39Z" finished-at="2016-11-28T14:42:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="verifyAddSocketSubmission()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="verifyAddSocketSubmission" duration-ms="1632" started-at="2016-11-28T14:42:40Z" finished-at="2016-11-28T14:42:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddSocketSubmission -->
+        <test-method status="PASS" signature="waitingForPageLoad()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="waitingForPageLoad" is-config="true" duration-ms="54" started-at="2016-11-28T14:42:41Z" finished-at="2016-11-28T14:42:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitingForPageLoad -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="login" is-config="true" duration-ms="720" started-at="2016-11-28T14:42:42Z" finished-at="2016-11-28T14:42:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="verifyAddSocketCancel()[pri:1, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="verifyAddSocketCancel" duration-ms="806" started-at="2016-11-28T14:42:42Z" finished-at="2016-11-28T14:42:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddSocketCancel -->
+        <test-method status="PASS" signature="waitingForPageLoad()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="waitingForPageLoad" is-config="true" duration-ms="4" started-at="2016-11-28T14:42:43Z" finished-at="2016-11-28T14:42:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitingForPageLoad -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="login" is-config="true" duration-ms="708" started-at="2016-11-28T14:42:43Z" finished-at="2016-11-28T14:42:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="verifyAuthentication()[pri:2, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="verifyAuthentication" duration-ms="31403" started-at="2016-11-28T14:42:44Z" finished-at="2016-11-28T14:43:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAuthentication -->
+        <test-method status="PASS" signature="finishTest()[pri:0, instance:com.glance.datamanagement.tests.VerifyAddSocketDetailsPage@146ba0ac]" name="finishTest" is-config="true" duration-ms="1125" started-at="2016-11-28T14:43:15Z" finished-at="2016-11-28T14:43:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finishTest -->
+      </class> <!-- com.glance.datamanagement.tests.VerifyAddSocketDetailsPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

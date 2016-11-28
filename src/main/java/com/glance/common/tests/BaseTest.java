@@ -9,13 +9,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
-
+import com.glance.pageobjects.common.CommonPageObject;
 import com.glance.pageobjects.logs.TestLog;
+import com.glance.pageobjects.userlogin.LoginPage;
 
 public class BaseTest extends ReadPropertyFile {
 
+	LoginPage loginPage;
+	CommonPageObject commonPage;
+	
 	// @Parameters({ "browser" })
 	@BeforeClass(alwaysRun = true)
 	public void initializeTest() throws IOException {
@@ -71,8 +77,31 @@ public class BaseTest extends ReadPropertyFile {
 	}
 	
 	
-	public void finishTest(){
+	@BeforeMethod
+	public void login(){
 		
+		//login 
+		loginPage=new LoginPage(driver);
+		loginPage.enterUsername(userName);
+		loginPage.enterPassword(password);
+		loginPage.clickLoginBtn();
+	
 	}
+	
+	@BeforeMethod
+	public void waitingForPageLoad(){
+		
+		commonPage = new CommonPageObject(driver);
+		commonPage.waitForPageLoad(5);
+	}
+	
+	
+	@AfterTest
+	public void finishTest(){
 
+		if(driver!=null){
+
+			driver.quit();
+        }
+	}
 }
