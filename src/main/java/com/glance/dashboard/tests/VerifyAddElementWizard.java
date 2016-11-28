@@ -1,4 +1,4 @@
-package com.glance.dashboard.tests;
+/*package com.glance.dashboard.tests;
 
 import org.testng.annotations.Test;
 
@@ -39,3 +39,4 @@ public class VerifyAddElementWizard extends BaseTest{
 	}
 
 }
+*/

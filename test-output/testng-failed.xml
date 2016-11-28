@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.glance.dashboard.tests.VerifyAddElementWizard">
+      <class name="com.glance.dashboard.tests.VerifyAddProject">
         <methods>
-          <include name="myFirstTest"/>
           <include name="initializeTest"/>
+          <include name="verifyAddProjectLeftPanal"/>
           <include name="testStartUp"/>
         </methods>
-      </class> <!-- com.glance.dashboard.tests.VerifyAddElementWizard -->
+      </class> <!-- com.glance.dashboard.tests.VerifyAddProject -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

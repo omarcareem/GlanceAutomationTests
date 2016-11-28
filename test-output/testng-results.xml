@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19492" started-at="2016-11-17T08:52:59Z" finished-at="2016-11-17T08:53:19Z">
+  <suite name="Default suite" duration-ms="11931" started-at="2016-11-28T05:54:28Z" finished-at="2016-11-28T05:54:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19492" started-at="2016-11-17T08:52:59Z" finished-at="2016-11-17T08:53:19Z">
-      <class name="com.glance.dashboard.tests.VerifyAddElementWizard">
-        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@108c53f9]" name="testStartUp" is-config="true" duration-ms="19" started-at="2016-11-17T14:22:59Z" finished-at="2016-11-17T14:22:59Z">
+    <test name="Default test" duration-ms="11931" started-at="2016-11-28T05:54:28Z" finished-at="2016-11-28T05:54:40Z">
+      <class name="com.glance.userlogin.tests.VerifyLockScreen">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.userlogin.tests.VerifyLockScreen@e25b2fe]" name="testStartUp" is-config="true" duration-ms="15" started-at="2016-11-28T11:24:28Z" finished-at="2016-11-28T11:24:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStartUp -->
-        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@108c53f9]" name="initializeTest" is-config="true" duration-ms="12783" started-at="2016-11-17T14:22:59Z" finished-at="2016-11-17T14:23:12Z">
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.userlogin.tests.VerifyLockScreen@e25b2fe]" name="initializeTest" is-config="true" duration-ms="8063" started-at="2016-11-28T11:24:28Z" finished-at="2016-11-28T11:24:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method status="PASS" signature="verifyAddNewDashboardElement()[pri:0, instance:com.glance.dashboard.tests.VerifyAddElementWizard@108c53f9]" name="verifyAddNewDashboardElement" duration-ms="6682" started-at="2016-11-17T14:23:12Z" finished-at="2016-11-17T14:23:19Z">
+        <test-method status="PASS" signature="verifyLockScreen()[pri:0, instance:com.glance.userlogin.tests.VerifyLockScreen@e25b2fe]" name="verifyLockScreen" duration-ms="1644" started-at="2016-11-28T11:24:36Z" finished-at="2016-11-28T11:24:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddNewDashboardElement -->
-      </class> <!-- com.glance.dashboard.tests.VerifyAddElementWizard -->
+        </test-method> <!-- verifyLockScreen -->
+        <test-method status="PASS" signature="verifyLockScreenWrongPassword()[pri:1, instance:com.glance.userlogin.tests.VerifyLockScreen@e25b2fe]" name="verifyLockScreenWrongPassword" duration-ms="1350" started-at="2016-11-28T11:24:38Z" finished-at="2016-11-28T11:24:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLockScreenWrongPassword -->
+        <test-method status="PASS" signature="verifyLockScreenWrongPassword2()[pri:2, instance:com.glance.userlogin.tests.VerifyLockScreen@e25b2fe]" name="verifyLockScreenWrongPassword2" duration-ms="864" started-at="2016-11-28T11:24:39Z" finished-at="2016-11-28T11:24:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLockScreenWrongPassword2 -->
+      </class> <!-- com.glance.userlogin.tests.VerifyLockScreen -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
