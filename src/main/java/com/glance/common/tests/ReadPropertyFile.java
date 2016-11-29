@@ -22,6 +22,10 @@ public class ReadPropertyFile {
 	public static String userName;
 	public static String password;
 	
+	public static String accountName;
+	public static String segment;
+	public static String tableName;
+	
 	public static String clientProjectId;
 	public static String engagementName;
 	public static String applicationName;
@@ -62,7 +66,13 @@ public class ReadPropertyFile {
 		password=getDataRepository().getProperty("password");
 		System.out.println(password);
 		
-
+		accountName=getDataRepository().getProperty("accountName");
+		System.out.println(accountName);
+		segment=getDataRepository().getProperty("segment");
+		System.out.println(segment);
+		tableName=getDataRepository().getProperty("tableName");
+		System.out.println(tableName);
+		
 		clientProjectId=getDataRepository().getProperty("clientProjectId");
 		System.out.println(clientProjectId);
 		engagementName=getDataRepository().getProperty("engagementName");
