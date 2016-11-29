@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\abkareem\AppData\Local\Temp\testng-eclipse--21913105\testng-customsuite.xml</span>
+                    <span>C:\Users\sdsmadara\AppData\Local\Temp\testng-eclipse--1393974545\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.glance.dashboard.tests.VerifyAddEngagement" hash-for-method="verifyEntityInLeftPaneDisplayDashboard">verifyEntityInLeftPaneDisplayDashboard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +116,32 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.glance.dashboard.tests.VerifyAddElementWizard" hash-for-method="verifyAddNewDashboardElement">verifyAddNewDashboardElement</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.glance.dashboard.tests.VerifyAddEngagement" hash-for-method="verifyAddEngagementElementAddedtoDb">verifyAddEngagementElementAddedtoDb</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.glance.dashboard.tests.VerifyAddEngagement" hash-for-method="verifyAddEngagementElementAddedtoLeftPane">verifyAddEngagementElementAddedtoLeftPane</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.glance.dashboard.tests.VerifyAddEngagement" hash-for-method="verifyAddEngagementElementByLeftPane">verifyAddEngagementElementByLeftPane</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.glance.dashboard.tests.VerifyAddEngagement" hash-for-method="verifyAddEngagementElementBySettingsPage">verifyAddEngagementElementBySettingsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.glance.dashboard.tests.VerifyAddEngagement" hash-for-method="verifyAddEngagementElementCancel">verifyAddEngagementElementCancel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.glance.dashboard.tests.VerifyAddEngagement" hash-for-method="verifyAddEngagementElementGoToDashBoard">verifyAddEngagementElementGoToDashBoard</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -117,17 +156,101 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.glance.dashboard.tests.VerifyAddElementWizard</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.glance.dashboard.tests.VerifyAddEngagement</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAddNewDashboardElement">
-                  </a> <!-- verifyAddNewDashboardElement -->
-                  <span class="method-name">verifyAddNewDashboardElement</span>
+                  <a name="verifyEntityInLeftPaneDisplayDashboard">
+                  </a> <!-- verifyEntityInLeftPaneDisplayDashboard -->
+                  <span class="method-name">verifyEntityInLeftPaneDisplayDashboard</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:397)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:504)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:351)
+	at com.glance.pageobjects.dashboard.CommonPageLeftPane.clickOnAccountName(CommonPageLeftPane.java:124)
+	at com.glance.dashboard.tests.VerifyAddEngagement.verifyEntityInLeftPaneDisplayDashboard(VerifyAddEngagement.java:247)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.glance.dashboard.tests.VerifyAddEngagement</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddEngagementElementAddedtoDb">
+                  </a> <!-- verifyAddEngagementElementAddedtoDb -->
+                  <span class="method-name">verifyAddEngagementElementAddedtoDb</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddEngagementElementAddedtoLeftPane">
+                  </a> <!-- verifyAddEngagementElementAddedtoLeftPane -->
+                  <span class="method-name">verifyAddEngagementElementAddedtoLeftPane</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddEngagementElementByLeftPane">
+                  </a> <!-- verifyAddEngagementElementByLeftPane -->
+                  <span class="method-name">verifyAddEngagementElementByLeftPane</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddEngagementElementBySettingsPage">
+                  </a> <!-- verifyAddEngagementElementBySettingsPage -->
+                  <span class="method-name">verifyAddEngagementElementBySettingsPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddEngagementElementCancel">
+                  </a> <!-- verifyAddEngagementElementCancel -->
+                  <span class="method-name">verifyAddEngagementElementCancel</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddEngagementElementGoToDashBoard">
+                  </a> <!-- verifyAddEngagementElementGoToDashBoard -->
+                  <span class="method-name">verifyAddEngagementElementGoToDashBoard</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +258,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\abkareem\AppData\Local\Temp\testng-eclipse--21913105\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\sdsmadara\AppData\Local\Temp\testng-eclipse--1393974545\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +267,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.glance.dashboard.tests.VerifyAddElementWizard&quot;/&gt;
+      &lt;class name=&quot;com.glance.dashboard.tests.VerifyAddEngagement&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -184,16 +307,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyAddNewDashboardElement')
-data.setCell(0, 2, 'com.glance.dashboard.tests.VerifyAddElementWizard')
-data.setCell(0, 3, 6682);
+data.setCell(0, 1, 'verifyEntityInLeftPaneDisplayDashboard')
+data.setCell(0, 2, 'com.glance.dashboard.tests.VerifyAddEngagement')
+data.setCell(0, 3, 12526);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyAddEngagementElementByLeftPane')
+data.setCell(1, 2, 'com.glance.dashboard.tests.VerifyAddEngagement')
+data.setCell(1, 3, 6285);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyAddEngagementElementBySettingsPage')
+data.setCell(2, 2, 'com.glance.dashboard.tests.VerifyAddEngagement')
+data.setCell(2, 3, 2280);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyAddEngagementElementAddedtoLeftPane')
+data.setCell(3, 2, 'com.glance.dashboard.tests.VerifyAddEngagement')
+data.setCell(3, 3, 2072);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyAddEngagementElementAddedtoDb')
+data.setCell(4, 2, 'com.glance.dashboard.tests.VerifyAddEngagement')
+data.setCell(4, 3, 1730);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyAddEngagementElementGoToDashBoard')
+data.setCell(5, 2, 'com.glance.dashboard.tests.VerifyAddEngagement')
+data.setCell(5, 3, 1632);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyAddEngagementElementCancel')
+data.setCell(6, 2, 'com.glance.dashboard.tests.VerifyAddEngagement')
+data.setCell(6, 3, 1140);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -219,19 +366,105 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.glance.dashboard.tests.VerifyAddElementWizard</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.glance.dashboard.tests.VerifyAddEngagement</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">testStartUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">initializeTest</span>
-                <span class="method-start">30 ms</span>
+                <span class="method-start">40 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">testLogin</span>
+                <span class="method-start">3083 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyAddNewDashboardElement</span>
-                <span class="method-start">12825 ms</span>
+                <span class="method-name">verifyAddEngagementElementBySettingsPage</span>
+                <span class="method-start">3268 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testLogout</span>
+                <span class="method-start">5550 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">testLogin</span>
+                <span class="method-start">5664 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddEngagementElementCancel</span>
+                <span class="method-start">5792 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testLogout</span>
+                <span class="method-start">6935 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">testLogin</span>
+                <span class="method-start">7176 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddEngagementElementGoToDashBoard</span>
+                <span class="method-start">7341 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testLogout</span>
+                <span class="method-start">8975 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">testLogin</span>
+                <span class="method-start">9085 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddEngagementElementByLeftPane</span>
+                <span class="method-start">9216 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testLogout</span>
+                <span class="method-start">15503 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">testLogin</span>
+                <span class="method-start">15610 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddEngagementElementAddedtoDb</span>
+                <span class="method-start">15770 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testLogout</span>
+                <span class="method-start">17501 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">testLogin</span>
+                <span class="method-start">17609 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddEngagementElementAddedtoLeftPane</span>
+                <span class="method-start">17726 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testLogout</span>
+                <span class="method-start">19799 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">testLogin</span>
+                <span class="method-start">19934 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyEntityInLeftPaneDisplayDashboard</span>
+                <span class="method-start">20069 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testLogout</span>
+                <span class="method-start">32595 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">finishTest</span>
+                <span class="method-start">39617 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

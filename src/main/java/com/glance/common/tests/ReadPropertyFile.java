@@ -43,6 +43,26 @@ public class ReadPropertyFile {
 	public static String expectedMessageFirstName;
 	public static String expectedMessageLastName;
 	
+	public static String accountName1;
+	public static String DeliveryMethod;
+	public static String conractType;
+	public static String years;
+	public static String radioButton;
+	public static String addNewEngagement;
+	
+	public static String dateRange; 
+	public static String customDateStart;
+	public static String customDateEnd;
+	
+	public static String deleteType;
+	public static String typeID;
+	public static String typeName;
+	public static String sqlQuery;
+	
+	public static String showEntry;
+	public static String enterSearch;
+	
+	
 
 	public static Properties getDataRepository() throws IOException {
 		// Read object repository file
@@ -101,7 +121,39 @@ public class ReadPropertyFile {
 		expectedMessageLastName=getDataRepository().getProperty("expectedMessageLastName");
 		System.out.println(expectedMessageLastName);
 		
+		accountName1=getDataRepository().getProperty("accountName1");
+		System.out.println(accountName1);
+		DeliveryMethod=getDataRepository().getProperty("DeliveryMethod");
+		System.out.println(DeliveryMethod);
+		conractType=getDataRepository().getProperty("conractType");
+		System.out.println(conractType);
+		years=getDataRepository().getProperty("years");
+		System.out.println(years);
+		radioButton=getDataRepository().getProperty("radioButton");
+		System.out.println(radioButton);
+		addNewEngagement=getDataRepository().getProperty("addNewEngagement");
+		System.out.println(addNewEngagement);
 		
+		dateRange=getDataRepository().getProperty("dateRange");
+		System.out.println(dateRange);
+		customDateStart=getDataRepository().getProperty("customDateStart");
+		System.out.println(customDateStart);
+		customDateEnd=getDataRepository().getProperty("customDateEnd");
+		System.out.println(customDateEnd);
+		
+		deleteType=getDataRepository().getProperty("deleteType");
+		System.out.println(deleteType);
+		typeID=getDataRepository().getProperty("typeID");
+		System.out.println(typeID);
+		typeName=getDataRepository().getProperty("typeName");
+		System.out.println(typeName);
+		sqlQuery=getDataRepository().getProperty("sqlQuery");
+		System.out.println(sqlQuery);
+		
+		showEntry=getDataRepository().getProperty("showEntry");
+		System.out.println(showEntry);
+		enterSearch=getDataRepository().getProperty("enterSearch");
+		System.out.println(enterSearch);
 	}
 
 }
