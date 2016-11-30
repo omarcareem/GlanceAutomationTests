@@ -89,6 +89,31 @@ public class VerifyAddAccountPage extends BaseTest{
 	
 	
 	@Test (priority=1)
+	public void verifyAddAccountWithLeftPane() throws Exception {
+				
+		//click on add new on left pane
+		leftPane.clickOnAddNewAccountLink();
+		
+		//create an account
+		addAccount=new AddAccountPage(driver);
+		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
+		accountName=RandomNameGenerator.getName();
+		addAccount.enterAccountName(accountName);
+		addAccount.selectSegment(segment);
+		addAccount.clickSubmit();
+		addAccount.addNewEntry();
+		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
+		
+		//check account is added
+		Assert.assertTrue(leftPane.verifyAdded(accountName));
+		
+		//logout
+		leftPane.clickLogout();
+		
+	}
+
+	
+	@Test (priority=2)
 	public void verifyAddAccountCancel() throws Exception {
 		
 		//click on settings icon in left pane
@@ -128,8 +153,9 @@ public class VerifyAddAccountPage extends BaseTest{
 			
 	}
 	
-	@Test (priority=2)
-	public void verifyAddAccountWithLeftPane() throws Exception {
+	
+	@Test (priority=3)
+	public void verifyCollapse(){
 				
 		//click on add new on left pane
 		leftPane.clickOnAddNewAccountLink();
@@ -137,19 +163,21 @@ public class VerifyAddAccountPage extends BaseTest{
 		//create an account
 		addAccount=new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
-		accountName=RandomNameGenerator.getName();
-		addAccount.enterAccountName(accountName);
-		addAccount.selectSegment(segment);
-		addAccount.clickSubmit();
-		addAccount.addNewEntry();
-		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
-		
-		//check account is added
-		Assert.assertTrue(leftPane.verifyAdded(accountName));
-		
-		//logout
-		leftPane.clickLogout();
+		addAccount.clickCollapse();
 		
 	}
-
+	
+	
+	/*@Test (priority=4)
+	public void verifyClose(){
+				
+		//click on add new on left pane
+		leftPane.clickOnAddNewAccountLink();
+		
+		//create an account
+		addAccount=new AddAccountPage(driver);
+		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
+		addAccount.clickClose();
+		
+	}*/
 }

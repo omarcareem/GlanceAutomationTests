@@ -25,6 +25,7 @@ public class ReadPropertyFile {
 	public static String accountName;
 	public static String segment;
 	public static String tableName;
+	public static String userin;
 	
 	public static String clientProjectId;
 	public static String engagementName;

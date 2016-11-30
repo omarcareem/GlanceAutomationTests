@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.glance.common.tests.BaseTest;
 import com.glance.pageobjects.common.CommonPageObject;
+import com.glance.pageobjects.dashboard.AddAccountPage;
 import com.glance.pageobjects.dashboard.CommonPageLeftPane;
 import com.glance.pageobjects.datamanagement.DataUploadPage;
 import com.glance.pageobjects.userlogin.LoginPage;
@@ -12,78 +13,121 @@ import com.glance.pageobjects.userlogin.SettingsPage;
 
 import junit.framework.Assert;
 
-public class VerifyDataUploadPage extends BaseTest{
-	
+public class VerifyDataUploadPage extends BaseTest {
+
 	LoginPage loginPage;
 	CommonPageLeftPane leftPane;
 	SettingsPage settingsPage;
 	DataUploadPage dataUploadPage;
 	CommonPageObject commonPage;
-	
+
 	@BeforeMethod
-	public void login(){
-		
-		//login 
-		loginPage=new LoginPage(driver);
+	public void login() {
+
+		// login
+		loginPage = new LoginPage(driver);
 		loginPage.enterUsername(userName);
 		loginPage.enterPassword(password);
 		loginPage.clickLoginBtn();
-	
+
 	}
-	
+
 	@BeforeMethod
-	public void waitingForPageLoad(){
-		
+	public void waitingForPageLoad() {
+
 		commonPage = new CommonPageObject(driver);
 		commonPage.waitForPageLoad(5);
 	}
-	
-	@Test (priority=0)
-	public void verifyDataUploading(){
-		
-		//click on settings icon in left pane
-		leftPane=new CommonPageLeftPane(driver);
+
+	@Test(priority = 0)
+	public void verifyDataUploading() {
+
+		// click on settings icon in left pane
+		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
-		
-		//click data upload 
+
+		// click data upload
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataUploadBtn();
-		
-		//select table
+
+		// select table
 		dataUploadPage = new DataUploadPage(driver);
 		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Upload Your Files Here"));
 		dataUploadPage.selectDataTable(tableName);
-		
-		//	select file	//
-		
-		/*dataUploadPage.clickUpload();
-		Assert.assertTrue(dataUploadPage.verifySubmitSuccess("Information"));
-		dataUploadPage.clickDone();*/
-				
+
+		// select file //
+
+		/*
+		 * dataUploadPage.clickUpload();
+		 * Assert.assertTrue(dataUploadPage.verifySubmitSuccess("Information"));
+		 * dataUploadPage.clickDone();
+		 */
+
 	}
-	
-	@Test (priority=1)
-	public void verifyDataUploadingWrongFile(){
-		
-		//click on settings icon in left pane
-		leftPane=new CommonPageLeftPane(driver);
+
+	@Test(priority = 1)
+	public void verifyDataUploadingWrongFile() {
+
+		// click on settings icon in left pane
+		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
-		
-		//click data upload 
+
+		// click data upload
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataUploadBtn();
-		
-		//select table
+
+		// select table
 		dataUploadPage = new DataUploadPage(driver);
 		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Upload Your Files Here"));
 		dataUploadPage.selectDataTable(tableName);
-		
-		//	select file	//
-		
-		/*dataUploadPage.clickUpload();
-		Assert.assertTrue(dataUploadPage.verifyWrongFileErrorMessage("Please select a file you wish to upload"));
-		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Information"));
-		dataUploadPage.clickDone();*/
-				
+
+		// select file //
+
+		/*
+		 * dataUploadPage.clickUpload();
+		 * Assert.assertTrue(dataUploadPage.verifyWrongFileErrorMessage(
+		 * "Please select a file you wish to upload"));
+		 * Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage(
+		 * "Information")); dataUploadPage.clickDone();
+		 */
+
 	}
+	
+	
+	@Test (priority=3)
+	public void verifyCollapse(){
+				
+		// click on settings icon in left pane
+		leftPane = new CommonPageLeftPane(driver);
+		leftPane.clickSettings();
+
+		// click data upload
+		settingsPage = new SettingsPage(driver);
+		settingsPage.clickDataUploadBtn();
+		
+		//create an account
+		dataUploadPage = new DataUploadPage(driver);
+		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Upload Your Files Here"));
+		dataUploadPage.clickCollapse();
+		
+	}
+	
+	
+	/*@Test (priority=4)
+	public void verifyClose(){
+				
+		// click on settings icon in left pane
+		leftPane = new CommonPageLeftPane(driver);
+		leftPane.clickSettings();
+
+		// click data upload
+		settingsPage = new SettingsPage(driver);
+		settingsPage.clickDataUploadBtn();
+		
+		//create an account
+		addAccount=new AddAccountPage(driver);
+		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
+		addAccount.clickClose();
+		
+	}*/
 }
