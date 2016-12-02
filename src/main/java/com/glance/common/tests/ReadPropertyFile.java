@@ -44,16 +44,22 @@ public class ReadPropertyFile {
 	public static String expectedMessageFirstName;
 	public static String expectedMessageLastName;
 	
-	public static String accountName1;
+	public static String accountName2;
 	public static String DeliveryMethod;
 	public static String conractType;
 	public static String years;
 	public static String radioButton;
 	public static String addNewEngagement;
 	
+	public static String accountName1;
+	public static String engagementName1;
+	public static String projectName1;
+	public static String individualName1;
 	public static String dateRange; 
 	public static String customDateStart;
 	public static String customDateEnd;
+	public static String userName1;
+	public static String password1;
 	
 	public static String deleteType;
 	public static String typeID;
@@ -62,7 +68,7 @@ public class ReadPropertyFile {
 	
 	public static String showEntry;
 	public static String enterSearch;
-	
+	public static String recordInsert;
 	
 
 	public static Properties getDataRepository() throws IOException {
@@ -122,8 +128,8 @@ public class ReadPropertyFile {
 		expectedMessageLastName=getDataRepository().getProperty("expectedMessageLastName");
 		System.out.println(expectedMessageLastName);
 		
-		accountName1=getDataRepository().getProperty("accountName1");
-		System.out.println(accountName1);
+		accountName1=getDataRepository().getProperty("accountName2");
+		System.out.println(accountName2);
 		DeliveryMethod=getDataRepository().getProperty("DeliveryMethod");
 		System.out.println(DeliveryMethod);
 		conractType=getDataRepository().getProperty("conractType");
@@ -135,12 +141,24 @@ public class ReadPropertyFile {
 		addNewEngagement=getDataRepository().getProperty("addNewEngagement");
 		System.out.println(addNewEngagement);
 		
+		accountName1=getDataRepository().getProperty("accountName1");
+		System.out.println(accountName1);
+		engagementName1=getDataRepository().getProperty("engagementName1");
+		System.out.println(engagementName1);
+		projectName1=getDataRepository().getProperty("projectName1");
+		System.out.println(projectName1);
+		individualName1=getDataRepository().getProperty("individualName1");
+		System.out.println(individualName1);
 		dateRange=getDataRepository().getProperty("dateRange");
 		System.out.println(dateRange);
 		customDateStart=getDataRepository().getProperty("customDateStart");
 		System.out.println(customDateStart);
 		customDateEnd=getDataRepository().getProperty("customDateEnd");
 		System.out.println(customDateEnd);
+		userName1=getDataRepository().getProperty("userName1");
+		System.out.println(userName1);
+		password1=getDataRepository().getProperty("password1");
+		System.out.println(password1);
 		
 		deleteType=getDataRepository().getProperty("deleteType");
 		System.out.println(deleteType);
@@ -155,6 +173,8 @@ public class ReadPropertyFile {
 		System.out.println(showEntry);
 		enterSearch=getDataRepository().getProperty("enterSearch");
 		System.out.println(enterSearch);
+		recordInsert=getDataRepository().getProperty("recordInsert");
+		System.out.println(recordInsert);
 	}
 
 }

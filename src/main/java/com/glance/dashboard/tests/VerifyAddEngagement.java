@@ -8,7 +8,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.glance.common.tests.BaseTest;
+import com.glance.common.tests.GlanceDataProvider;
 import com.glance.common.tests.RandomNameGenerator;
+import com.glance.pageobjects.common.CommonPageObject;
+import com.glance.pageobjects.dashboard.AddElementWizardPage;
 import com.glance.pageobjects.dashboard.AddEngagementPage;
 import com.glance.pageobjects.dashboard.CommonPageLeftPane;
 import com.glance.pageobjects.dashboard.DashboardPage;
@@ -43,9 +46,35 @@ public class VerifyAddEngagement extends BaseTest {
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickLogout();
 	}
-
+	
 	@Test(priority = 0)
-	public void verifyAddEngagementElementBySettingsPage() throws Exception {
+	public void NavigatetoAddNewEngagementusingSettingspage() throws Exception {
+
+		commonPageLeftPane = new CommonPageLeftPane(driver);
+		commonPageLeftPane.clickSettings();
+
+		settingsPage = new SettingsPage(driver);
+		settingsPage.clickAddEngagementBtn();
+
+		addEngagementPage = new AddEngagementPage(driver);
+		Assert.assertTrue(addEngagementPage.getPageName("Engagement Add operations"));
+
+	}
+	
+	@Test(priority = 1)
+	public void verifyAddEngagementElementByLeftPane() throws Exception {
+
+		commonPageLeftPane = new CommonPageLeftPane(driver);
+		commonPageLeftPane.clickEngagement();
+		commonPageLeftPane.clickOnAddNewEngagementLink();
+		Thread.sleep(5000);
+		addEngagementPage = new AddEngagementPage(driver);
+		Assert.assertTrue(addEngagementPage.getPageName("Engagement Add operations"));
+
+	}
+
+	@Test(priority = 2)
+	public void submitAddEngagementElementBySettingsPage() throws Exception {
 
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -71,9 +100,28 @@ public class VerifyAddEngagement extends BaseTest {
 		addEngagementPage.selectAddNewEntry();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 
+		
+		//CommonPageObject commonPage = new CommonPageObject(driver);
+		//commonPage.waitForPageLoad(10);
+		
+		engagementName = RandomNameGenerator.getName();
+		addEngagementPage.enterEngagementName(engagementName);
+		addEngagementPage.selectAccount(accountName1);
+		addEngagementPage.selectDeliveryMethod(DeliveryMethod);
+		addEngagementPage.selectContractType(conractType);
+		addEngagementPage.enterYears(years);
+		addEngagementPage.selectRadioButton4();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		addEngagementPage.clickSubmit();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Assert.assertTrue(addEngagementPage.verifySubmit("Done adding new entry"));
+		addEngagementPage.selectGoToDashboard();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		dashboardPage = new DashboardPage(driver);
+		Assert.assertTrue(dashboardPage.getPageName("Account Level Dashboard"));
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 3)
 	public void verifyAddEngagementElementCancel() throws Exception {
 
 		commonPageLeftPane = new CommonPageLeftPane(driver);
@@ -103,61 +151,6 @@ public class VerifyAddEngagement extends BaseTest {
 
 	}
 
-	@Test(priority = 2)
-	public void verifyAddEngagementElementGoToDashBoard() throws Exception {
-
-		commonPageLeftPane = new CommonPageLeftPane(driver);
-		commonPageLeftPane.clickSettings();
-
-		settingsPage = new SettingsPage(driver);
-		settingsPage.clickAddEngagementBtn();
-
-		addEngagementPage = new AddEngagementPage(driver);
-		Assert.assertTrue(addEngagementPage.getPageName("Engagement Add operations"));
-
-		engagementName = RandomNameGenerator.getName();
-		addEngagementPage.enterEngagementName(engagementName);
-		addEngagementPage.selectAccount(accountName1);
-		addEngagementPage.selectDeliveryMethod(DeliveryMethod);
-		addEngagementPage.selectContractType(conractType);
-		addEngagementPage.enterYears(years);
-		addEngagementPage.selectRadioButton4();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		addEngagementPage.clickSubmit();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		Assert.assertTrue(addEngagementPage.verifySubmit("Done adding new entry"));
-		addEngagementPage.selectGoToDashboard();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		dashboardPage = new DashboardPage(driver);
-		Assert.assertTrue(dashboardPage.getPageName("Account Level Dashboard"));
-
-	}
-
-	@Test(priority = 3)
-	public void verifyAddEngagementElementByLeftPane() throws Exception {
-
-		commonPageLeftPane = new CommonPageLeftPane(driver);
-		commonPageLeftPane.clickEngagement();
-		commonPageLeftPane.clickOnAddNewEngagementLink();
-		Thread.sleep(5000);
-		addEngagementPage = new AddEngagementPage(driver);
-		Assert.assertTrue(addEngagementPage.getPageName("Engagement Add operations"));
-
-		engagementName = RandomNameGenerator.getName();
-		addEngagementPage.enterEngagementName(engagementName);
-		addEngagementPage.selectAccount(accountName1);
-		addEngagementPage.selectDeliveryMethod(DeliveryMethod);
-		addEngagementPage.selectContractType(conractType);
-		addEngagementPage.enterYears(years);
-		addEngagementPage.selectRadioButton4();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		addEngagementPage.clickSubmit();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		Assert.assertTrue(addEngagementPage.verifySubmit("Done adding new entry"));
-		addEngagementPage.selectAddNewEntry();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-
-	}
 
 	@Test(priority = 4)
 	public void verifyAddEngagementElementAddedtoDb() throws Exception {
@@ -238,19 +231,52 @@ public class VerifyAddEngagement extends BaseTest {
 
 	}
 	
-	@Test(priority = 6)
-	public void verifyEntityInLeftPaneDisplayDashboard() throws Exception {
-
-		commonPageLeftPane = new CommonPageLeftPane(driver);
-		commonPageLeftPane.clickAccount();
+	@Test (priority=6)
+	public void screenIconsoftehaddengaggemetnpage() throws Exception{
 		
-		commonPageLeftPane.clickOnAccountName(accountName1);
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		addEngagementPage = new AddEngagementPage(driver);
-		//Assert.assertTrue(addEngagementPage.getDashbordPageName("No dashboard elements defined!"));
-
+		DashboardPage dashBoardPage = new DashboardPage(driver);
+		dashBoardPage.selectMaxMin();
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-
+		commonPageLeftPane.clickGlanceIcon();
+		CommonPageObject commonPage = new CommonPageObject(driver);
+		commonPage.waitForPageLoad(10);
+		dashBoardPage.selectClose();
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		
 	}
+	
+	//********************************************************
+	@Test(dataProvider = "chartTestData", dataProviderClass = GlanceDataProvider.class)
+	public void verifyAddNewEngagement(String engagementName, String account, String deliveryMethod, String contractType, String years) throws Exception {
+
+		
+		CommonPageObject commonPage = new CommonPageObject(driver);
+		commonPage.waitForPageLoad(10);
+		
+		commonPageLeftPane = new CommonPageLeftPane(driver);
+		commonPageLeftPane.clickSettings();
+
+		settingsPage = new SettingsPage(driver);
+		settingsPage.clickAddEngagementBtn();
+
+		addEngagementPage = new AddEngagementPage(driver);
+		Assert.assertTrue(addEngagementPage.getPageName("Engagement Add operations"));
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		engagementName = RandomNameGenerator.getName();
+		addEngagementPage.enterEngagementName(engagementName);
+		addEngagementPage.selectAccount(account);
+		addEngagementPage.selectDeliveryMethod(deliveryMethod);
+		addEngagementPage.selectContractType(contractType);
+		addEngagementPage.enterYears(years);
+		addEngagementPage.selectRadioButton4();
+		Thread.sleep(5000);
+		addEngagementPage.clickSubmit();
+		
+		Assert.assertTrue(dashboardPage.verifyElementMessage());
+		Thread.sleep(5000);
+			
+		
+	}
+	//*********************************************************
 }

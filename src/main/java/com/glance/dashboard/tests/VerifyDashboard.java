@@ -43,7 +43,47 @@ public class VerifyDashboard extends BaseTest{
 	}
 	
 	@Test (priority=0)
-	public void verifyDashboardElementDateRangeSubmit() throws Exception{
+	public void navigateofLeftPaneEntitesToParticularDashboardPage() throws Exception{
+		
+		
+		dashBoardPage = new DashboardPage(driver);
+		Assert.assertTrue(dashBoardPage.getPageName("Account Level Dashboard"));
+		
+		commonPage = new CommonPageObject(driver);
+		commonPage.waitForPageLoad(10);
+		
+		commonPageLeftPane= new CommonPageLeftPane(driver);
+		commonPageLeftPane.clickOnAccount();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		commonPageLeftPane.clickOnAccountName(accountName1);
+		dashBoardPage = new DashboardPage(driver);
+		Assert.assertTrue(dashBoardPage.getPageName("Account Level Dashboard"));
+		commonPageLeftPane.clickGlanceIcon();
+		
+		commonPage.waitForPageLoad(10);
+		commonPageLeftPane.clickEngagement();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		commonPageLeftPane.clickOnEngagementName(engagementName1);
+		dashBoardPage = new DashboardPage(driver);
+		Assert.assertTrue(dashBoardPage.getPageName("Engagement Level Dashboard"));
+		commonPageLeftPane.clickGlanceIcon();
+		
+		commonPage.waitForPageLoad(10);
+		commonPageLeftPane.clickProject();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		commonPageLeftPane.clickOnProjectName(projectName1);
+		dashBoardPage = new DashboardPage(driver);
+		Assert.assertTrue(dashBoardPage.getPageName("Project Level Dashboard"));
+		commonPageLeftPane.clickGlanceIcon();
+		
+		commonPage.waitForPageLoad(10);
+		commonPageLeftPane.clickIndividual();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+	}
+	
+	@Test (priority=1)
+	public void DateRangeSubmitfortheSelectedEntity() throws Exception{
 		
 		
 		dashBoardPage = new DashboardPage(driver);
@@ -54,18 +94,17 @@ public class VerifyDashboard extends BaseTest{
 		Thread.sleep(5000);
 		dashBoardPage.selectDateRange(dateRange);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//verify the selected date range is matched with what was clicked
+		dashBoardPage.clickDateRange();
 		
-	}
-	
-	@Test (priority=1)
-	public void verifyDashboardElementCustomeDateRangeSubmit() throws Exception{
-		
-		dashBoardPage = new DashboardPage(driver);
+		commonPageLeftPane= new CommonPageLeftPane(driver);
+		commonPageLeftPane.clickGlanceIcon();
+		commonPage = new CommonPageObject(driver);
+		commonPage.waitForPageLoad(10);
 		Assert.assertTrue(dashBoardPage.getPageName("Account Level Dashboard"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		dashBoardPage.clickDateRange();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
 		dashBoardPage.selectCustomDate();
 		dashBoardPage.selectStartYear();
 		dashBoardPage.selectStartMonth();
@@ -74,18 +113,15 @@ public class VerifyDashboard extends BaseTest{
 		dashBoardPage.selectEndMonth();
 		dashBoardPage.selectEndDate();
 		dashBoardPage.selectSubmit();
+		//verify the selected date range is matched with what was clicked
+		dashBoardPage.clickDateRange();
 		
-	}
-	
-	@Test (priority=2)
-	public void verifyDashboardElementCustomeDateRangeClear() throws Exception{
-		
-		dashBoardPage = new DashboardPage(driver);
+		commonPageLeftPane.clickGlanceIcon();
+		commonPage.waitForPageLoad(10);
 		Assert.assertTrue(dashBoardPage.getPageName("Account Level Dashboard"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		dashBoardPage.clickDateRange();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
 		dashBoardPage.selectCustomDate();
 		dashBoardPage.selectStartYear();
 		dashBoardPage.selectStartMonth();
@@ -94,43 +130,34 @@ public class VerifyDashboard extends BaseTest{
 		dashBoardPage.selectEndMonth();
 		dashBoardPage.selectEndDate();
 		dashBoardPage.selectClear();
-	
+		//verify clear the selected date range (default date range has selected)
+		dashBoardPage.clickDateRange();
 	}
 	
-	@Test (priority=3)
-	public void verifyDashboardElementMaxMInIcons() throws Exception{
+	@Test (priority=2)
+	public void DashboardIconsfortheSelectedEntity() throws Exception{
 		
 		dashBoardPage = new DashboardPage(driver);
 		dashBoardPage.selectMaxMin();
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		
-	}
-	
-	@Test (priority=4)
-	public void verifyDashboardElementCloseIcons() throws Exception{
-		
-		dashBoardPage = new DashboardPage(driver);
-		dashBoardPage.selectClose();
-		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
-		
-	}
-	
-	@Test (priority=5)
-	public void verifyDashboardElementCloseInDeletePopup() throws Exception{
-		
-		dashBoardPage = new DashboardPage(driver);
+		commonPageLeftPane= new CommonPageLeftPane(driver);
+		commonPageLeftPane.clickGlanceIcon();
+		commonPage = new CommonPageObject(driver);
+		commonPage.waitForPageLoad(10);
 		dashBoardPage.selectDelete();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		Assert.assertTrue(dashBoardPage.verifyDelete("Confirm element deletion!"));
 		dashBoardPage.selectCloseInPopup();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		
-	}
-	
-	@Test (priority=6)
-	public void verifyDashboardElementDeleteIcons() throws Exception{
+		commonPageLeftPane.clickGlanceIcon();
+		commonPage.waitForPageLoad(10);
+		dashBoardPage.selectClose();
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		
-		dashBoardPage = new DashboardPage(driver);
+		commonPageLeftPane.clickGlanceIcon();
+		commonPage.waitForPageLoad(10);
 		dashBoardPage.selectDelete();
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		Assert.assertTrue(dashBoardPage.verifyDelete("Confirm element deletion!"));
@@ -141,9 +168,10 @@ public class VerifyDashboard extends BaseTest{
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		
 	}
-	
-	@Test (priority=7)
-	public void verifyDashboardElementAddNewElement() throws Exception{
+
+
+	@Test (priority=3)
+	public void AddNewElementfortheSelectedEntity() throws Exception{
 		
 		dashBoardPage = new DashboardPage(driver);
 		dashBoardPage.selectAddNewElement();
@@ -151,6 +179,20 @@ public class VerifyDashboard extends BaseTest{
 		addElementWizardPage = new AddElementWizardPage(driver);
 		Assert.assertTrue(addElementWizardPage.getElementWizardPageTitle("Elements Wizard Account level"));
 		
+	}
+	
+	@Test (priority=4)
+	public void Noanyofusershavetheaccesstotheresourcerequested() throws Exception{
+		
+		commonPageLeftPane = new CommonPageLeftPane(driver);
+		commonPageLeftPane.clickLogout();
+		loginPage = new LoginPage(driver);
+		loginPage.enterUsername(userName1);
+		loginPage.enterPassword(password1);
+		loginPage.clickLoginBtn();
+		commonPage = new CommonPageObject(driver);
+		commonPage.waitForPageLoad(10);
+		//Assert.assertTrue(dashBoardPage.verifyNavigationToAccessDeniedPage("Access Denied!"));
 	}
 	
 	
