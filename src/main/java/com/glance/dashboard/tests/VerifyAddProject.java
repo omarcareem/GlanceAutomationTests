@@ -35,8 +35,7 @@ public class VerifyAddProject extends BaseTest {
 		// click on settings button in left panal
 		leftPanel=new CommonPageLeftPane(driver);
 		leftPanel.clickSettings();
-		Assert.assertTrue(settingPage.verifyNavigationToSettingPage("Dashboard Management"
-));
+		
 		
 		commonPage = new CommonPageObject(driver);
 		commonPage.waitForPageLoad(10);
@@ -175,7 +174,7 @@ public class VerifyAddProject extends BaseTest {
 	
 	
 	        
-	@Test (priority=0)
+	@Test (priority=2)
 	public void verifyAddProjectLeftPanal() throws Exception {        
 
 		// Login to Glance By entering user name and password
@@ -185,13 +184,25 @@ public class VerifyAddProject extends BaseTest {
 		login.clickLoginBtn();
 		
 		commonPage = new CommonPageObject(driver);
-		
+		settingPage=new SettingsPage(driver);
 		leftPanel=new CommonPageLeftPane(driver);
+		
+		// click on settings button in left panal
+		leftPanel=new CommonPageLeftPane(driver);
+		leftPanel.clickSettings();
+		Assert.assertTrue(settingPage.verifyNavigationToSettingPage("Dashboard Management"
+));
+		
+		// Get the count of Number of Projects before adding a project and click on add project button
+		
+		int previousCountProject=settingPage.getCountAddProject();
+		System.out.println("Previous Count:"+previousCountProject);
 		
 		//click on add new project from left panal in array
 		leftPanel.clickOnAddNewProjectLink();
 		commonPage.waitForPageLoad(20);
 		
+						
 		//Add Project Page
 		addProject=new AddProjectPage(driver);
 		
@@ -227,18 +238,22 @@ public class VerifyAddProject extends BaseTest {
 		
 		//click on settings page
 		leftPanel.clickSettings();
-		settingPage =new SettingsPage(driver);
+		
 		Assert.assertTrue(settingPage.verifyNavigationToSettingPage("Dashboard Management"
 ));
 		
-		//leftPanel.clickOnProjectName(projectName);
-		System.out.println(projectName);
-		
-		//check the new project has been added 
-		
-		//Assert.assertTrue(leftPanel.verifyAddedProject(projectName));
-		
-				
+		//get current count of number of accounts 
+        int newestCountProject=settingPage.getCountAddProject();
+        System.out.println(newestCountProject);
+
+        //compare the counts 
+        if(newestCountProject > previousCountProject)
+               System.out.println("New Project has been added");
+        
+        else 
+               System.out.println("Project has not been added");     
+        commonPage.waitForPageLoad(10);
+					
 		//Logout
         leftPanel.clickLogout();
 		
@@ -247,17 +262,6 @@ public class VerifyAddProject extends BaseTest {
 	
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

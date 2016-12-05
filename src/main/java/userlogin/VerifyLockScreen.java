@@ -10,7 +10,7 @@ import com.glance.pageobjects.dashboard.DashboardPage;
 import com.glance.pageobjects.userlogin.LockScreenPage;
 import com.glance.pageobjects.userlogin.LoginPage;
 
-public class VerifyLockScreen extends BaseTest{
+public class VerifyLockScreen{
 
 	
 	
@@ -20,7 +20,36 @@ public class VerifyLockScreen extends BaseTest{
 	LockScreenPage lockscreen;
 	DashboardPage dashboard;
 	
+	public class GL_Main_08 extends BaseTest { 
+		
+		@Test
+		public void verifyClickProfilePic() throws Exception {
+		
+		
+		// Login to Glance By entering user name and password
+				login=new LoginPage(driver);
+				login.enterUsername(userName);
+				login.enterPassword(password);
+				login.clickLoginBtn();
+						
+		// click on LockScreen button in left panal
+				leftPanel=new CommonPageLeftPane(driver);
+				leftPanel.clickScreenLock();
+						
+		//click on profile picture
+				lockscreen=new LockScreenPage(driver);
+				
+		//checking whether in lockscreen page		
+				Assert.assertTrue(lockscreen.verifyNavigationToLockScreen("Lock Screen"));
+				lockscreen.clickProfilePicture();
+				
 	
+		}
+		
+		
+	}
+	
+	public class GL_Main_09 extends BaseTest{
 	//Enter correct password and check
 	@Test (priority=0)
 	public void verifyLockScreen() throws Exception {
@@ -41,9 +70,9 @@ public class VerifyLockScreen extends BaseTest{
 			
 	//checking whether in lockscreen page		
 			Assert.assertTrue(lockscreen.verifyNavigationToLockScreen("Lock Screen"));
-			
-	//giving password and login		
 			lockscreen.clickProfilePicture();
+	//giving password and login		
+			
 			lockscreen.enterPassword(password);
 			lockscreen.clickLogInBtn();
 			
@@ -144,5 +173,5 @@ public class VerifyLockScreen extends BaseTest{
 			
 			
 		}
-	
+	}
 }

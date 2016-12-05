@@ -52,8 +52,7 @@ public class VerifySettingsPage extends BaseTest {
 		// click on settings button in left panal
 				leftPanel=new CommonPageLeftPane(driver);
 				leftPanel.clickSettings();
-				Assert.assertTrue(settingPage.verifyNavigationToSettingPage("Dashboard Management"
-						));
+				Assert.assertTrue(settingPage.verifyNavigationToSettingPage("Dashboard Management"));
 				
 				
 		//click on add account and check
@@ -108,7 +107,7 @@ public class VerifySettingsPage extends BaseTest {
 		//click on Manage users and check
 				settingPage.clickManageUsersBtn();
 				userManagement=new UserManagementPage(driver);
-				Assert.assertTrue(userManagement.FindUserDetailsElement("User Details"));
+				Assert.assertTrue(userManagement.FindUserDetailsElement("All active users"));
 				
 				leftPanel.clickSettings();
 				
@@ -152,7 +151,7 @@ public class VerifySettingsPage extends BaseTest {
 		//click on profile update and check
 				settingPage.clickProfileUpdateBtn();
 				profileUpdate=new ProfileUpdatePage(driver);
-				//Assert.assertTrue(profileUpdate.FindUserDetailsElement("Update Profile Details"));	
+				Assert.assertTrue(profileUpdate.getProfileUpdateTitle("Update Profile Details"));	
 				
 				leftPanel.clickSettings();
 				
