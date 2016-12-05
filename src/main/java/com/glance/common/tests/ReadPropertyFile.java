@@ -38,6 +38,8 @@ public class ReadPropertyFile {
 	
 	public static String wrongpassword;
 	public static String emptypassword;
+	public static String userNameErr;
+	public static String passwordErr;
 	
 	public static String expectedMessageUserId;
 	public static String expectedMessageUserName;
@@ -69,6 +71,39 @@ public class ReadPropertyFile {
 	public static String showEntry;
 	public static String enterSearch;
 	public static String recordInsert;
+	
+	public static String emailAdd;
+	public static String emailAddErr;
+	
+	public static String newValidUN;
+	public static String newValidEID;
+	public static String newValidPSW;
+	public static String newValidConPSW;
+	public static String newInvalidUN1;
+	public static String newInvalidUN2;
+	public static String newInvalidEID;
+	public static String newInvalidPSW1;
+	public static String newInvalidPSW2;
+	public static String newInvalidConPSW1;
+	public static String newInvalidConPSW2;
+	
+	
+	public static String updateInvalidUN1;
+	public static String upadteInvalidUN2;
+	public static String updateExistingUN;
+	public static String updateValidUN;
+	public static String updateInvalidEID;
+	public static String updateValidEID;
+	public static String updateInvalidPSW1;
+	public static String updateInvalidConPSW1;
+	public static String updateInvalidPSW2;
+	public static String updateInvalidConPSW2;
+	public static String updateValidPSW;
+	public static String updateValidConPSW;
+	public static String updateInvalidConPSW;
+	public static String updateFirstName;
+	public static String UpdatelastName;
+	
 	
 
 	public static Properties getDataRepository() throws IOException {
@@ -175,6 +210,85 @@ public class ReadPropertyFile {
 		System.out.println(enterSearch);
 		recordInsert=getDataRepository().getProperty("recordInsert");
 		System.out.println(recordInsert);
+		
+		
+		//LoginValidation
+		userNameErr=getDataRepository().getProperty("userNameErr");
+		System.out.println(userNameErr);
+		passwordErr=getDataRepository().getProperty("passwordErr");
+		System.out.println(passwordErr);
+				
+		//LostPasswordValidatin
+		emailAdd=getDataRepository().getProperty("emailAdd");
+		System.out.println(emailAdd);
+		emailAddErr=getDataRepository().getProperty("emailAddErr");
+		System.out.println(emailAddErr);
+				
+		//CreateAccountValidation
+		newValidUN=getDataRepository().getProperty("newValidUN");
+		System.out.println(newValidUN);
+		newValidEID=getDataRepository().getProperty("newValidEID");
+		System.out.println(newValidEID);
+		newValidPSW=getDataRepository().getProperty("newValidPSW");
+		System.out.println(newValidPSW);
+		newValidConPSW=getDataRepository().getProperty("newValidConPSW");
+		System.out.println(newValidConPSW);
+		newInvalidUN1=getDataRepository().getProperty("newInvalidUN1");
+		System.out.println(newInvalidUN1);
+		newInvalidUN2=getDataRepository().getProperty("newInvalidUN2");
+		System.out.println(newInvalidUN2);
+		newInvalidEID=getDataRepository().getProperty("newInvalidEID");
+		System.out.println(newInvalidEID);
+		newInvalidPSW1=getDataRepository().getProperty("newInvalidPSW1");
+		System.out.println(newInvalidPSW1);
+		newInvalidPSW2=getDataRepository().getProperty("newInvalidPSW2");
+		System.out.println(newInvalidPSW2);
+		newInvalidConPSW1=getDataRepository().getProperty("newInvalidConPSW1");
+		System.out.println(newInvalidConPSW1);
+		newInvalidConPSW2=getDataRepository().getProperty("newInvalidConPSW2");
+		System.out.println(newInvalidConPSW2);
+				
+		//profile Update Page Validations
+		updateInvalidUN1=getDataRepository().getProperty("updateInvalidUN1");
+		System.out.println(updateInvalidUN1);
+		upadteInvalidUN2=getDataRepository().getProperty("upadteInvalidUN2");
+		System.out.println(upadteInvalidUN2);
+		updateExistingUN=getDataRepository().getProperty("updateExistingUN");
+		System.out.println(newInvalidConPSW2);
+				
+		updateValidUN=getDataRepository().getProperty("updateValidUN");
+		System.out.println(updateValidUN);
+		updateInvalidEID=getDataRepository().getProperty("updateInvalidEID");
+		System.out.println(updateInvalidEID);
+		updateValidEID=getDataRepository().getProperty("updateValidEID");
+		System.out.println(updateValidEID);
+				
+		updateInvalidPSW1=getDataRepository().getProperty("updateInvalidPSW1");
+		System.out.println(updateInvalidPSW1);
+		updateInvalidConPSW1=getDataRepository().getProperty("updateInvalidConPSW1");
+		System.out.println(updateInvalidConPSW1);
+		updateInvalidPSW2=getDataRepository().getProperty("updateInvalidPSW2");
+		System.out.println(updateInvalidPSW2);
+				
+				
+		updateInvalidConPSW2=getDataRepository().getProperty("updateInvalidConPSW2");
+		System.out.println(updateInvalidConPSW2);
+		updateValidPSW=getDataRepository().getProperty("updateValidPSW");
+		System.out.println(updateValidPSW);
+		updateValidConPSW=getDataRepository().getProperty("updateValidConPSW");
+		System.out.println(updateValidConPSW);
+				
+		updateInvalidConPSW=getDataRepository().getProperty("updateInvalidConPSW");
+		System.out.println(updateInvalidConPSW);
+		updateFirstName=getDataRepository().getProperty("updateFirstName");
+		System.out.println(updateFirstName);
+		UpdatelastName=getDataRepository().getProperty("UpdatelastName");
+		System.out.println(UpdatelastName);
+				
+				
+			
 	}
 
+	
+	
 }
