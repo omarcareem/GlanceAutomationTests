@@ -104,7 +104,18 @@ public class ReadPropertyFile {
 	public static String updateFirstName;
 	public static String UpdatelastName;
 	
-	
+	public static String grpName;
+    public static String grpNameNew;
+    public static String grpNameDeleted;
+    public static String accountName3;
+    public static String projectName;
+    public static String expectedMessageEdit;
+    public static String searchTwo;
+    public static String searchFullText;
+    public static String searchAPE;
+    public static String searchEmpty;
+    public static String searchAD;
+
 
 	public static Properties getDataRepository() throws IOException {
 		// Read object repository file
@@ -285,7 +296,18 @@ public class ReadPropertyFile {
 		UpdatelastName=getDataRepository().getProperty("UpdatelastName");
 		System.out.println(UpdatelastName);
 				
-				
+		grpName=getDataRepository().getProperty("grpName");
+		grpNameNew=getDataRepository().getProperty("grpNameNew");
+		grpNameDeleted=getDataRepository().getProperty("grpNameDeleted");
+		
+		accountName=getDataRepository().getProperty("accountName");
+		projectName=getDataRepository().getProperty("projectName");
+		expectedMessageEdit=getDataRepository().getProperty("expectedMessageEdit");
+		searchTwo=getDataRepository().getProperty("searchTwo");
+		searchFullText=getDataRepository().getProperty("searchFullText");
+		searchAPE=getDataRepository().getProperty("searchAPE");
+		searchEmpty=getDataRepository().getProperty("searchEmpty");
+		searchAD=getDataRepository().getProperty("searchAD");		
 			
 	}
 
