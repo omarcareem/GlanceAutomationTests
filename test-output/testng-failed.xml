@@ -3,21 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.glance.dashboard.tests.VerifyDeleteSearchResults">
+      <class name="com.glance.dashboard.tests.VerifyAddEngagement">
         <methods>
-          <include name="deleteSearchResultPageDeleteCancel"/>
-          <include name="DeleteSearchrecordInparticularsearchentryandinparticularpage"/>
-          <include name="deleteSearchResultPageShowEntryAndPAgeNavigation"/>
-          <include name="deleteSearchResultPageDeleteFailed"/>
-          <include name="deleteSearchResultPageAllPageNavigation"/>
-          <include name="testLogout"/>
-          <include name="deleteSearchResultPageMiddlePageNavigation"/>
-          <include name="initializeTest"/>
+          <include name="verifyAddNewEngagement" invocation-numbers="0"/>
           <include name="testLogin"/>
+          <include name="initializeTest"/>
+          <include name="testLogout"/>
           <include name="testStartUp"/>
-          <include name="deleteSearchResultPageEnterSearch"/>
         </methods>
-      </class> <!-- com.glance.dashboard.tests.VerifyDeleteSearchResults -->
+      </class> <!-- com.glance.dashboard.tests.VerifyAddEngagement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

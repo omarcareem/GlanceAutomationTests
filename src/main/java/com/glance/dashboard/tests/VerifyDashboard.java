@@ -43,7 +43,7 @@ public class VerifyDashboard extends BaseTest{
 	}
 	
 	@Test (priority=0)
-	public void navigateofLeftPaneEntitesToParticularDashboardPage() throws Exception{
+	public void GL_Settings_DB_35() throws Exception{
 		
 		
 		dashBoardPage = new DashboardPage(driver);
@@ -83,7 +83,7 @@ public class VerifyDashboard extends BaseTest{
 	}
 	
 	@Test (priority=1)
-	public void DateRangeSubmitfortheSelectedEntity() throws Exception{
+	public void GL_Settings_DB_36() throws Exception{
 		
 		
 		dashBoardPage = new DashboardPage(driver);
@@ -135,7 +135,7 @@ public class VerifyDashboard extends BaseTest{
 	}
 	
 	@Test (priority=2)
-	public void DashboardIconsfortheSelectedEntity() throws Exception{
+	public void GL_Settings_DB_37() throws Exception{
 		
 		dashBoardPage = new DashboardPage(driver);
 		dashBoardPage.selectMaxMin();
@@ -171,7 +171,7 @@ public class VerifyDashboard extends BaseTest{
 
 
 	@Test (priority=3)
-	public void AddNewElementfortheSelectedEntity() throws Exception{
+	public void GL_Settings_DB_38() throws Exception{
 		
 		dashBoardPage = new DashboardPage(driver);
 		dashBoardPage.selectAddNewElement();
@@ -182,7 +182,7 @@ public class VerifyDashboard extends BaseTest{
 	}
 	
 	@Test (priority=4)
-	public void Noanyofusershavetheaccesstotheresourcerequested() throws Exception{
+	public void GL_Settings_DB_39() throws Exception{
 		
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickLogout();
