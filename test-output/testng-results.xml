@@ -2,24 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11950" started-at="2016-12-05T10:17:51Z" finished-at="2016-12-05T10:18:03Z">
+  <suite name="Default suite" duration-ms="9065" started-at="2016-12-07T10:22:09Z" finished-at="2016-12-07T10:22:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11950" started-at="2016-12-05T10:17:51Z" finished-at="2016-12-05T10:18:03Z">
-      <class name="userlogin.VerifySettingsPage">
-        <test-method status="PASS" signature="testStartUp()[pri:0, instance:userlogin.VerifySettingsPage@146ba0ac]" name="testStartUp" is-config="true" duration-ms="31" started-at="2016-12-05T15:47:51Z" finished-at="2016-12-05T15:47:51Z">
+    <test name="Default test" duration-ms="9065" started-at="2016-12-07T10:22:09Z" finished-at="2016-12-07T10:22:18Z">
+      <class name="com.glance.dashboard.tests.VerifyAddProject">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.dashboard.tests.VerifyAddProject@4dfa3a9d]" name="testStartUp" is-config="true" duration-ms="31" started-at="2016-12-07T15:52:09Z" finished-at="2016-12-07T15:52:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStartUp -->
-        <test-method status="PASS" signature="initializeTest()[pri:0, instance:userlogin.VerifySettingsPage@146ba0ac]" name="initializeTest" is-config="true" duration-ms="4859" started-at="2016-12-05T15:47:51Z" finished-at="2016-12-05T15:47:56Z">
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.dashboard.tests.VerifyAddProject@4dfa3a9d]" name="initializeTest" is-config="true" duration-ms="7418" started-at="2016-12-07T15:52:09Z" finished-at="2016-12-07T15:52:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method status="PASS" signature="verifySettingsPage()[pri:0, instance:userlogin.VerifySettingsPage@146ba0ac]" name="verifySettingsPage" duration-ms="7082" started-at="2016-12-05T15:47:56Z" finished-at="2016-12-05T15:48:03Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.glance.dashboard.tests.VerifyAddProject@4dfa3a9d]" name="login" is-config="true" duration-ms="201" started-at="2016-12-07T15:52:17Z" finished-at="2016-12-07T15:52:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySettingsPage -->
-      </class> <!-- userlogin.VerifySettingsPage -->
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="GL_Settings_AP_15_verifyAddProjectNavigation()[pri:0, instance:com.glance.dashboard.tests.VerifyAddProject@4dfa3a9d]" name="GL_Settings_AP_15_verifyAddProjectNavigation" duration-ms="1421" started-at="2016-12-07T15:52:17Z" finished-at="2016-12-07T15:52:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_AP_15_verifyAddProjectNavigation -->
+      </class> <!-- com.glance.dashboard.tests.VerifyAddProject -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
