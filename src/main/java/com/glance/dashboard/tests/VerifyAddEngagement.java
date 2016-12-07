@@ -245,10 +245,10 @@ public class VerifyAddEngagement extends BaseTest {
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		
 	}
-	
+/*	
 	//********************************************************
-	@Test(dataProvider = "chartTestData", dataProviderClass = GlanceDataProvider.class)
-	public void verifyAddNewEngagement(String engagementName, String account, String deliveryMethod, String contractType, String years) throws Exception {
+	@Test(dataProvider = "AddEngagementData", dataProviderClass = GlanceDataProvider.class)
+	public void verifyAddNewEngagement(String engagement, String account, String deliveryMethod, String contractType, String years) throws Exception {
 
 		
 		CommonPageObject commonPage = new CommonPageObject(driver);
@@ -262,13 +262,13 @@ public class VerifyAddEngagement extends BaseTest {
 
 		addEngagementPage = new AddEngagementPage(driver);
 		Assert.assertTrue(addEngagementPage.getPageName("Engagement Add operations"));
+		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		engagementName = RandomNameGenerator.getName();
-		addEngagementPage.enterEngagementName(engagementName);
-		addEngagementPage.selectAccount(account);
-		addEngagementPage.selectDeliveryMethod(deliveryMethod);
-		addEngagementPage.selectContractType(contractType);
-		addEngagementPage.enterYears(years);
+		addEngagementPage.enterEngagementName2(engagement);
+		addEngagementPage.selectAccount2(account);
+		addEngagementPage.selectDeliveryMethod2(deliveryMethod);
+		addEngagementPage.selectContractType2(contractType);
+		addEngagementPage.enterYear2(years);
 		addEngagementPage.selectRadioButton4();
 		Thread.sleep(5000);
 		addEngagementPage.clickSubmit();
@@ -278,5 +278,5 @@ public class VerifyAddEngagement extends BaseTest {
 			
 		
 	}
-	//*********************************************************
+*/	//*********************************************************
 }

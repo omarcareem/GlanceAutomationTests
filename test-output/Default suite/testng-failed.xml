@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="userlogin.VerifySettingsPage">
         <methods>
           <include name="verifySocketsPage"/>
@@ -18,6 +19,17 @@
           <include name="login"/>
         </methods>
       </class> <!-- userlogin.VerifySettingsPage -->
+=======
+      <class name="com.glance.dashboard.tests.VerifyAddEngagement">
+        <methods>
+          <include name="verifyAddNewEngagement" invocation-numbers="0"/>
+          <include name="testLogin"/>
+          <include name="initializeTest"/>
+          <include name="testLogout"/>
+          <include name="testStartUp"/>
+        </methods>
+      </class> <!-- com.glance.dashboard.tests.VerifyAddEngagement -->
+>>>>>>> sachiniTEST
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
