@@ -35,6 +35,7 @@ public class ReadPropertyFile {
 	public static String fundReleaseDate;
 	public static String status;
 	
+	public static String emptyProjectName;
 	
 	public static String wrongpassword;
 	public static String emptypassword;
@@ -135,6 +136,9 @@ public class ReadPropertyFile {
 		tableName=getDataRepository().getProperty("tableName");
 		System.out.println(tableName);
 		
+		
+		
+		
 		clientProjectId=getDataRepository().getProperty("clientProjectId");
 		System.out.println(clientProjectId);
 		engagementName=getDataRepository().getProperty("engagementName");
@@ -149,6 +153,9 @@ public class ReadPropertyFile {
 		System.out.println(fundReleaseDate);
 		status=getDataRepository().getProperty("status");
 		System.out.println(status);
+		
+		clientProjectId=getDataRepository().getProperty("emptyProjectName");
+		System.out.println(emptyProjectName);
 		
 		wrongpassword=getDataRepository().getProperty("wrongpassword");
 		System.out.println(wrongpassword);

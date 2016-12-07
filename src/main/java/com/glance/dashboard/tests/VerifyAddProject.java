@@ -57,7 +57,7 @@ public class VerifyAddProject extends BaseTest {
 		
 	}
 	
-/*	@Test (priority=1)
+	@Test (priority=1)
 	public void GL_Settings_AP_16_verifyAddProject() throws Exception{
 	
 				// click on settings button in left panal
@@ -90,7 +90,6 @@ public class VerifyAddProject extends BaseTest {
 				addProject.enterClientProjectId(clientProjectId);
 				addProject.selectEngagementName(engagementName);
 				addProject.selectApplicationName(applicationName);
-				System.out.println("=============================================");
 				addProject.selectFundingStartDate(fundStartDate);
 				addProject.selectFundingEndDate(fundEndDate);
 				addProject.selectFundingReleaseDate(fundReleaseDate);
@@ -100,9 +99,26 @@ public class VerifyAddProject extends BaseTest {
 				addProject.clickSubmitBtn();
 				commonPage.waitForPageLoad(30);
 				addProject.clickAddNewBtn();
+				
+				
+				// check whether navigated to Add Project page
+				Assert.assertTrue(addProject.verifyNavigationToAddProjectPage("Project "));
+				
+				
+		        projectName=RandomNameGenerator.getName();
+		        System.out.println(projectName);
+				addProject.enterProjectName(emptyProjectName);
+				addProject.enterClientProjectId(clientProjectId);
+				addProject.selectEngagementName(engagementName);
+				addProject.selectApplicationName(applicationName);
+				addProject.selectFundingStartDate(fundStartDate);
+				addProject.selectFundingEndDate(fundEndDate);
+				addProject.selectFundingReleaseDate(fundReleaseDate);
+				addProject.selectStatus(status);
+				
 	
 		
-	}*/
+	}
 	
 /*	@Test (priority=2)
 	public void GL_Settings_AP_17_verifyAddProjectSubmission() throws Exception{
