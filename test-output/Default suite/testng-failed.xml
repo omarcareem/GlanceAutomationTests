@@ -5,9 +5,17 @@
     <classes>
       <class name="userlogin.VerifySettingsPage">
         <methods>
+          <include name="verifySocketsPage"/>
           <include name="initializeTest"/>
-          <include name="verifySettingsPage"/>
+          <include name="GL_Settings_MU_56_verifyManageUsersPage"/>
+          <include name="GL_Settings_AA_01_verifyAddAccount"/>
+          <include name="GL_Settings_AP_14_verifyAddProject"/>
+          <include name="GL_Settings_DS_22_verifyDeleteSearch"/>
+          <include name="GL_Settings_DU_41_verifyDataUploadPage"/>
+          <include name="GL_Settings_AE_09_verifyAddEngagement"/>
+          <include name="GL_Settings_DM_45_verifyDataDeleteModifyPage"/>
           <include name="testStartUp"/>
+          <include name="login"/>
         </methods>
       </class> <!-- userlogin.VerifySettingsPage -->
     </classes>
