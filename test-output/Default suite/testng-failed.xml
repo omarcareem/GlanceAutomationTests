@@ -3,13 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="userlogin.VerifySettingsPage">
+      <class name="com.glance.datamanagement.tests.VerifyDataUploadPage">
         <methods>
+          <include name="login"/>
+          <include name="GL_Settings_DU_42_4"/>
           <include name="initializeTest"/>
-          <include name="verifySettingsPage"/>
           <include name="testStartUp"/>
+          <include name="waitingForPageLoad"/>
+          <include name="GL_Settings_DU_42_3"/>
         </methods>
-      </class> <!-- userlogin.VerifySettingsPage -->
+      </class> <!-- com.glance.datamanagement.tests.VerifyDataUploadPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
