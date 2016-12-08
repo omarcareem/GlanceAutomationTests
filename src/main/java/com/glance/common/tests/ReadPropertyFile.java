@@ -115,7 +115,7 @@ public class ReadPropertyFile {
 	public static String validfirstName;
 	public static String validlastName;
 	
-<<<<<<< HEAD
+
 	//User management
 
 	public static String group;
@@ -154,7 +154,7 @@ public class ReadPropertyFile {
 	public static String wrongEmail;
 
 	
-=======
+
 	public static String admin;
 	public static String manager_QA;
 	public static String sConsultant_QA;
@@ -164,7 +164,7 @@ public class ReadPropertyFile {
 	public static String engineer_QA;
 	public static String aEngineer_QA;
 	public static String jEngineer_QA;
->>>>>>> neelamaniTest
+
 	
 	
 	public static String selectTopPaneProfile;
@@ -367,7 +367,7 @@ public class ReadPropertyFile {
 		System.out.println(updateFirstName);
 		UpdatelastName=getDataRepository().getProperty("UpdatelastName");
 		System.out.println(UpdatelastName);
-<<<<<<< HEAD
+
 		
 		
 		//User management
@@ -408,7 +408,7 @@ public class ReadPropertyFile {
 		wrongEmail=getDataRepository().getProperty("wrongEmail");
 				
 			
-=======
+
 		validfirstName=getDataRepository().getProperty("validfirstName");
 		System.out.println(validfirstName);		
 		validlastName=getDataRepository().getProperty("validlastName");
@@ -440,7 +440,7 @@ public class ReadPropertyFile {
 		selectTopPaneLogout=getDataRepository().getProperty("selectTopPaneLogout");
 		System.out.println(selectTopPaneLogout);
 		
->>>>>>> neelamaniTest
+
 	}
 
 	

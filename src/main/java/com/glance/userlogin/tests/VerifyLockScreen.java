@@ -1,4 +1,4 @@
-package userlogin;
+package com.glance.userlogin.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

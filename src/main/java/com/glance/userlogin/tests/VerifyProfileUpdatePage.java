@@ -1,4 +1,4 @@
-package userlogin;
+package com.glance.userlogin.tests;
 
 import java.io.IOException;
 

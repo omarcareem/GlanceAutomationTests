@@ -64,7 +64,7 @@ public class GlanceDataProvider {
 		return chartData;
 	}
 	
-<<<<<<< HEAD
+
 	
 	
 	@DataProvider(name="SortData")
@@ -277,7 +277,7 @@ public class GlanceDataProvider {
 	
 
 }
-=======
+
 	/*@DataProvider(name="profileUpdateData")
 	public static Object[][] getProfileUpdateData() throws Exception
 	{
@@ -348,7 +348,7 @@ public class GlanceDataProvider {
 		return logineData;
 	}
 	*/
-	}
+	//}
 
 
->>>>>>> neelamaniTest
+

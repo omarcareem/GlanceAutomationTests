@@ -123,8 +123,8 @@ public class TestManageAccess extends BaseTest {
 				topPane.clickDropDownIcon();
 				topPane.clickLogout();
 				
-				loginPage.enterUsername(userName);
-				loginPage.enterPassword(password);
+				loginPage.enterUsername(userNameEdit);
+				loginPage.enterPassword(passwordEdit);
 				loginPage.clickLoginBtn();
 	
 	}
