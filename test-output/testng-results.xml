@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testng-results skipped="3" failed="0" total="3" passed="0">
+=======
+<testng-results skipped="0" failed="0" total="7" passed="7">
+>>>>>>> sajeththaTest
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5516" started-at="2016-12-08T07:55:19Z" finished-at="2016-12-08T07:55:25Z">
+  <suite name="Default suite" duration-ms="768060" started-at="2016-12-08T10:08:40Z" finished-at="2016-12-08T10:21:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5516" started-at="2016-12-08T07:55:19Z" finished-at="2016-12-08T07:55:25Z">
-      <class name="com.glance.usermanagement.tests.TestDeleteUser">
-        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.usermanagement.tests.TestDeleteUser@4dfa3a9d]" name="testStartUp" is-config="true" duration-ms="47" started-at="2016-12-08T13:25:19Z" finished-at="2016-12-08T13:25:19Z">
+    <test name="Default test" duration-ms="768060" started-at="2016-12-08T10:08:40Z" finished-at="2016-12-08T10:21:28Z">
+      <class name="com.glance.usermanagement.tests.TestGroupMembership">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="testStartUp" is-config="true" duration-ms="31" started-at="2016-12-08T15:38:40Z" finished-at="2016-12-08T15:38:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStartUp -->
-        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.usermanagement.tests.TestDeleteUser@4dfa3a9d]" name="initializeTest" is-config="true" duration-ms="5447" started-at="2016-12-08T13:25:19Z" finished-at="2016-12-08T13:25:24Z">
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="initializeTest" is-config="true" duration-ms="4267" started-at="2016-12-08T15:38:40Z" finished-at="2016-12-08T15:38:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
+<<<<<<< HEAD
         <test-method status="FAIL" signature="verifyGoToDeleteUserPage()[pri:0, instance:com.glance.usermanagement.tests.TestDeleteUser@4dfa3a9d]" name="verifyGoToDeleteUserPage" is-config="true" duration-ms="0" started-at="2016-12-08T13:25:24Z" finished-at="2016-12-08T13:25:24Z">
           <exception class="java.lang.Error">
             <message>
@@ -401,6 +406,65 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
         </test-method> <!-- finishTest -->
       </class> <!-- com.glance.dashboard.tests.VerifyAddEngagement -->
 >>>>>>> sachiniTEST
+=======
+        <test-method status="PASS" signature="verifyGoToEditGroupMembership()[pri:0, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="verifyGoToEditGroupMembership" is-config="true" duration-ms="3807" started-at="2016-12-08T15:38:44Z" finished-at="2016-12-08T15:38:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoToEditGroupMembership -->
+        <test-method status="PASS" signature="GL_Settings_GM_69_verifyAddGroupMembership()[pri:1, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="GL_Settings_GM_69_verifyAddGroupMembership" duration-ms="27368" started-at="2016-12-08T15:38:48Z" finished-at="2016-12-08T15:39:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_GM_69_verifyAddGroupMembership -->
+        <test-method status="PASS" signature="verifyGoToEditGroupMembership()[pri:0, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="verifyGoToEditGroupMembership" is-config="true" duration-ms="113474" started-at="2016-12-08T15:39:16Z" finished-at="2016-12-08T15:41:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoToEditGroupMembership -->
+        <test-method status="PASS" signature="GL_Settings_GM_71_verifyAddDuplicateEntries()[pri:2, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="GL_Settings_GM_71_verifyAddDuplicateEntries" duration-ms="8753" started-at="2016-12-08T15:41:09Z" finished-at="2016-12-08T15:41:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_GM_71_verifyAddDuplicateEntries -->
+        <test-method status="PASS" signature="verifyGoToEditGroupMembership()[pri:0, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="verifyGoToEditGroupMembership" is-config="true" duration-ms="113351" started-at="2016-12-08T15:41:18Z" finished-at="2016-12-08T15:43:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoToEditGroupMembership -->
+        <test-method status="PASS" signature="GL_Settings_GM_70_verifyAddGroupMembershipWithEmptyFields()[pri:3, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="GL_Settings_GM_70_verifyAddGroupMembershipWithEmptyFields" duration-ms="11057" started-at="2016-12-08T15:43:11Z" finished-at="2016-12-08T15:43:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_GM_70_verifyAddGroupMembershipWithEmptyFields -->
+        <test-method status="PASS" signature="verifyGoToEditGroupMembership()[pri:0, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="verifyGoToEditGroupMembership" is-config="true" duration-ms="113480" started-at="2016-12-08T15:43:22Z" finished-at="2016-12-08T15:45:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoToEditGroupMembership -->
+        <test-method status="PASS" signature="verifyCancelAddGroupMembership()[pri:4, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="verifyCancelAddGroupMembership" duration-ms="332" started-at="2016-12-08T15:45:16Z" finished-at="2016-12-08T15:45:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCancelAddGroupMembership -->
+        <test-method status="PASS" signature="verifyGoToEditGroupMembership()[pri:0, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="verifyGoToEditGroupMembership" is-config="true" duration-ms="113550" started-at="2016-12-08T15:45:16Z" finished-at="2016-12-08T15:47:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoToEditGroupMembership -->
+        <test-method status="PASS" signature="GL_Settings_GM_72_viewMembers()[pri:5, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="GL_Settings_GM_72_viewMembers" duration-ms="481" started-at="2016-12-08T15:47:10Z" finished-at="2016-12-08T15:47:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_GM_72_viewMembers -->
+        <test-method status="PASS" signature="verifyGoToEditGroupMembership()[pri:0, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="verifyGoToEditGroupMembership" is-config="true" duration-ms="113548" started-at="2016-12-08T15:47:10Z" finished-at="2016-12-08T15:49:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoToEditGroupMembership -->
+        <test-method status="PASS" signature="GL_Settings_GM_74_verifyCancelDelete()[pri:6, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="GL_Settings_GM_74_verifyCancelDelete" duration-ms="15504" started-at="2016-12-08T15:49:04Z" finished-at="2016-12-08T15:49:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_GM_74_verifyCancelDelete -->
+        <test-method status="PASS" signature="verifyGoToEditGroupMembership()[pri:0, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="verifyGoToEditGroupMembership" is-config="true" duration-ms="113461" started-at="2016-12-08T15:49:19Z" finished-at="2016-12-08T15:51:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoToEditGroupMembership -->
+        <test-method status="PASS" signature="GL_Settings_GM_73_verifyDeleteGroupMembership()[pri:7, instance:com.glance.usermanagement.tests.TestGroupMembership@4dfa3a9d]" name="GL_Settings_GM_73_verifyDeleteGroupMembership" duration-ms="15618" started-at="2016-12-08T15:51:13Z" finished-at="2016-12-08T15:51:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_GM_73_verifyDeleteGroupMembership -->
+      </class> <!-- com.glance.usermanagement.tests.TestGroupMembership -->
+>>>>>>> sajeththaTest
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

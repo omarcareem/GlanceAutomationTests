@@ -14,7 +14,7 @@ import com.glance.pageobjects.usermanagement.GroupMembershipPage;
 import com.glance.pageobjects.usermanagement.ManageGroupPage;
 
 
-public class TestAddGroupMembership extends BaseTest {
+public class TestGroupMembership extends BaseTest{
 	LoginPage loginPage;
 	CommonPageLeftPane leftPanel;
 	SettingsPage settingPage;
@@ -86,6 +86,7 @@ public class TestAddGroupMembership extends BaseTest {
 				settingPage.clickManageGroupsBtn();
 				addGroup.inputGroupName(groupAdd);
 				addGroup.clickAddGroup();
+				Thread.sleep(5000);
 				groupMembership.clickDone();
 				
 		//go to group membership page
@@ -155,5 +156,53 @@ public class TestAddGroupMembership extends BaseTest {
 		
 	}
 	
+	@Test(priority=5)
+	public void GL_Settings_GM_72_viewMembers() throws InterruptedException {
+
+//Select group
+		editGroup = new EditGroupMembership(driver);
+		settingPage = new SettingsPage(driver);
+		
+		settingPage.clickGroupMembershipBtn();
+		editGroup.selectGroup(groupAdd);
+		Assert.assertTrue(editGroup.verifyTableIsDisplayed());
+
+	}
 	
+	@Test(priority=6)
+	public void GL_Settings_GM_74_verifyCancelDelete() throws InterruptedException {
+		groupMembership = new GroupMembershipPage(driver);
+		editGroup = new EditGroupMembership(driver);
+//Delete user
+		
+		editGroup.removeUser(userNameEdit);
+		Thread.sleep(5000);
+		editGroup.selectGroup(groupAdd);
+		
+		editGroup.removeUser(userNameEdit);
+//Cancel delete user
+		editGroup.closeRemove();
+		Assert.assertTrue(groupMembership.verifyNavigationToGroupMembershipPage("Add group membership"));
+	}
+	
+	@Test(priority=7)
+	public void GL_Settings_GM_73_verifyDeleteGroupMembership() throws InterruptedException {
+
+//Select group
+		editGroup = new EditGroupMembership(driver);
+		editGroup.selectGroup(groupAdd);
+//Delete user
+		editGroup.removeUser(userNameEdit);
+		Thread.sleep(5000);
+	
+		editGroup.ClickOkToRemoveUser();
+//verify deleted
+		Thread.sleep(5000);
+		editGroup.selectGroup(groupAdd);
+		
+		Assert.assertTrue(editGroup.verifyRemove(userNameEdit));
+
+	}
 }
+	
+	
