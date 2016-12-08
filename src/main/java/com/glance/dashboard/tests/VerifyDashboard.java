@@ -15,6 +15,8 @@ import com.glance.pageobjects.dashboard.CommonPageTopPane;
 import com.glance.pageobjects.dashboard.DashboardPage;
 import com.glance.pageobjects.userlogin.CreateAccountPage;
 import com.glance.pageobjects.userlogin.LoginPage;
+import com.glance.pageobjects.userlogin.SettingsPage;
+import com.glance.pageobjects.usermanagement.DeleteUser;
 
 
 
@@ -205,7 +207,7 @@ public class VerifyDashboard extends BaseTest{
 		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		createAccount.clickpopupClose();
+		createAccount.clickpopupDone();
 		Thread.sleep(10000);
 		createAccount.clickLoginLink();
 		
@@ -218,6 +220,21 @@ public class VerifyDashboard extends BaseTest{
 		commonPage.waitForPageLoad(10);
 		Assert.assertTrue(dashBoardPage.verifyNavigationToAccessDeniedPage("Access Denied!"));
 		
+		commonPageLeftPane.clickLogout();
+		
+		loginPage = new LoginPage(driver);
+		loginPage.enterUsername(userName);
+		loginPage.enterPassword(password);
+		loginPage.clickLoginBtn();
+		
+		commonPageLeftPane.clickSettings();
+		SettingsPage settingsPage = new SettingsPage(driver);
+		settingsPage.clickManageUsersBtn();
+		
+		DeleteUser deleteUser = new DeleteUser(driver);
+		deleteUser.selectUserToDelete(userName1);
+		deleteUser.deleteUsers();
+		deleteUser.verifyDelete(userName1);
 		
 	}
 	
@@ -235,5 +252,6 @@ public class VerifyDashboard extends BaseTest{
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		commonPageLeftPane.clickOnAccountName(accountName4);
 		Assert.assertTrue(dashBoardPage.verifyElementMessage());
+		
 	}
 }
