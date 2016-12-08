@@ -89,11 +89,8 @@ public class VerifyAddEngagement extends BaseTest {
 		addEngagementPage.selectDeliveryMethod(DeliveryMethod);
 		addEngagementPage.selectContractType(conractType);
 		addEngagementPage.enterYears(years);
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		addEngagementPage.selectRadioButton4();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		addEngagementPage.clickSubmit();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		Assert.assertTrue(addEngagementPage.verifySubmit("Done adding new entry"));
 		addEngagementPage.selectAddNewEntry();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
