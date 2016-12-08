@@ -35,7 +35,11 @@ public class ReadPropertyFile {
 	public static String fundReleaseDate;
 	public static String status;
 	
-	public static String emptyProjectName;
+	/*public static String emptyProjectName;
+	public static String wrongProjectName;
+	public static String emptyClientProjectId;
+	public static String wrongClientProjectId;*/
+	
 	
 	public static String wrongpassword;
 	public static String emptypassword;
@@ -154,8 +158,15 @@ public class ReadPropertyFile {
 		status=getDataRepository().getProperty("status");
 		System.out.println(status);
 		
-		clientProjectId=getDataRepository().getProperty("emptyProjectName");
+		/*clientProjectId=getDataRepository().getProperty("emptyProjectName");
 		System.out.println(emptyProjectName);
+		clientProjectId=getDataRepository().getProperty("wrongProjectName");
+		System.out.println(wrongProjectName);
+		clientProjectId=getDataRepository().getProperty("emptyClientProjectId");
+		System.out.println(emptyClientProjectId);
+		clientProjectId=getDataRepository().getProperty("wrongClientProjectId");
+		System.out.println(wrongClientProjectId);*/
+		
 		
 		wrongpassword=getDataRepository().getProperty("wrongpassword");
 		System.out.println(wrongpassword);

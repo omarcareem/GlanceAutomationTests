@@ -64,8 +64,8 @@ public class GlanceDataProvider {
 		return chartData;
 	}
 	
-<<<<<<< HEAD
-=======
+	
+	
 	@DataProvider(name="SortData")
 	public static Object[][] getSortData() throws Exception
 	{
@@ -273,6 +273,6 @@ public class GlanceDataProvider {
 		}
 		return showEntryData;
 	}
->>>>>>> sachiniTEST
 	
+
 }

@@ -3,33 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="userlogin.VerifySettingsPage">
+      <class name="com.glance.dashboard.tests.VerifyAddProject">
         <methods>
-          <include name="verifySocketsPage"/>
           <include name="initializeTest"/>
-          <include name="GL_Settings_MU_56_verifyManageUsersPage"/>
-          <include name="GL_Settings_AA_01_verifyAddAccount"/>
-          <include name="GL_Settings_AP_14_verifyAddProject"/>
-          <include name="GL_Settings_DS_22_verifyDeleteSearch"/>
-          <include name="GL_Settings_DU_41_verifyDataUploadPage"/>
-          <include name="GL_Settings_AE_09_verifyAddEngagement"/>
-          <include name="GL_Settings_DM_45_verifyDataDeleteModifyPage"/>
-          <include name="testStartUp"/>
           <include name="login"/>
-        </methods>
-      </class> <!-- userlogin.VerifySettingsPage -->
-=======
-      <class name="com.glance.dashboard.tests.VerifyAddEngagement">
-        <methods>
-          <include name="verifyAddNewEngagement" invocation-numbers="0"/>
-          <include name="testLogin"/>
-          <include name="initializeTest"/>
-          <include name="testLogout"/>
+          <include name="GL_Settings_AP_16_03_verifyAddProject"/>
           <include name="testStartUp"/>
         </methods>
-      </class> <!-- com.glance.dashboard.tests.VerifyAddEngagement -->
->>>>>>> sachiniTEST
+      </class> <!-- com.glance.dashboard.tests.VerifyAddProject -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
