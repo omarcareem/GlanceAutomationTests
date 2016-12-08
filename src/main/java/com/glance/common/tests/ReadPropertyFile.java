@@ -112,10 +112,13 @@ public class ReadPropertyFile {
     public static String expectedMessageEdit;
     public static String searchTwo;
     public static String searchFullText;
-    public static String searchAPE;
+    public static String searchUnexisting;
     public static String searchEmpty;
     public static String searchAD;
-
+    public static String expectedMessage;
+    public static String profileUpdateTitle;
+    public static String lblLoginTitle;
+    public static String expectedMessageTitleSet;
 
 	public static Properties getDataRepository() throws IOException {
 		// Read object repository file
@@ -305,10 +308,13 @@ public class ReadPropertyFile {
 		expectedMessageEdit=getDataRepository().getProperty("expectedMessageEdit");
 		searchTwo=getDataRepository().getProperty("searchTwo");
 		searchFullText=getDataRepository().getProperty("searchFullText");
-		searchAPE=getDataRepository().getProperty("searchAPE");
+		searchUnexisting=getDataRepository().getProperty("searchUnexisting");
 		searchEmpty=getDataRepository().getProperty("searchEmpty");
-		searchAD=getDataRepository().getProperty("searchAD");		
-			
+		searchAD=getDataRepository().getProperty("searchAD");	
+		expectedMessage=getDataRepository().getProperty("expectedMessage");
+		profileUpdateTitle=getDataRepository().getProperty("profileUpdateTitle");
+		lblLoginTitle=getDataRepository().getProperty("lblLoginTitle");
+		
 	}
 
 	

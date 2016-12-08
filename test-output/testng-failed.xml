@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="userlogin.VerifySettingsPage">
+      <class name="com.glance.commonPage.tests.VerifyCommonPageTopPane">
         <methods>
           <include name="initializeTest"/>
-          <include name="verifySettingsPage"/>
+          <include name="GL_Main_33"/>
           <include name="testStartUp"/>
         </methods>
-      </class> <!-- userlogin.VerifySettingsPage -->
+      </class> <!-- com.glance.commonPage.tests.VerifyCommonPageTopPane -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

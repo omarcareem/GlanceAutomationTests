@@ -1,25 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="13" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11950" started-at="2016-12-05T10:17:51Z" finished-at="2016-12-05T10:18:03Z">
+  <suite name="Default suite" duration-ms="391745" started-at="2016-12-08T11:46:44Z" finished-at="2016-12-08T11:53:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11950" started-at="2016-12-05T10:17:51Z" finished-at="2016-12-05T10:18:03Z">
-      <class name="userlogin.VerifySettingsPage">
-        <test-method status="PASS" signature="testStartUp()[pri:0, instance:userlogin.VerifySettingsPage@146ba0ac]" name="testStartUp" is-config="true" duration-ms="31" started-at="2016-12-05T15:47:51Z" finished-at="2016-12-05T15:47:51Z">
+    <test name="Default test" duration-ms="391745" started-at="2016-12-08T11:46:44Z" finished-at="2016-12-08T11:53:16Z">
+      <class name="com.glance.commonPage.tests.VerifyCommonPageTopPane">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="testStartUp" is-config="true" duration-ms="16" started-at="2016-12-08T17:16:44Z" finished-at="2016-12-08T17:16:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStartUp -->
-        <test-method status="PASS" signature="initializeTest()[pri:0, instance:userlogin.VerifySettingsPage@146ba0ac]" name="initializeTest" is-config="true" duration-ms="4859" started-at="2016-12-05T15:47:51Z" finished-at="2016-12-05T15:47:56Z">
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="initializeTest" is-config="true" duration-ms="3320" started-at="2016-12-08T17:16:45Z" finished-at="2016-12-08T17:16:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method status="PASS" signature="verifySettingsPage()[pri:0, instance:userlogin.VerifySettingsPage@146ba0ac]" name="verifySettingsPage" duration-ms="7082" started-at="2016-12-05T15:47:56Z" finished-at="2016-12-05T15:48:03Z">
+        <test-method status="PASS" signature="GL_Main_22()[pri:0, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_22" duration-ms="8733" started-at="2016-12-08T17:16:48Z" finished-at="2016-12-08T17:16:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySettingsPage -->
-      </class> <!-- userlogin.VerifySettingsPage -->
+        </test-method> <!-- GL_Main_22 -->
+        <test-method status="PASS" signature="GL_Main_23()[pri:1, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_23" duration-ms="32376" started-at="2016-12-08T17:16:57Z" finished-at="2016-12-08T17:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_23 -->
+        <test-method status="PASS" signature="GL_Main_24()[pri:2, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_24" duration-ms="31639" started-at="2016-12-08T17:17:29Z" finished-at="2016-12-08T17:18:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_24 -->
+        <test-method status="PASS" signature="GL_Main_25()[pri:3, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_25" duration-ms="36848" started-at="2016-12-08T17:18:01Z" finished-at="2016-12-08T17:18:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_25 -->
+        <test-method status="PASS" signature="GL_Main_26()[pri:4, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_26" duration-ms="31778" started-at="2016-12-08T17:18:37Z" finished-at="2016-12-08T17:19:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_26 -->
+        <test-method status="PASS" signature="GL_Main_27()[pri:5, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_27" duration-ms="6245" started-at="2016-12-08T17:19:09Z" finished-at="2016-12-08T17:19:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_27 -->
+        <test-method status="PASS" signature="GL_Main_28()[pri:6, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_28" duration-ms="34317" started-at="2016-12-08T17:19:15Z" finished-at="2016-12-08T17:19:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_28 -->
+        <test-method status="PASS" signature="GL_Main_29()[pri:7, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_29" duration-ms="34352" started-at="2016-12-08T17:19:50Z" finished-at="2016-12-08T17:20:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_29 -->
+        <test-method status="PASS" signature="GL_Main_30()[pri:8, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_30" duration-ms="34323" started-at="2016-12-08T17:20:24Z" finished-at="2016-12-08T17:20:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_30 -->
+        <test-method status="PASS" signature="GL_Main_31()[pri:9, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_31" duration-ms="34702" started-at="2016-12-08T17:20:58Z" finished-at="2016-12-08T17:21:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_31 -->
+        <test-method status="PASS" signature="GL_Main_32()[pri:10, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_32" duration-ms="34582" started-at="2016-12-08T17:21:33Z" finished-at="2016-12-08T17:22:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_32 -->
+        <test-method status="FAIL" signature="GL_Main_33()[pri:11, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_33" duration-ms="34270" started-at="2016-12-08T17:22:08Z" finished-at="2016-12-08T17:22:42Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.glance.commonPage.tests.VerifyCommonPageTopPane.GL_Main_33(VerifyCommonPageTopPane.java:267)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_33 -->
+        <test-method status="PASS" signature="GL_Main_34()[pri:12, instance:com.glance.commonPage.tests.VerifyCommonPageTopPane@4dfa3a9d]" name="GL_Main_34" duration-ms="34235" started-at="2016-12-08T17:22:42Z" finished-at="2016-12-08T17:23:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Main_34 -->
+      </class> <!-- com.glance.commonPage.tests.VerifyCommonPageTopPane -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
