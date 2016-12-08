@@ -207,6 +207,7 @@ public class GlanceDataProvider {
 
 }
 
+<<<<<<< HEAD
 	/*@DataProvider(name="profileUpdateData")
 	public static Object[][] getProfileUpdateData() throws Exception
 	{
@@ -281,3 +282,5 @@ public class GlanceDataProvider {
 
 
 
+=======
+>>>>>>> poornimaTEST

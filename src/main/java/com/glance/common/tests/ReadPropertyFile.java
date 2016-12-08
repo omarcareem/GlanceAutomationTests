@@ -26,6 +26,8 @@ public class ReadPropertyFile {
 	public static String segment;
 	public static String tableName;
 	public static String userin;
+	public static String userin1;
+	public static String colomName;
 	
 	public static String clientProjectId;
 	public static String engagementName;
@@ -210,6 +212,12 @@ public class ReadPropertyFile {
 		System.out.println(segment);
 		tableName=getDataRepository().getProperty("tableName");
 		System.out.println(tableName);
+		userin=getDataRepository().getProperty("userin");
+		System.out.println(userin);
+		userin1=getDataRepository().getProperty("userin1");
+		System.out.println(userin1);
+		colomName=getDataRepository().getProperty("colomName");
+		System.out.println(colomName);
 		
 		
 		

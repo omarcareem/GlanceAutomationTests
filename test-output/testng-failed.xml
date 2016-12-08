@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <class name="com.glance.usermanagement.tests.TestDeleteUser">
 =======
       <class name="com.glance.usermanagement.tests.TestAddGroupMembership">
@@ -20,8 +21,18 @@
           <include name="GL_Settings_GM_70_verifyAddGroupMembershipWithEmptyFields"/>
           <include name="verifyGoToEditGroupMembership"/>
           <include name="GL_Settings_GM_73_verifyDeleteGroupMembership"/>
+=======
+      <class name="com.glance.datamanagement.tests.VerifyDataUploadPage">
+        <methods>
+          <include name="login"/>
+          <include name="GL_Settings_DU_42_4"/>
+          <include name="initializeTest"/>
+>>>>>>> poornimaTEST
           <include name="testStartUp"/>
+          <include name="waitingForPageLoad"/>
+          <include name="GL_Settings_DU_42_3"/>
         </methods>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </class> <!-- com.glance.usermanagement.tests.TestDeleteUser -->
 =======
@@ -54,6 +65,9 @@
 =======
       </class> <!-- com.glance.usermanagement.tests.TestAddGroupMembership -->
 >>>>>>> sajeththaTest
+=======
+      </class> <!-- com.glance.datamanagement.tests.VerifyDataUploadPage -->
+>>>>>>> poornimaTEST
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
