@@ -2,326 +2,224 @@ package userlogin;
 
 import junit.framework.Assert;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.glance.common.tests.BaseTest;
+//import com.glance.pageobjects.dashboard.CommonPageLeftPane;
 import com.glance.pageobjects.userlogin.CreateAccountPage;
 import com.glance.pageobjects.userlogin.LoginPage;
+//import com.glance.pageobjects.userlogin.SettingsPage;
 
 
-public class VerifyCreateAccountPage {
+public class VerifyCreateAccountPage extends BaseTest {
+
+	@BeforeMethod
+	public void createAccnvigation() throws InterruptedException{
+	LoginPage loginPage=new LoginPage(driver);
+	loginPage.navigateCreateAccountPage();
+	Thread.sleep(5000);
+	}
 	
-	public class GL_Login_05 extends BaseTest{
+	
+	@AfterMethod
+	public void LoginNavigation()
+	{
+		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		createAccount.clickLoginLink();
+	}
+	
 	
 	@Test (priority = 0)
-	public void verifynavigationCreateAccountPage() throws InterruptedException {
-		
-		LoginPage loginPage=new LoginPage(driver);
-		Thread.sleep(10000);
-		loginPage.navigateCreateAccountPage();
-		Thread.sleep(10000);
+	public void GL_Login_05() throws InterruptedException {
+	
+		Thread.sleep(5000);
 		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		Thread.sleep(5000);
 		Assert.assertTrue(createAccount.getCreateAccTitle("Create Account"));
-		createAccount.clickLoginLink();
+		Thread.sleep(5000);
 	}
+
 	
-	}
 	
-	public class GL_Login_06 extends BaseTest{
 	@Test (priority =1)
-	public void verifyValidAccountCreation() throws InterruptedException {
+	public void GL_Login_06() throws InterruptedException {
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
 		
 		CreateAccountPage createAccount=new CreateAccountPage(driver);
+	
+			//Valid account Creation
 		Thread.sleep(5000);
 		createAccount.createUsername(newValidUN);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newValidPSW);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newValidConPSW);
-		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("New User inserted successfully"));
-		Thread.sleep(10000);
-		createAccount.clickpopupOkay();
-		Thread.sleep(10000);
-		createAccount.clickLoginLink();
-		
-		
-	}
-	
-	
-	@Test (priority =2)
-	public void verifyInvalidAccountCreation2() throws InterruptedException {
-		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
-		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		Assert.assertTrue(createAccount.getPopupMsg1("New User inserted successfully"));
 		Thread.sleep(5000);
-		createAccount.createUsername(newInvalidUN1);
-		Thread.sleep(5000);
-		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
-		createAccount.createpassword(newInvalidPSW1);
-		Thread.sleep(5000);
-		createAccount.confirmPassword(newValidConPSW);
+		createAccount.clickpopupDone();
+		Thread.sleep(1000);
 
-		
+		//Invalid account creation 1
+		createAccount.createUsername(newInvalidUN1);
+		createAccount.addemailAdd(newValidEID);
+		createAccount.createpassword(newInvalidPSW1);
+		createAccount.confirmPassword(newValidConPSW);
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("The passsword and confirmation password do not match !"));
+		Assert.assertTrue(createAccount.getPopupMsg2("The passsword and confirmation password do not match !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
+		
+		//Invalid account creation 2
+		createAccount.createUsername(newInvalidUN1);
+		createAccount.addemailAdd(newValidEID);
+		createAccount.createpassword(newInvalidPSW1);
+		createAccount.confirmPassword(newValidConPSW);
+		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		createAccount.clickLoginLink();
-	}
-	
-	
-	@Test (priority =3)
-	public void verifyInvalidAccountCreation3() throws InterruptedException {
+		Assert.assertTrue(createAccount.getPopupMsg2("The passsword and confirmation password do not match !"));
+		Thread.sleep(5000);
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
 		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		
+		//Invalid account creation 3
 		Thread.sleep(5000);
 		createAccount.createUsername(newValidUN);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newInvalidPSW1);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newInvalidConPSW1);
-		Thread.sleep(5000);
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("Please enter user name and password in valid length !"));
+		Assert.assertTrue(createAccount.getPopupMsg3("Please enter user name and password in valid length !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
-		createAccount.clickLoginLink();
-	
-	}
-
-	
-	@Test (priority = 4)
-	public void verifyInvalidAccountCreation4() throws InterruptedException {
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
-		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		//Invalid account creation 4
 		Thread.sleep(5000);
 		createAccount.createUsername(newInvalidUN2);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newInvalidPSW1);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newValidConPSW);
-		Thread.sleep(5000);
-		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("The passsword and confirmation password do not match !"));
+		Assert.assertTrue(createAccount.getPopupMsg2("The passsword and confirmation password do not match !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
-		createAccount.clickLoginLink();
-	}
-	
-	
-	
-	@Test (priority = 5)
-	public void verifyInvalidAccountCreation5() throws InterruptedException {
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
-		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		//invalid account creation 5
 		Thread.sleep(5000);
 		createAccount.createUsername(newInvalidUN1);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newValidPSW);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newInvalidConPSW1);
-		Thread.sleep(5000);
-		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("The passsword and confirmation password do not match !"));
+		Assert.assertTrue(createAccount.getPopupMsg2("The passsword and confirmation password do not match !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
-		createAccount.clickLoginLink();
-	}
-	
-	@Test (priority = 6)
-	public void verifyInvalidAccountCreation6() throws InterruptedException {
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
-		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		//Invalid account creation 6
 		Thread.sleep(5000);
 		createAccount.createUsername(newInvalidUN2);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newValidPSW);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newValidConPSW);
-		Thread.sleep(5000);
-		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("Please enter user name and password in valid length !"));
+		Assert.assertTrue(createAccount.getPopupMsg3("Please enter user name and password in valid length !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
-		createAccount.clickLoginLink();
-	}
-	
-	@Test (priority = 7)
-	public void verifyInvalidAccountCreation7() throws InterruptedException {
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
-		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		//Invalid account creation 7
 		Thread.sleep(5000);
 		createAccount.createUsername(newInvalidUN1);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newInvalidPSW2);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newValidConPSW);
-		Thread.sleep(5000);
-		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("The passsword and confirmation password do not match !"));
+		Assert.assertTrue(createAccount.getPopupMsg2("The passsword and confirmation password do not match !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
-		createAccount.clickLoginLink();
-	}
-	
-	@Test (priority = 8)
-	public void verifyInvalidAccountCreation8() throws InterruptedException {
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
 		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		//Invalid account creation 8
 		Thread.sleep(5000);
 		createAccount.createUsername(newValidUN);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newInvalidPSW2);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newInvalidConPSW2);
-		Thread.sleep(5000);
-		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("Please enter user name and password in valid length !"));
+		Assert.assertTrue(createAccount.getPopupMsg3("Please enter user name and password in valid length !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
-		createAccount.clickLoginLink();
-	}
-	
-	@Test (priority = 9)
-	public void verifyInvalidAccountCreation9() throws InterruptedException {
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
+		//Invalid account creation 9
 		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
 		Thread.sleep(5000);
 		createAccount.createUsername(newInvalidUN2);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newInvalidPSW2);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newValidConPSW);
-		Thread.sleep(5000);
-		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("The passsword and confirmation password do not match !"));
+		Assert.assertTrue(createAccount.getPopupMsg2("The passsword and confirmation password do not match !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
-		createAccount.clickLoginLink();
-	}
-	
-
-	@Test (priority = 10)
-	public void verifyInvalidAccountCreation10() throws InterruptedException {
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
 		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		//Invalid account creation 10
 		Thread.sleep(5000);
 		createAccount.createUsername(newInvalidUN1);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newInvalidPSW1);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newInvalidConPSW1);
-		Thread.sleep(5000);
-		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("Please enter user name and password in valid length !"));
+		Assert.assertTrue(createAccount.getPopupMsg3("Please enter user name and password in valid length !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
-		createAccount.clickLoginLink();
-	}
-	
-	@Test (priority = 11)
-	public void verifyInvalidAccountCreation11() throws InterruptedException {
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
 		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
-		
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
-		Thread.sleep(5000);
+		//Invalid account creation 11
+	/*	Thread.sleep(5000);
 		createAccount.createUsername(newValidUN);
-		Thread.sleep(5000);
 		createAccount.addemailAdd(newValidEID);
-		Thread.sleep(5000);
 		createAccount.createpassword(newValidPSW);
-		Thread.sleep(5000);
 		createAccount.confirmPassword(newInvalidConPSW1);
-		Thread.sleep(5000);
-		
 		createAccount.clickSubmitBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(createAccount.getPopupMsg("The passsword and confirmation password do not match !"));
+		Assert.assertTrue(createAccount.getPopupMsg2("The passsword and confirmation password do not match !"));
 		Thread.sleep(5000);
-		createAccount.clickpopupOkay();
-		createAccount.clickLoginLink();
-	}
+		createAccount.clickpopupOK();
+		Thread.sleep(1000);
+	*/
 	}
 	
 	
-	public class GL_Login_07 extends BaseTest{
+	
+
 		
 	@Test (priority = 12)
-	public void verifyPopupMsgOkay() throws InterruptedException {
+	public void GL_Login_07() throws InterruptedException {
 		
-		LoginPage loginPage=new LoginPage(driver);
+		/*LoginPage loginPage=new LoginPage(driver);
 		loginPage.navigateCreateAccountPage();
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		CreateAccountPage createAccount=new CreateAccountPage(driver);
 		Thread.sleep(5000);
 		createAccount.createUsername(newValidUN);
@@ -330,19 +228,21 @@ public class VerifyCreateAccountPage {
 		createAccount.confirmPassword(newInvalidConPSW1);
 		createAccount.clickSubmitBtn();
 		
-		createAccount.clickpopupOkay();
+		//createAccount.clickpopupOK();
+		createAccount.clickpopupDone();
+		Thread.sleep(5000);
 		Assert.assertTrue(createAccount.getCreateAccTitle("Create Account"));
-		createAccount.clickLoginLink();
-	}}
-	
-	/*public class GL_Login_08 extends BaseTest{
+		Thread.sleep(5000);
+		//createAccount.clickLoginLink();
+	}
+
 		
 		@Test (priority = 13)
-		public void verifyUserNameUniqueness() throws InterruptedException {
+		public void GL_Login_08() throws InterruptedException {
 			
-			LoginPage loginPage=new LoginPage(driver);
+			/*LoginPage loginPage=new LoginPage(driver);
 			loginPage.navigateCreateAccountPage();
-			Thread.sleep(5000);
+			*/Thread.sleep(5000);
 			CreateAccountPage createAccount=new CreateAccountPage(driver);
 			Thread.sleep(5000);
 			createAccount.createUsername(newValidUN);
@@ -351,16 +251,19 @@ public class VerifyCreateAccountPage {
 			createAccount.confirmPassword(newValidConPSW);
 			createAccount.clickSubmitBtn();
 			Thread.sleep(5000);
-			Assert.assertTrue(createAccount.getPopupMsg("There is a user from same user name use another"));
+			Assert.assertTrue(createAccount.getPopupMsg1("This is duplicate entry!"));
 			Thread.sleep(5000);
-			createAccount.clickpopupOkay();
-			createAccount.clickLoginLink();
-		}}
+			createAccount.clickpopupDone();
+			//createAccount.clickLoginLink();
+			
+			
+			
+		}
 		
-	*/
-	/*public class GL_Login_09 extends BaseTest{
+
+	/*
 		@Test (priority = 14)
-		public void verifyInvalidUserAccess() throws InterruptedException {
+		public void GL_Login_09() throws InterruptedException {
 			
 			LoginPage loginPage=new LoginPage(driver);
 			Thread.sleep(1000);
@@ -375,24 +278,37 @@ public class VerifyCreateAccountPage {
 			commanleft.clickLogout();	
 		
 		
-	}}
+	}
 	*/
-	public class GL_Login_10 extends BaseTest{
 	@Test (priority = 15)
-	public void verifyLoginNavigationLink() throws InterruptedException {
+	public void GL_Login_10() throws InterruptedException {
 		
 		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateCreateAccountPage();
+		
+		Thread.sleep(10000);
+		//loginPage.navigateCreateAccountPage();
 		Thread.sleep(5000);
 		CreateAccountPage createAccount=new CreateAccountPage(driver);
 		createAccount.clickLoginLink();
 		Thread.sleep(5000);
 		Assert.assertTrue(loginPage.getLoginTitle("Login Form"));
 
+		/*loginPage.enterUsername(userName);
+		loginPage.enterPassword(password);
 		
-	}}
-
-
+		CommonPageLeftPane commonLeftPane =new CommonPageLeftPane(driver);
+		commonLeftPane.clickSettings();
+		
+		SettingsPage settingspage= new SettingsPage(driver);
+		settingspage.clickManageUsersBtn();*/
+		
+		
+	}
+	
+	
 	
 
-}
+	
+	}
+
+

@@ -21,7 +21,7 @@ public class GlanceDataProvider {
 		String dataField=null;
 		String dataSeriesField=null;
 		String chartSeriesField=null;		
-		String screen=null;
+		//String screen=null;
 		Object[][] chartData = null;		
 		
 		
@@ -61,5 +61,77 @@ public class GlanceDataProvider {
 		}
 		return chartData;
 	}
+	
+	/*@DataProvider(name="profileUpdateData")
+	public static Object[][] getProfileUpdateData() throws Exception
+	{
+		
+		String sheetName="ProfileUpdateData";
+		String username=null;
+		String emailID=null;
+		String firstName=null;
+		String lastName=null;
+		String password=null;
+		String conpassword=null;
+		Object[][] profileUpdateData = null;
+		
+		
+		ExcelReader excelReader = new ExcelReader(path);
+		int rows = excelReader.getRowCount(sheetName);
+		profileUpdateData = new Object[rows-1][];
+		for(int i=1;i<rows;i++)
+		{
+			username = excelReader.getData(sheetName, i, 0);
+			System.out.println(username);
+			emailID = excelReader.getData(sheetName, i, 1);
+			System.out.println(emailID);
+			firstName = excelReader.getData(sheetName, i, 2);
+			System.out.println(firstName);
+			lastName= excelReader.getData(sheetName, i, 3);
+			System.out.println(lastName);
+			password=excelReader.getData(sheetName, i, 4);
+			System.out.println(password);
+			conpassword=excelReader.getData(sheetName, i, 5);
+			System.out.println(conpassword);
+			
+			profileUpdateData[i - 1] = new Object[] { username,emailID,firstName,lastName,password,conpassword};
+			
+		}
+		return profileUpdateData;
+	}
+	
+	
+	
+	@DataProvider(name="loginData")
+	public static Object[][] getLoginData() throws Exception
+	{
+		
+		String sheetName="LoginData";
+		String username=null;
+		String password=null;
+		String msg=null;
+		
+		Object[][] logineData = null;
+		
+		
+		ExcelReader excelReader = new ExcelReader(path);
+		int rows = excelReader.getRowCount(sheetName);
+		logineData = new Object[rows-1][];
+		for(int i=1;i<rows;i++)
+		{
+			username = excelReader.getData(sheetName, i, 0);
+			System.out.println(username);
+			password = excelReader.getData(sheetName, i, 1);
+			System.out.println(password);
+			msg = excelReader.getData(sheetName, i, 2);
+			System.out.println(msg);
+			
+			logineData[i - 1] = new Object[] { username,password,msg};
+			
+		}
+		return logineData;
+	}
+	*/
+	}
 
-}
+

@@ -8,13 +8,10 @@ import com.glance.common.tests.BaseTest;
 import com.glance.pageobjects.userlogin.LoginPage;
 import com.glance.pageobjects.userlogin.LostPasswordPage;
 
-public class VerifyLostPasswordPage {
+public class VerifyLostPasswordPage extends BaseTest {
 	
-	
-	
-	public class GL_Login_11 extends BaseTest{
 	@Test (priority =0)
-	public void verifynavigationLostPasswordPage() {
+	public void GL_Login_11() {
 		
 		LoginPage loginPage=new LoginPage(driver);
 		loginPage.navigateLostPasswordPage();
@@ -24,13 +21,15 @@ public class VerifyLostPasswordPage {
 		lostPassword.clickBackBtn();
 		
 	}
-	}
 	
-	public class GL_Login_12 extends BaseTest{
-	/*	
-	@Test (priority =1)
-	public void verifyValidLostPasswordRequest(){
+	
+	
 		
+	@Test (priority =1)
+	public void GL_Login_12(){
+		
+		//Valid Request
+		/*
 		LoginPage loginPage=new LoginPage(driver);
 		loginPage.navigateLostPasswordPage();
 		
@@ -40,48 +39,38 @@ public class VerifyLostPasswordPage {
 		lostPassword.clickSubmitBtn();
 		//message Verification
 		lostPassword.switchtoMsgBoxLostPasswordPage();
-		lostPassword.clickBackBtn();
-	}
-	*/		
+		lostPassword.clickBackBtn();*/	
 	
-	@Test (priority =2)
-	public void verifyInvalidLostPasswordRequest1(){
-		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateLostPasswordPage();
-		
-		LostPasswordPage lostPassword = new LostPasswordPage(driver);
-		lostPassword.enterUserName(userNameErr);
-		lostPassword.enterEmailAdd(emailAdd);
-		lostPassword.clickSubmitBtn();
-		Assert.assertTrue(lostPassword.getLostPasswordMsgContent("Entered user name or email address do not match !"));
-		lostPassword.clickPopupOkay();
-		lostPassword.clickBackBtn();
 	
-	}
+	//Invalid request1
+	LoginPage loginPage=new LoginPage(driver);
+	loginPage.navigateLostPasswordPage();
 	
-		
-	@Test (priority =3)
-	public void verifyInvalidLostPasswordRequest2(){
-		
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.navigateLostPasswordPage();
-		
-		LostPasswordPage lostPassword = new LostPasswordPage(driver);
-		lostPassword.enterUserName(userName);
-		lostPassword.enterEmailAdd(emailAddErr);
-		lostPassword.clickSubmitBtn();
-		Assert.assertTrue(lostPassword.getLostPasswordMsgContent("Entered user name or email address do not match !"));
-		lostPassword.clickPopupOkay();
-		lostPassword.clickBackBtn();
+	LostPasswordPage lostPassword = new LostPasswordPage(driver);
+	lostPassword.enterUserName(userNameErr);
+	lostPassword.enterEmailAdd(emailAdd);
+	lostPassword.clickSubmitBtn();
+	Assert.assertTrue(lostPassword.getLostPasswordMsgContent("Entered user name or email address do not match !"));
+	lostPassword.clickPopupOkay();
+	lostPassword.clickBackBtn();
+
+	//Invalid Request2
 	
-	}
-	}
+	loginPage.navigateLostPasswordPage();
 	
 
-	public class GL_Login_13 extends BaseTest{
+	lostPassword.enterUserName(userName);
+	lostPassword.enterEmailAdd(emailAddErr);
+	lostPassword.clickSubmitBtn();
+	Assert.assertTrue(lostPassword.getLostPasswordMsgContent("Entered user name or email address do not match !"));
+	lostPassword.clickPopupOkay();
+	lostPassword.clickBackBtn();
+
+}
+
+	
 	@Test (priority =4)
-	public void verifyLostPasswordBack(){
+	public void GL_Login_13(){
 		
 		LoginPage loginPage=new LoginPage(driver);
 		loginPage.navigateLostPasswordPage();
@@ -93,18 +82,19 @@ public class VerifyLostPasswordPage {
 		
 
 	}
-	}
 	
-	/*public class GL_Login_14 extends BaseTest{
+	
+	/*
 		@Test (priority =5)
-		
+		public void GL_Login_14 {
+		}
 		
 	}*/
 	
 	
-	public class GL_Login_15 extends BaseTest{
+	
 		@Test (priority =6)
-		public void verifyLostPasswordMsgOkay(){
+		public void GL_Login_15(){
 			
 			LoginPage loginPage=new LoginPage(driver);
 			loginPage.navigateLostPasswordPage();
@@ -116,5 +106,5 @@ public class VerifyLostPasswordPage {
 			lostPassword.clickPopupOkay();
 			Assert.assertTrue(lostPassword.getLostPasswordTitle("Lost Password"));
 		}
-		}
+		
 }
