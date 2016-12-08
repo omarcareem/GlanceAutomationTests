@@ -96,8 +96,10 @@ public class ReadPropertyFile {
 	public static String updateInvalidUN1;
 	public static String upadteInvalidUN2;
 	public static String updateExistingUN;
+	public static String updateEmptyUN;
 	public static String updateValidUN;
 	public static String updateInvalidEID;
+	public static String updateEmptyEID;
 	public static String updateValidEID;
 	public static String updateInvalidPSW1;
 	public static String updateInvalidConPSW1;
@@ -106,9 +108,14 @@ public class ReadPropertyFile {
 	public static String updateValidPSW;
 	public static String updateValidConPSW;
 	public static String updateInvalidConPSW;
+	public static String updateEmptyPSW;
+	public static String updateEmptyConPSW;
 	public static String updateFirstName;
 	public static String UpdatelastName;
+	public static String validfirstName;
+	public static String validlastName;
 	
+<<<<<<< HEAD
 	//User management
 
 	public static String group;
@@ -147,8 +154,25 @@ public class ReadPropertyFile {
 	public static String wrongEmail;
 
 	
+=======
+	public static String admin;
+	public static String manager_QA;
+	public static String sConsultant_QA;
+	public static String consultant_QA;
+	public static String aConsultant_QA;
+	public static String sEngineer_QA;
+	public static String engineer_QA;
+	public static String aEngineer_QA;
+	public static String jEngineer_QA;
+>>>>>>> neelamaniTest
 	
-
+	
+	public static String selectTopPaneProfile;
+	public static String selectTopPaneLogout;
+	
+	
+	
+	 
 	public static Properties getDataRepository() throws IOException {
 		// Read object repository file
 		Properties prop = new Properties();
@@ -310,36 +334,40 @@ public class ReadPropertyFile {
 		upadteInvalidUN2=getDataRepository().getProperty("upadteInvalidUN2");
 		System.out.println(upadteInvalidUN2);
 		updateExistingUN=getDataRepository().getProperty("updateExistingUN");
-		System.out.println(newInvalidConPSW2);
-				
+		System.out.println(updateExistingUN);		
+		updateEmptyUN=getDataRepository().getProperty("updateEmptyUN");
+		System.out.println(updateEmptyUN);
 		updateValidUN=getDataRepository().getProperty("updateValidUN");
 		System.out.println(updateValidUN);
 		updateInvalidEID=getDataRepository().getProperty("updateInvalidEID");
 		System.out.println(updateInvalidEID);
+		updateEmptyEID=getDataRepository().getProperty("updateEmptyEID");
+		System.out.println(updateEmptyEID);
 		updateValidEID=getDataRepository().getProperty("updateValidEID");
-		System.out.println(updateValidEID);
-				
+		System.out.println(updateValidEID);		
 		updateInvalidPSW1=getDataRepository().getProperty("updateInvalidPSW1");
 		System.out.println(updateInvalidPSW1);
 		updateInvalidConPSW1=getDataRepository().getProperty("updateInvalidConPSW1");
 		System.out.println(updateInvalidConPSW1);
 		updateInvalidPSW2=getDataRepository().getProperty("updateInvalidPSW2");
-		System.out.println(updateInvalidPSW2);
-				
-				
+		System.out.println(updateInvalidPSW2);		
 		updateInvalidConPSW2=getDataRepository().getProperty("updateInvalidConPSW2");
 		System.out.println(updateInvalidConPSW2);
 		updateValidPSW=getDataRepository().getProperty("updateValidPSW");
 		System.out.println(updateValidPSW);
 		updateValidConPSW=getDataRepository().getProperty("updateValidConPSW");
-		System.out.println(updateValidConPSW);
-				
+		System.out.println(updateValidConPSW);		
 		updateInvalidConPSW=getDataRepository().getProperty("updateInvalidConPSW");
 		System.out.println(updateInvalidConPSW);
+		updateEmptyPSW=getDataRepository().getProperty("updateEmptyPSW");
+		System.out.println(updateEmptyPSW);
+		updateEmptyConPSW=getDataRepository().getProperty("updateEmptyConPSW");
+		System.out.println(updateEmptyConPSW);
 		updateFirstName=getDataRepository().getProperty("updateFirstName");
 		System.out.println(updateFirstName);
 		UpdatelastName=getDataRepository().getProperty("UpdatelastName");
 		System.out.println(UpdatelastName);
+<<<<<<< HEAD
 		
 		
 		//User management
@@ -380,6 +408,39 @@ public class ReadPropertyFile {
 		wrongEmail=getDataRepository().getProperty("wrongEmail");
 				
 			
+=======
+		validfirstName=getDataRepository().getProperty("validfirstName");
+		System.out.println(validfirstName);		
+		validlastName=getDataRepository().getProperty("validlastName");
+		System.out.println(validlastName);		
+		
+		
+		admin=getDataRepository().getProperty("admin");
+		System.out.println(admin);		
+		manager_QA=getDataRepository().getProperty("manager_QA");
+		System.out.println(manager_QA);		
+		sConsultant_QA=getDataRepository().getProperty("sConsultant_QA");
+		System.out.println(sConsultant_QA);		
+		consultant_QA=getDataRepository().getProperty("consultant_QA");
+		System.out.println(consultant_QA);		
+		aConsultant_QA=getDataRepository().getProperty("aConsultant_QA");
+		System.out.println(aConsultant_QA);		
+		sEngineer_QA=getDataRepository().getProperty("sEngineer_QA");
+		System.out.println(sEngineer_QA);		
+		engineer_QA=getDataRepository().getProperty("engineer_QA");
+		System.out.println(engineer_QA);		
+		aEngineer_QA=getDataRepository().getProperty("aEngineer_QA");
+		System.out.println(aEngineer_QA);		
+		jEngineer_QA=getDataRepository().getProperty("jEngineer_QA");
+		System.out.println(jEngineer_QA);		
+		
+		
+		selectTopPaneProfile=getDataRepository().getProperty("selectTopPaneProfile");
+		System.out.println(selectTopPaneProfile);
+		selectTopPaneLogout=getDataRepository().getProperty("selectTopPaneLogout");
+		System.out.println(selectTopPaneLogout);
+		
+>>>>>>> neelamaniTest
 	}
 
 	

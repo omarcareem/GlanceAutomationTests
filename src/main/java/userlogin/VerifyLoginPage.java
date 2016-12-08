@@ -5,28 +5,24 @@ import junit.framework.Assert;
 import org.testng.annotations.Test;
 
 import com.glance.common.tests.BaseTest;
+//import com.glance.common.tests.GlanceDataProvider;
 import com.glance.pageobjects.dashboard.CommonPageLeftPane;
 import com.glance.pageobjects.dashboard.DashboardPage;
 import com.glance.pageobjects.userlogin.LoginPage;
 
-public class VerifyLoginPage {
-	
-	public class GL_Login_01 extends BaseTest{
-		
-		@Test (priority =0)
-		
-		public void verifyNavigationLoginPage() {
-			LoginPage loginPage=new LoginPage(driver);
-			Assert.assertTrue(loginPage.getLoginTitle("Login Form"));
-	}
-		
-	}
+public class VerifyLoginPage extends BaseTest {
 	
 	
-	public class GL_login_02 extends BaseTest{
+		
+	@Test (priority =0)
+	public void GL_Login_01() {
+		LoginPage loginPage=new LoginPage(driver);
+		Assert.assertTrue(loginPage.getLoginTitle("Login Form"));
+		}
+		
 	
 	@Test (priority =1)
-	public void verifyValidLogin() throws InterruptedException {
+	public void GL_login_02() throws InterruptedException {
 		
 		LoginPage loginPage=new LoginPage(driver);
 		Thread.sleep(1000);
@@ -40,12 +36,8 @@ public class VerifyLoginPage {
 		CommonPageLeftPane commanleft= new CommonPageLeftPane(driver);
 		commanleft.clickLogout();
 		
-	}
-
-	@Test (priority =2)
-	public void verifyInvalidUNLogin() throws InterruptedException {
+		//invalid Login 1
 		
-		LoginPage loginPage=new LoginPage(driver);
 		Thread.sleep(1000);
 		loginPage.enterUsername(userNameErr);
 		loginPage.enterPassword(password);
@@ -53,14 +45,10 @@ public class VerifyLoginPage {
 		Thread.sleep(1000);
 		Assert.assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
 		loginPage.clickErrorOK();
-	
 		
-	}
-	
-	@Test(priority =3)
-	public void verifyInvalidPSWLogin() throws InterruptedException {
 		
-		LoginPage loginPage=new LoginPage(driver);
+		//Invalid Login2
+		
 		Thread.sleep(1000);
 		loginPage.enterUsername(userName);
 		loginPage.enterPassword(passwordErr);
@@ -71,13 +59,17 @@ public class VerifyLoginPage {
 		loginPage.clickErrorOK();
 		
 	}
-	}
+
 	
-/*	public class GL_login_03{
+	
+	
+	
+	
+	/*
 		
 		@Test (priority =4)
 		
-		public void verifyInvalid5attempts() throws InterruptedException {
+		public void GL_login_03() throws InterruptedException {
 			
 			
 			for(int i=0; i<5 ;i++){
@@ -102,12 +94,12 @@ public class VerifyLoginPage {
 			
 			
 		}
-	}*/
+	*/
 	
-	public class GL_login_04 extends BaseTest{
+	
 		
 	@Test (priority =5)
-	public void verifyLoginErrorMsgOkay() throws InterruptedException {
+	public void GL_login_04 () throws InterruptedException {
 		
 		LoginPage loginPage=new LoginPage(driver);
 		Thread.sleep(1000);
@@ -118,9 +110,12 @@ public class VerifyLoginPage {
 		
 		Assert.assertTrue(loginPage.getLoginTitle("Login Form"));
 
-	}
-	}
 	
+	
+	
+	
+	}
+
 	
 	
 

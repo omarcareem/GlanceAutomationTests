@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.glance.usermanagement.tests.TestDeleteUser">
         <methods>
           <include name="GL_Settings_MU_61_verifyCancelDeleteUser"/>
@@ -13,6 +14,17 @@
           <include name="testStartUp"/>
         </methods>
       </class> <!-- com.glance.usermanagement.tests.TestDeleteUser -->
+=======
+      <class name="userlogin.VerifyProfileUpdatePage">
+        <methods>
+          <include name="GL_Settings_09"/>
+          <include name="GL_Settings_07"/>
+          <include name="LoginAndNavigation"/>
+          <include name="initializeTest"/>
+          <include name="testStartUp"/>
+        </methods>
+      </class> <!-- userlogin.VerifyProfileUpdatePage -->
+>>>>>>> neelamaniTest
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

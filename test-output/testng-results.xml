@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="3" failed="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
@@ -82,6 +83,33 @@
           </reporter-output>
         </test-method> <!-- GL_Settings_MU_60_verifyDeleteUser -->
       </class> <!-- com.glance.usermanagement.tests.TestDeleteUser -->
+=======
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="269807" started-at="2016-12-08T07:35:16Z" finished-at="2016-12-08T07:39:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="269807" started-at="2016-12-08T07:35:16Z" finished-at="2016-12-08T07:39:45Z">
+      <class name="userlogin.VerifyProfileUpdatePage">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:userlogin.VerifyProfileUpdatePage@43beaa92]" name="testStartUp" is-config="true" duration-ms="79" started-at="2016-12-08T13:05:16Z" finished-at="2016-12-08T13:05:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStartUp -->
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:userlogin.VerifyProfileUpdatePage@43beaa92]" name="initializeTest" is-config="true" duration-ms="5732" started-at="2016-12-08T13:05:16Z" finished-at="2016-12-08T13:05:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method status="PASS" signature="LoginAndNavigation()[pri:0, instance:userlogin.VerifyProfileUpdatePage@43beaa92]" name="LoginAndNavigation" is-config="true" duration-ms="7184" started-at="2016-12-08T13:05:21Z" finished-at="2016-12-08T13:05:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginAndNavigation -->
+        <test-method status="PASS" signature="GL_Settings_07()[pri:5, instance:userlogin.VerifyProfileUpdatePage@43beaa92]" name="GL_Settings_07" duration-ms="256880" started-at="2016-12-08T13:05:29Z" finished-at="2016-12-08T13:09:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_07 -->
+      </class> <!-- userlogin.VerifyProfileUpdatePage -->
+>>>>>>> neelamaniTest
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
