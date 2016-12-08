@@ -12,6 +12,7 @@ import com.glance.pageobjects.dashboard.CommonPageLeftPane;
 import com.glance.pageobjects.userlogin.CreateAccountPage;
 import com.glance.pageobjects.userlogin.LoginPage;
 import com.glance.pageobjects.userlogin.SettingsPage;
+import com.glance.pageobjects.usermanagement.DeleteUser;
 import com.glance.pageobjects.usermanagement.EditUser;
 import com.glance.pageobjects.usermanagement.GroupMembershipPage;
 
@@ -23,7 +24,7 @@ public class TestEditUser extends BaseTest {
 	EditUser editUser;
 	CreateAccountPage createAccount;
 	GroupMembershipPage groupMembership;
-	
+	DeleteUser deleteUser;
 	
 	@BeforeMethod
 	public void verifyGoToEditUserPage() throws InterruptedException {
@@ -104,7 +105,7 @@ public class TestEditUser extends BaseTest {
 	}
 	
 //verify edit user details
-	@Test(priority=3)
+	@Test(priority=4)
 	public void GL_Settings_MU_58_1_verifyEditUser() throws InterruptedException, IOException {
 		editUser = new EditUser(driver);
 		
@@ -130,6 +131,68 @@ public class TestEditUser extends BaseTest {
 		Assert.assertTrue(editUser.verifyUpdate(newUserName, firstName, lastName, role));
 
 	}
+	@Test (priority=5)
+	public void GL_Settings_MU_62_verifyGoBackFromDeleteUser() throws InterruptedException{
 	
+		deleteUser = new DeleteUser(driver);
+		settingPage = new SettingsPage(driver);
+		leftPanel = new CommonPageLeftPane(driver);
+		
+		deleteUser.selectUserToDelete(user1);
+		
+		//deleteUser.selectUserToDelete(userDelete);
+		deleteUser.goBack();
+		
+		Assert.assertTrue(deleteUser.getTitle());
+		
+		//deleteUser.verifyDelete(userDelete);
+		
+		
+	}
+	
+	@Test (priority=6)
+	public void GL_Settings_MU_61_verifyCancelDeleteUser() throws InterruptedException{
+		
+		deleteUser = new DeleteUser(driver);
+		settingPage = new SettingsPage(driver);
+		leftPanel = new CommonPageLeftPane(driver);
+		
+		deleteUser.selectUserToDelete(user1);
+		deleteUser.deleteUsers();
+		deleteUser.CancelDeleteUser();
+		
+		Assert.assertTrue(deleteUser.getTitle());
+		
+		//deleteUser.verifyDelete(userDelete);
+		
+		
+	}
+	
+	
+	
+@Test(priority=7)
+public void GL_Settings_MU_60_verifyDeleteUser() throws InterruptedException{
+	
+	deleteUser = new DeleteUser(driver);
+	settingPage = new SettingsPage(driver);
+	leftPanel = new CommonPageLeftPane(driver);
+	
+	
+	deleteUser.selectUserToDelete(newUserName);
+	deleteUser.deleteUsers();
+	
+	
+	//leftPanel.clickSettings();
+	
+	//settingPage.clickManageUsersBtn();
+	Thread.sleep(5000);
+	
+	Assert.assertTrue(deleteUser.getTitle());
+	Assert.assertTrue(deleteUser.verifyDelete(newUserName));
+	
+	//deleteUser.verifyDelete(userDelete);
+	
+}
+
 
 }

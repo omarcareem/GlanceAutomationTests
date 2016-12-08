@@ -102,7 +102,11 @@ public class TestManageAccess extends BaseTest {
 		//verify whether we are in manage access page after clicking ok
 		Assert.assertTrue(manageAccess.getTitle());
 		
-		//Go to edit user to assign job role	
+		//After giving access we have to check whether the user could login. 
+		//so have to assign admin role to him as only admin could login in the current system
+		
+		//Go to edit user to assign job role
+		
 				leftPanel.clickSettings();
 				settingPage.clickManageUsersBtn();
 				editUser.selectUserToEdit(userNameEdit);
@@ -110,8 +114,9 @@ public class TestManageAccess extends BaseTest {
 				editUser.update();
 				Thread.sleep(5000);
 				editUser.clickOk();
-				
-		//Assign to the group
+		
+		//Assign him to the group to which we provide access
+		
 				leftPanel.clickSettings();
 				settingPage.clickGroupMembershipBtn();
 				addGroupMembership = new GroupMembershipPage(driver);
@@ -120,11 +125,13 @@ public class TestManageAccess extends BaseTest {
 				addGroupMembership.submit();
 				addGroupMembership.clickDone();
 				
+		//Log out from current account
 				topPane.clickDropDownIcon();
 				topPane.clickLogout();
-				
-				loginPage.enterUsername(userName);
-				loginPage.enterPassword(password);
+			
+		//Log in as the user to whome we gave access
+				loginPage.enterUsername(userNameEdit);
+				loginPage.enterPassword(passwordEdit);
 				loginPage.clickLoginBtn();
 	
 	}

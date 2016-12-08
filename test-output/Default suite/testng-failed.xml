@@ -3,16 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.glance.usermanagement.tests.TestDeleteUser">
+      <class name="com.glance.usermanagement.tests.TestAddGroupMembership">
         <methods>
-          <include name="GL_Settings_MU_61_verifyCancelDeleteUser"/>
+          <include name="GL_Settings_GM_74_verifyCancelDelete"/>
           <include name="initializeTest"/>
-          <include name="verifyGoToDeleteUserPage"/>
-          <include name="GL_Settings_MU_62_verifyGoBack"/>
-          <include name="GL_Settings_MU_60_verifyDeleteUser"/>
+          <include name="GL_Settings_GM_69_verifyAddGroupMembership"/>
+          <include name="GL_Settings_GM_71_verifyAddDuplicateEntries"/>
+          <include name="verifyCancelAddGroupMembership"/>
+          <include name="GL_Settings_GM_72_viewMembers"/>
+          <include name="GL_Settings_GM_70_verifyAddGroupMembershipWithEmptyFields"/>
+          <include name="verifyGoToEditGroupMembership"/>
+          <include name="GL_Settings_GM_73_verifyDeleteGroupMembership"/>
           <include name="testStartUp"/>
         </methods>
-      </class> <!-- com.glance.usermanagement.tests.TestDeleteUser -->
+      </class> <!-- com.glance.usermanagement.tests.TestAddGroupMembership -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
