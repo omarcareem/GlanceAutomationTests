@@ -8,10 +8,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.glance.common.tests.BaseTest;
-import com.glance.common.tests.GlanceDataProvider;
 import com.glance.common.tests.RandomNameGenerator;
 import com.glance.pageobjects.common.CommonPageObject;
-import com.glance.pageobjects.dashboard.AddElementWizardPage;
 import com.glance.pageobjects.dashboard.AddEngagementPage;
 import com.glance.pageobjects.dashboard.CommonPageLeftPane;
 import com.glance.pageobjects.dashboard.DashboardPage;
@@ -48,7 +46,7 @@ public class VerifyAddEngagement extends BaseTest {
 	}
 	
 	@Test(priority = 0)
-	public void NavigatetoAddNewEngagementusingSettingspage() throws Exception {
+	public void GL_Settings_AE_09() throws Exception {
 
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -62,7 +60,7 @@ public class VerifyAddEngagement extends BaseTest {
 	}
 	
 	@Test(priority = 1)
-	public void verifyAddEngagementElementByLeftPane() throws Exception {
+	public void GL_Settings_AE_10() throws Exception {
 
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickEngagement();
@@ -74,7 +72,7 @@ public class VerifyAddEngagement extends BaseTest {
 	}
 
 	@Test(priority = 2)
-	public void submitAddEngagementElementBySettingsPage() throws Exception {
+	public void GL_Settings_AE_11() throws Exception {
 
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -119,10 +117,11 @@ public class VerifyAddEngagement extends BaseTest {
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		dashboardPage = new DashboardPage(driver);
 		Assert.assertTrue(dashboardPage.getPageName("Account Level Dashboard"));
+		
 	}
 
 	@Test(priority = 3)
-	public void verifyAddEngagementElementCancel() throws Exception {
+	public void GL_Settings_AE_12() throws Exception {
 
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -144,16 +143,15 @@ public class VerifyAddEngagement extends BaseTest {
 		addEngagementPage.clickCancel();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 
-		/*
-		  String[] expectedValues = {"Dashboard Management", "Data Management", "User Management", "Personalizations", "Maintenance"};
-		  Assert.assertTrue(settingsPage.verifyPageName(expectedValues));
-		 */
+		//verify page titles
+		/*String[] expectedValues = {"Dashboard Management", "Data Management", "User Management", "Personalizations", "Maintenance"};
+		Assert.assertEquals(addEngagementPage.verifyChartTitle(),expectedValues);*/
 
 	}
 
 
 	@Test(priority = 4)
-	public void verifyAddEngagementElementAddedtoDb() throws Exception {
+	public void GL_Settings_AE_11_verify1() throws Exception {
 
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -196,7 +194,7 @@ public class VerifyAddEngagement extends BaseTest {
 	}
 	
 	@Test(priority = 5)
-	public void verifyAddEngagementElementAddedtoLeftPane() throws Exception {
+	public void GL_Settings_AE_11_verify2() throws Exception {
 
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -232,7 +230,7 @@ public class VerifyAddEngagement extends BaseTest {
 	}
 	
 	@Test (priority=6)
-	public void screenIconsoftehaddengaggemetnpage() throws Exception{
+	public void GL_Settings_AE_13() throws Exception{
 		
 		DashboardPage dashBoardPage = new DashboardPage(driver);
 		dashBoardPage.selectMaxMin();
@@ -245,38 +243,4 @@ public class VerifyAddEngagement extends BaseTest {
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		
 	}
-/*	
-	//********************************************************
-	@Test(dataProvider = "AddEngagementData", dataProviderClass = GlanceDataProvider.class)
-	public void verifyAddNewEngagement(String engagement, String account, String deliveryMethod, String contractType, String years) throws Exception {
-
-		
-		CommonPageObject commonPage = new CommonPageObject(driver);
-		commonPage.waitForPageLoad(10);
-		
-		commonPageLeftPane = new CommonPageLeftPane(driver);
-		commonPageLeftPane.clickSettings();
-
-		settingsPage = new SettingsPage(driver);
-		settingsPage.clickAddEngagementBtn();
-
-		addEngagementPage = new AddEngagementPage(driver);
-		Assert.assertTrue(addEngagementPage.getPageName("Engagement Add operations"));
-		
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		addEngagementPage.enterEngagementName2(engagement);
-		addEngagementPage.selectAccount2(account);
-		addEngagementPage.selectDeliveryMethod2(deliveryMethod);
-		addEngagementPage.selectContractType2(contractType);
-		addEngagementPage.enterYear2(years);
-		addEngagementPage.selectRadioButton4();
-		Thread.sleep(5000);
-		addEngagementPage.clickSubmit();
-		
-		Assert.assertTrue(dashboardPage.verifyElementMessage());
-		Thread.sleep(5000);
-			
-		
-	}
-*/	//*********************************************************
 }

@@ -4,6 +4,7 @@
   <test name="Default test(failed)">
     <classes>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <class name="com.glance.usermanagement.tests.TestDeleteUser">
         <methods>
           <include name="GL_Settings_MU_61_verifyCancelDeleteUser"/>
@@ -21,10 +22,26 @@
           <include name="GL_Settings_07"/>
           <include name="LoginAndNavigation"/>
           <include name="initializeTest"/>
+=======
+      <class name="com.glance.dashboard.tests.VerifyAddEngagement">
+        <methods>
+          <include name="finishTest"/>
+          <include name="testLogin"/>
+          <include name="GL_Settings_AE_11_verify1"/>
+          <include name="initializeTest"/>
+          <include name="testLogout"/>
+          <include name="GL_Settings_AE_11_verify2"/>
+>>>>>>> sachiniTEST
           <include name="testStartUp"/>
+          <include name="GL_Settings_AE_12"/>
+          <include name="GL_Settings_AE_13"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- userlogin.VerifyProfileUpdatePage -->
 >>>>>>> neelamaniTest
+=======
+      </class> <!-- com.glance.dashboard.tests.VerifyAddEngagement -->
+>>>>>>> sachiniTEST
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -67,6 +67,8 @@ public class ReadPropertyFile {
 	public static String customDateEnd;
 	public static String userName1;
 	public static String password1;
+	public static String email;
+	public static String accountName4;
 	
 	public static String deleteType;
 	public static String typeID;
@@ -155,6 +157,7 @@ public class ReadPropertyFile {
 
 	
 
+<<<<<<< HEAD
 	public static String admin;
 	public static String manager_QA;
 	public static String sConsultant_QA;
@@ -164,6 +167,12 @@ public class ReadPropertyFile {
 	public static String engineer_QA;
 	public static String aEngineer_QA;
 	public static String jEngineer_QA;
+=======
+
+	public static int rowCount;
+	public static String columnName;
+
+>>>>>>> sachiniTEST
 
 	
 	
@@ -274,6 +283,10 @@ public class ReadPropertyFile {
 		System.out.println(userName1);
 		password1=getDataRepository().getProperty("password1");
 		System.out.println(password1);
+		email=getDataRepository().getProperty("email");
+		System.out.println(email);
+		accountName4=getDataRepository().getProperty("accountName4");
+		System.out.println(accountName4);
 		
 		deleteType=getDataRepository().getProperty("deleteType");
 		System.out.println(deleteType);
@@ -288,6 +301,10 @@ public class ReadPropertyFile {
 		System.out.println(showEntry);
 		enterSearch=getDataRepository().getProperty("enterSearch");
 		System.out.println(enterSearch);
+<<<<<<< HEAD
+=======
+
+>>>>>>> sachiniTEST
 		recordInsert=getDataRepository().getProperty("recordInsert");
 		System.out.println(recordInsert);
 		
@@ -409,6 +426,7 @@ public class ReadPropertyFile {
 				
 			
 
+<<<<<<< HEAD
 		validfirstName=getDataRepository().getProperty("validfirstName");
 		System.out.println(validfirstName);		
 		validlastName=getDataRepository().getProperty("validlastName");
@@ -440,6 +458,12 @@ public class ReadPropertyFile {
 		selectTopPaneLogout=getDataRepository().getProperty("selectTopPaneLogout");
 		System.out.println(selectTopPaneLogout);
 		
+=======
+		/*rowCount=getDataRepository().getProperty(rowCount);
+		System.out.println(rowCount);*/
+		columnName=getDataRepository().getProperty("columnName");
+		System.out.println(columnName);
+>>>>>>> sachiniTEST
 
 	}
 

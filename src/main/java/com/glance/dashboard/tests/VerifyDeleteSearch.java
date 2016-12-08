@@ -41,7 +41,7 @@ public class VerifyDeleteSearch extends BaseTest{
 	}
 	
 	@Test (priority=0)
-	public void NavigatetoDeleteSearchpage() throws Exception{
+	public void GL_Settings_DS_22() throws Exception{
 		
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -55,7 +55,7 @@ public class VerifyDeleteSearch extends BaseTest{
 	}
 	
 	@Test (priority=1)
-	public void NavigatetoSearchtab() throws Exception{
+	public void GL_Settings_DS_23() throws Exception{
 		
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -69,7 +69,7 @@ public class VerifyDeleteSearch extends BaseTest{
 	}
 	
 	@Test (priority=2)
-	public void NavigatetoSQLtab() throws Exception{
+	public void GL_Settings_DS_24() throws Exception{
 		
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -83,7 +83,7 @@ public class VerifyDeleteSearch extends BaseTest{
 	}
 	
 	@Test (priority=3)
-	public void searchforparticulardatausingSearch() throws Exception{
+	public void GL_Settings_DS_25() throws Exception{
 		
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -102,7 +102,7 @@ public class VerifyDeleteSearch extends BaseTest{
 	}
 	
 	@Test (priority=4)
-	public void searchforparticulardatausingSQL() throws Exception{
+	public void GL_Settings_DS_26() throws Exception{
 		
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickSettings();
@@ -119,7 +119,7 @@ public class VerifyDeleteSearch extends BaseTest{
 	}
 	
 	@Test (priority=5)
-	public void screenIconsoftehDeleteSearchpage() throws Exception{
+	public void GL_Settings_DS_27() throws Exception{
 		
 		DashboardPage dashBoardPage = new DashboardPage(driver);
 		dashBoardPage.selectMaxMin();

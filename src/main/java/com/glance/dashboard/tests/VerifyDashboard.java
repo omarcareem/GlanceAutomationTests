@@ -13,6 +13,7 @@ import com.glance.pageobjects.dashboard.AddElementWizardPage;
 import com.glance.pageobjects.dashboard.CommonPageLeftPane;
 import com.glance.pageobjects.dashboard.CommonPageTopPane;
 import com.glance.pageobjects.dashboard.DashboardPage;
+import com.glance.pageobjects.userlogin.CreateAccountPage;
 import com.glance.pageobjects.userlogin.LoginPage;
 
 
@@ -184,16 +185,55 @@ public class VerifyDashboard extends BaseTest{
 	@Test (priority=4)
 	public void GL_Settings_DB_39() throws Exception{
 		
+		
 		commonPageLeftPane = new CommonPageLeftPane(driver);
 		commonPageLeftPane.clickLogout();
-		loginPage = new LoginPage(driver);
+		
+		//create a user
+		LoginPage loginPage=new LoginPage(driver);
+		loginPage.navigateCreateAccountPage();
+		
+		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		Thread.sleep(5000);
+		createAccount.createUsername(userName1);
+		Thread.sleep(5000);
+		createAccount.addemailAdd(email);
+		Thread.sleep(5000);
+		createAccount.createpassword(password1);
+		Thread.sleep(5000);
+		createAccount.confirmPassword(password1);
+		
+		createAccount.clickSubmitBtn();
+		Thread.sleep(5000);
+		createAccount.clickpopupClose();
+		Thread.sleep(10000);
+		createAccount.clickLoginLink();
+		
+		
+		//loginPage = new LoginPage(driver);
 		loginPage.enterUsername(userName1);
 		loginPage.enterPassword(password1);
 		loginPage.clickLoginBtn();
 		commonPage = new CommonPageObject(driver);
 		commonPage.waitForPageLoad(10);
-		//Assert.assertTrue(dashBoardPage.verifyNavigationToAccessDeniedPage("Access Denied!"));
+		Assert.assertTrue(dashBoardPage.verifyNavigationToAccessDeniedPage("Access Denied!"));
+		
+		
 	}
 	
-	
+	@Test (priority=5)
+	public void GL_Settings_DB_40() throws Exception{
+		
+		dashBoardPage = new DashboardPage(driver);
+		Assert.assertTrue(dashBoardPage.getPageName("Account Level Dashboard"));
+		
+		commonPage = new CommonPageObject(driver);
+		commonPage.waitForPageLoad(10);
+		
+		commonPageLeftPane= new CommonPageLeftPane(driver);
+		commonPageLeftPane.clickOnAccount();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		commonPageLeftPane.clickOnAccountName(accountName4);
+		Assert.assertTrue(dashBoardPage.verifyElementMessage());
+	}
 }
