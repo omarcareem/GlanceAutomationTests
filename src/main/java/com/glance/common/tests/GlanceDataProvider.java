@@ -64,32 +64,6 @@ public class GlanceDataProvider {
 		return chartData;
 	}
 	
-<<<<<<< HEAD
-=======
-	@DataProvider(name="SortData")
-	public static Object[][] getSortData() throws Exception
-	{
-		
-		String sheetName="CharDataSort";
-		String columnName=null;
-		Object[][] sortData = null;	
-		
-		ExcelReader excelReader = new ExcelReader(path);
-		int rows = excelReader.getRowCount(sheetName);
-		sortData = new Object[rows-1][];
-		
-		for(int i=1;i<rows;i++)
-		{
-			columnName = excelReader.getData(sheetName, i, 0);
-			System.out.println(columnName);
-	
-			
-			sortData[i - 1] = new Object[] { columnName };
-			
-		}
-		return sortData;
-	}
-	
 	@DataProvider(name="AddEngagementData")
 	public static Object[][] getAddEngagementData() throws Exception
 	{
@@ -171,84 +145,6 @@ public class GlanceDataProvider {
 		return dateRangeData;
 	}
 	
-	@DataProvider(name="SearchData")
-	public static Object[][] getSearchData() throws Exception
-	{
-		
-		String sheetName="SearchData";
-		String Type=null;
-		String ID=null;
-		String Name=null;
-		Object[][] searchData = null;	
-		
-		ExcelReader excelReader = new ExcelReader(path);
-		int rows = excelReader.getRowCount(sheetName);
-		searchData = new Object[rows-1][];
-		
-		for(int i=1;i<rows;i++)
-		{
-			Type = excelReader.getData(sheetName, i, 0);
-			System.out.println(Type);
-			ID = excelReader.getData(sheetName, i, 0);
-			System.out.println(ID);
-			Name = excelReader.getData(sheetName, i, 1);
-			System.out.println(Name);
-			
-			searchData[i - 1] = new Object[] { Type,ID,Name };
-			
-		}
-		return searchData;
-	}
-	
-	@DataProvider(name="SQLData")
-	public static Object[][] getSQLData() throws Exception
-	{
-		
-		String sheetName="SQLData";
-		String SQLSearch=null;
-		Object[][] sqlData = null;	
-		
-		ExcelReader excelReader = new ExcelReader(path);
-		int rows = excelReader.getRowCount(sheetName);
-		sqlData = new Object[rows-1][];
-		
-		for(int i=1;i<rows;i++)
-		{
-			SQLSearch = excelReader.getData(sheetName, i, 0);
-			System.out.println(SQLSearch);
-			
-			sqlData[i - 1] = new Object[] { SQLSearch };
-			
-		}
-		return sqlData;
-	}
-	
-	@DataProvider(name="DeleteSearchData")
-	public static Object[][] getDeleteSearchData() throws Exception
-	{
-		
-		String sheetName="DeleteSearchData";
-		String EntityID=null;
-		String EntityName=null;
-		Object[][] deleteSearchData = null;	
-		
-		ExcelReader excelReader = new ExcelReader(path);
-		int rows = excelReader.getRowCount(sheetName);
-		deleteSearchData = new Object[rows-1][];
-		
-		for(int i=1;i<rows;i++)
-		{
-			EntityID = excelReader.getData(sheetName, i, 0);
-			System.out.println(EntityID);
-			EntityName = excelReader.getData(sheetName, i, 0);
-			System.out.println(EntityName);
-			
-			deleteSearchData[i - 1] = new Object[] { EntityID,EntityName };
-			
-		}
-		return deleteSearchData;
-	}
-	
 	@DataProvider(name="ShowEntryData")
 	public static Object[][] getShowEntryData() throws Exception
 	{
@@ -273,6 +169,6 @@ public class GlanceDataProvider {
 		}
 		return showEntryData;
 	}
->>>>>>> sachiniTEST
+
 	
 }
