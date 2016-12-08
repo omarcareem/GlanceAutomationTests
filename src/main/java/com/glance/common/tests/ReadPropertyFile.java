@@ -109,6 +109,44 @@ public class ReadPropertyFile {
 	public static String updateFirstName;
 	public static String UpdatelastName;
 	
+	//User management
+
+	public static String group;
+	public static String user;
+	
+	
+	public static String labl;
+	public static String addUser;
+	public static String addSelectGroup;
+	
+	public static String verifyUser;
+	
+	public static String user1;
+	
+	public static String newUserName;
+	public static String firstName;
+	public static String lastName;
+	public static String email;
+	public static String newPassword;
+	public static String confirmPassword;
+	public static String role;
+	public static String path;
+	public static String userDelete;
+	public static String userDeleteCancel;
+	public static String userCancel;
+	public static String userClose;
+
+	public static String eType;
+	public static String eId;
+	
+	public static String userNameEdit;
+	public static String emailAddEdit;
+	public static String passwordEdit;
+	public static String groupAdd;
+	public static String wrongUserName;
+	public static String wrongEmail;
+
+	
 	
 
 	public static Properties getDataRepository() throws IOException {
@@ -302,7 +340,44 @@ public class ReadPropertyFile {
 		System.out.println(updateFirstName);
 		UpdatelastName=getDataRepository().getProperty("UpdatelastName");
 		System.out.println(UpdatelastName);
-				
+		
+		
+		//User management
+		group=getDataRepository().getProperty("group");
+		user=getDataRepository().getProperty("user");
+		
+		labl=getDataRepository().getProperty("labl");
+		addUser=getDataRepository().getProperty("addUser");
+		addSelectGroup=getDataRepository().getProperty("addSelectGroup");
+
+		verifyUser=getDataRepository().getProperty("verifyUser");
+		
+		user1=getDataRepository().getProperty("user1");
+
+		newUserName=getDataRepository().getProperty("newUserName");
+		firstName=getDataRepository().getProperty("firstName");
+		lastName=getDataRepository().getProperty("lastName");
+		email=getDataRepository().getProperty("email");
+		newPassword=getDataRepository().getProperty("newPassword");
+		confirmPassword=getDataRepository().getProperty("confirmPassword");
+		role=getDataRepository().getProperty("role");
+		path=getDataRepository().getProperty("role");
+		userDelete=getDataRepository().getProperty("userDelete");
+		userDeleteCancel=getDataRepository().getProperty("userDeleteCancel");
+		userCancel=getDataRepository().getProperty("userCancel");
+		
+		userClose=getDataRepository().getProperty("userClose");
+		
+		eType=getDataRepository().getProperty("eType");
+		eId=getDataRepository().getProperty("eId");	
+		
+		userNameEdit=getDataRepository().getProperty("userNameEdit");
+		emailAddEdit=getDataRepository().getProperty("emailAddEdit");	
+		passwordEdit=getDataRepository().getProperty("passwordEdit");
+		
+		groupAdd=getDataRepository().getProperty("groupAdd");
+		wrongUserName=getDataRepository().getProperty("wrongUserName");
+		wrongEmail=getDataRepository().getProperty("wrongEmail");
 				
 			
 	}

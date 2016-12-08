@@ -3,14 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.glance.dashboard.tests.VerifyAddProject">
+      <class name="com.glance.usermanagement.tests.TestDeleteUser">
         <methods>
+          <include name="GL_Settings_MU_61_verifyCancelDeleteUser"/>
           <include name="initializeTest"/>
-          <include name="login"/>
-          <include name="GL_Settings_AP_16_03_verifyAddProject"/>
+          <include name="verifyGoToDeleteUserPage"/>
+          <include name="GL_Settings_MU_62_verifyGoBack"/>
+          <include name="GL_Settings_MU_60_verifyDeleteUser"/>
           <include name="testStartUp"/>
         </methods>
-      </class> <!-- com.glance.dashboard.tests.VerifyAddProject -->
+      </class> <!-- com.glance.usermanagement.tests.TestDeleteUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
