@@ -132,6 +132,7 @@ public class ReadPropertyFile {
 	
 	public static String verifyUser;
 	
+<<<<<<< HEAD
 	public static String user1;
 	
 	public static String newUserName;
@@ -173,6 +174,23 @@ public class ReadPropertyFile {
 
 	public static int rowCount;
 	public static String columnName;
+=======
+	public static String grpName;
+    public static String grpNameNew;
+    public static String grpNameDeleted;
+    public static String accountName3;
+    public static String projectName;
+    public static String expectedMessageEdit;
+    public static String searchTwo;
+    public static String searchFullText;
+    public static String searchUnexisting;
+    public static String searchEmpty;
+    public static String searchAD;
+    public static String expectedMessage;
+    public static String profileUpdateTitle;
+    public static String lblLoginTitle;
+    public static String expectedMessageTitleSet;
+>>>>>>> shamamaTEST
 
 >>>>>>> sachiniTEST
 
@@ -394,6 +412,7 @@ public class ReadPropertyFile {
 		System.out.println(UpdatelastName);
 
 		
+<<<<<<< HEAD
 		
 		//User management
 		group=getDataRepository().getProperty("group");
@@ -473,6 +492,20 @@ public class ReadPropertyFile {
 		System.out.println(columnName);
 >>>>>>> sachiniTEST
 
+=======
+		accountName=getDataRepository().getProperty("accountName");
+		projectName=getDataRepository().getProperty("projectName");
+		expectedMessageEdit=getDataRepository().getProperty("expectedMessageEdit");
+		searchTwo=getDataRepository().getProperty("searchTwo");
+		searchFullText=getDataRepository().getProperty("searchFullText");
+		searchUnexisting=getDataRepository().getProperty("searchUnexisting");
+		searchEmpty=getDataRepository().getProperty("searchEmpty");
+		searchAD=getDataRepository().getProperty("searchAD");	
+		expectedMessage=getDataRepository().getProperty("expectedMessage");
+		profileUpdateTitle=getDataRepository().getProperty("profileUpdateTitle");
+		lblLoginTitle=getDataRepository().getProperty("lblLoginTitle");
+		
+>>>>>>> shamamaTEST
 	}
 
 	

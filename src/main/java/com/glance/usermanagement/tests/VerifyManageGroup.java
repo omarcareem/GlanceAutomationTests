@@ -1,5 +1,7 @@
 package com.glance.usermanagement.tests;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,7 +14,7 @@ import com.glance.pageobjects.userlogin.SettingsPage;
 import com.glance.pageobjects.usermanagement.EditGroupPage;
 import com.glance.pageobjects.usermanagement.ManageGroupPage;
 
-public class ManageGroup extends BaseTest{
+public class VerifyManageGroup extends BaseTest{
 	LoginPage login;
     ManageGroupPage mGroup;
 	EditGroupPage eGroup;
@@ -20,9 +22,9 @@ public class ManageGroup extends BaseTest{
 	CommonPageLeftPane comLeftPane;
 	CommonPageObject comObj;
 	
-	//Add group
+	//verify Add group
 	@Test(priority = 0)
-	public void testAddgroup() throws InterruptedException{
+	public void GL_Settings_MG_80() throws InterruptedException, IOException{
 		login = new LoginPage(driver);
 		comLeftPane = new CommonPageLeftPane(driver);
 		mGroup = new ManageGroupPage(driver);
@@ -41,6 +43,11 @@ public class ManageGroup extends BaseTest{
 		
 		settingspage.clickManageGroupsBtn();
 		mGroup.inputGroupName(grpName);
+		Thread.sleep(2000);
+	
+		mGroup.inputGroupImage();
+		
+		Runtime.getRuntime().exec("C:\\GlanceProject\\GlanceAutomationTests\\GroupImageUpload.exe");
 		Thread.sleep(2000);
 		mGroup.clickAddGroup();
 		Thread.sleep(2000);
@@ -61,7 +68,41 @@ public class ManageGroup extends BaseTest{
         else 
                System.out.println("Group has not been added");     
         
+		Thread.sleep(2000);
+		comLeftPane.clickLogout();
+			
+		}
+	
+	//Verify adding group functionality with empty field
+	@Test(priority = 1)
+	public void GL_Settings_MG_81() throws InterruptedException, IOException{
+		login = new LoginPage(driver);
+		comLeftPane = new CommonPageLeftPane(driver);
+		mGroup = new ManageGroupPage(driver);
+		settingspage = new SettingsPage(driver);
+		comObj= new CommonPageObject(driver);
 		
+		login.enterUsername(userName);
+		login.enterPassword(password);
+		login.clickLoginBtn();
+		
+		
+		comLeftPane.clickSettings();
+		Thread.sleep(2000);
+		int previousManageGroupCount=settingspage.getCountManageGroups();
+		System.out.println("Previous Count:"+previousManageGroupCount);
+		
+		settingspage.clickManageGroupsBtn();
+		Thread.sleep(2000);
+		mGroup.clickAddGroup();
+		Thread.sleep(2000);
+		
+	
+		
+		Assert.assertTrue(mGroup.verifyAlert(""));
+		
+		
+		Thread.sleep(2000);
 		comLeftPane.clickLogout();
 			
 		}
@@ -69,7 +110,7 @@ public class ManageGroup extends BaseTest{
 	
   //Verify cancel Add group directed to settings page
 	@Test(priority = 1)
-	public void testCancelBtn() throws InterruptedException{
+	public void GL_Settings_MG_82() throws InterruptedException{
 		login = new LoginPage(driver);
 		mGroup = new ManageGroupPage(driver);
 		settingspage = new SettingsPage(driver);
@@ -97,7 +138,7 @@ public class ManageGroup extends BaseTest{
         
         //compare the counts 
         if(newestManageGroupCount > previousManageGroupCount)
-               System.out.println("New Group has been added");
+               System.out.println("New Group has  been added");
         
         else 
                System.out.println("Group has not been added");   
@@ -105,9 +146,9 @@ public class ManageGroup extends BaseTest{
 	}
 	
 		
-	//update group details
+	//verify navigation to edit group page 
    @Test(priority = 2)
-	public void testEditGroup() throws InterruptedException{
+	public void GL_Settings_MG_83() throws InterruptedException{
 		login = new LoginPage(driver);
 		mGroup = new ManageGroupPage(driver);
 		eGroup = new EditGroupPage(driver);
@@ -127,26 +168,84 @@ public class ManageGroup extends BaseTest{
         mGroup.clickEdit(grpName);
 		Assert.assertTrue(eGroup.verifyNavigationToEditGroupPage(expectedMessageEdit));  
 		Thread.sleep(2000);
+     
+		comLeftPane.clickLogout();
+					
+		}
+   
+   
+	//verify editing group details 
+   @Test(priority = 3)
+	public void GL_Settings_MG_84() throws InterruptedException{
+		login = new LoginPage(driver);
+		mGroup = new ManageGroupPage(driver);
+		eGroup = new EditGroupPage(driver);
+		settingspage = new SettingsPage(driver);
+		comLeftPane = new CommonPageLeftPane(driver);
+		
+		login.enterUsername(userName);
+		login.enterPassword(password);
+		login.clickLoginBtn();
+		
+		
+		comLeftPane.clickSettings();
+		Thread.sleep(2000);
+		settingspage.clickManageGroupsBtn();
+		Thread.sleep(2000);
+		comObj.lastPageNavigation();
+        mGroup.clickEdit(grpName);
+	    Thread.sleep(2000);
         eGroup.updateGroupName(grpNameNew);
 		Thread.sleep(2000);
 		eGroup.clickUpdateGroupBtn();
 		comObj.lastPageNavigation();
 		Assert.assertTrue(eGroup.verifyUpdated(grpNameNew));
 		comLeftPane.clickLogout();
-			
 		
-		
-	
-			
+					
 		}
    
+   
+ //Verify cancel update group details directed to manage group page
+	@Test(priority = 4)
+ 	public void GL_Settings_MG_85() throws InterruptedException{
+ 		login = new LoginPage(driver);
+ 		mGroup = new ManageGroupPage(driver);
+ 		settingspage = new SettingsPage(driver);
+ 		
+ 		comLeftPane = new CommonPageLeftPane(driver);
+ 		comObj= new CommonPageObject(driver);
+ 		
+ 		login.enterUsername(userName);
+ 		login.enterPassword(password);
+ 		login.clickLoginBtn();
+ 		
+ 		
+ 		comLeftPane.clickSettings();
+ 		Thread.sleep(2000);
+ 	 	settingspage.clickManageGroupsBtn();
+ 		Thread.sleep(2000);
+ 		comObj.lastPageNavigation();
+ 		mGroup.clickEdit(grpNameNew);
+ 		Thread.sleep(1000);
+ 		eGroup = new EditGroupPage(driver);
+ 	    eGroup.clickCancelUpdate();
+ 	    Thread.sleep(1000);
+ 		Assert.assertTrue(mGroup.verifyNavigationToManageGroupPage("Add Group Details"));
+ 		
+       
+ 	}
+ 	
+ 	
+   
  //delete existing group
- 	@Test(priority = 3)
- 	public void testDeleteGroup() throws InterruptedException{
+	@Test(priority = 5)
+ 	public void GL_Settings_MG_86() throws InterruptedException{
  		login = new LoginPage(driver);
  		mGroup = new ManageGroupPage(driver);
  		settingspage = new SettingsPage(driver);
  		comLeftPane = new CommonPageLeftPane(driver);
+ 		comObj= new CommonPageObject(driver);
  		
  		login.enterUsername(userName);
  		login.enterPassword(password);
@@ -160,10 +259,11 @@ public class ManageGroup extends BaseTest{
  		comObj.lastPageNavigation();
  		mGroup.clickDelete(grpNameNew);
  		Thread.sleep(1000);
- 		comObj.lastPageNavigation();
- 	   Assert.assertTrue(mGroup.verifyDeleted(grpNameNew));
- 		comLeftPane.clickLogout();
+ 	    
+ 	    Assert.assertTrue(mGroup.verifyDeleted(grpNameNew));
+ 		
  			
  		}
 
 }
+

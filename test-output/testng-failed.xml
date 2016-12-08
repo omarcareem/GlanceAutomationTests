@@ -7,13 +7,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <class name="com.glance.usermanagement.tests.TestDeleteUser">
 =======
       <class name="com.glance.usermanagement.tests.TestAddGroupMembership">
 >>>>>>> sajeththaTest
+=======
+      <class name="com.glance.commonPage.tests.VerifyCommonPageTopPane">
+>>>>>>> shamamaTEST
         <methods>
           <include name="GL_Settings_GM_74_verifyCancelDelete"/>
           <include name="initializeTest"/>
+<<<<<<< HEAD
           <include name="GL_Settings_GM_69_verifyAddGroupMembership"/>
           <include name="GL_Settings_GM_71_verifyAddDuplicateEntries"/>
           <include name="verifyCancelAddGroupMembership"/>
@@ -54,9 +59,13 @@
 >>>>>>> sachiniTEST
 =======
 >>>>>>> sachiniTEST
+=======
+          <include name="GL_Main_33"/>
+>>>>>>> shamamaTEST
           <include name="testStartUp"/>
           <include name="GL_Settings_AE_12"/>
         </methods>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </class> <!-- userlogin.VerifyProfileUpdatePage -->
 >>>>>>> neelamaniTest
@@ -69,6 +78,9 @@
 =======
       </class> <!-- com.glance.datamanagement.tests.VerifyDataUploadPage -->
 >>>>>>> poornimaTEST
+=======
+      </class> <!-- com.glance.commonPage.tests.VerifyCommonPageTopPane -->
+>>>>>>> shamamaTEST
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -7,154 +7,352 @@ import com.glance.common.tests.BaseTest;
 import com.glance.pageobjects.dashboard.CommonPageLeftPane;
 import com.glance.pageobjects.dashboard.CommonPageTopPane;
 import com.glance.pageobjects.dashboard.DashboardPage;
+import com.glance.pageobjects.userlogin.LockScreenPage;
 import com.glance.pageobjects.userlogin.LoginPage;
+import com.glance.pageobjects.userlogin.SettingsPage;
 
 public class VerifyCommonPageLeftPane extends BaseTest {
-	CommonPageTopPane comTop;
 	LoginPage login;
-	DashboardPage DbPage;
-	CommonPageLeftPane comLeft;
+	CommonPageLeftPane leftPane;
+	CommonPageTopPane topPane;
+	DashboardPage dashboard;
+	SettingsPage settings;
+	LockScreenPage lockscreen;
 	
-	
-	//verify the userName in the topPane
-		@Test (priority=0)
-		public void GL_Main_22() throws InterruptedException {
-			login = new LoginPage(driver);
-			comTop =new	CommonPageTopPane(driver);
-			
-			login.enterUsername(userName);
-			login.enterPassword(password);
-			login.clickLoginBtn();
-			Thread.sleep(2000);
-			
-			comTop.clickDropDownIcon();
-			Assert.assertTrue(comTop.verifyUserName());
-			
-				
-		}
-	
-	//verify the pancake icon
+	//verify the glance icon and link
 	@Test(priority=0)
-	public void GL_Main_27() throws InterruptedException {
+	public void GL_Main_02() throws InterruptedException {
 		login = new LoginPage(driver);
-		comTop =new	CommonPageTopPane(driver);
-		comLeft = new CommonPageLeftPane(driver);
+		leftPane = new CommonPageLeftPane(driver);
+		topPane = new CommonPageTopPane(driver);
+		dashboard = new DashboardPage(driver);
+				
+		login.enterUsername(userName);
+		login.enterPassword(password);
+		login.clickLoginBtn();
+		
+		leftPane.clickGlanceIcon();
+		Thread.sleep(1000);
+	    Assert.assertTrue(dashboard.verifyNavigationToDashboardPage("Account Level Dashboard"));
+	
+	}	
+	
+	//verify the welcome note user profile pic and user name
+	@Test(priority=1)
+	public void GL_Main_03() throws InterruptedException {
+		login = new LoginPage(driver);
+		leftPane = new CommonPageLeftPane(driver);
+		topPane = new CommonPageTopPane(driver);
+		dashboard = new DashboardPage(driver);
+				
+		login.enterUsername(userName);
+		login.enterPassword(password);
+		login.clickLoginBtn();
+		
+		Assert.assertTrue(leftPane.verifyUserNameLeft());
+		
+		
+	}	
+	
+	//verify navigation to Settings Page
+     @Test( priority=2)
+	public void GL_Main_04() throws InterruptedException {
+		login = new LoginPage(driver);
+		leftPane = new CommonPageLeftPane(driver);
+		topPane = new CommonPageTopPane(driver);
+	
 		
 		login.enterUsername(userName);
 		login.enterPassword(password);
 		login.clickLoginBtn();
-		Thread.sleep(2000);
 		
-		comTop.clickPanCakeIcon();
-		Thread.sleep(2000);
-		Assert.assertTrue(comLeft.verifyToggling());
-		Thread.sleep(2000);
-	
 		
-			
-	}
+		leftPane.clickSettings();
+		settings =  new SettingsPage(driver);
+	    Assert.assertTrue(settings.verifyNavigationToSettingPage("Dashboard Management"));
+    	Thread.sleep(2000);
+    	
+	     
+}
+     
+  //verify Full Screen Option
+ 	@Test(priority=3)
+ 	public void GL_Main_05() throws InterruptedException {
+ 		login = new LoginPage(driver);
+ 		login.enterUsername(userName);
+ 		login.enterPassword(password);
+ 		login.clickLoginBtn();
+ 		
+ 		leftPane = new CommonPageLeftPane(driver);
+ 	    leftPane.clickFullScreen();
+ 		Thread.sleep(2000);
+ 		
+ 	     
+ 	}	
+
 	
-  //verify the category wise search suggestions if two letters typed
-	@Test (priority=1)
-	public void GL_Main_28() throws InterruptedException {
+	//verify navigation to Lock screen page
+	@Test(priority=4)
+	public void GL_Main_06() throws InterruptedException {
 		login = new LoginPage(driver);
-		comTop =new	CommonPageTopPane(driver);
+		leftPane = new CommonPageLeftPane(driver);
+		topPane = new CommonPageTopPane(driver);
+		
 		
 		login.enterUsername(userName);
 		login.enterPassword(password);
 		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
-		comTop.searchTopPane(searchTwo);
-		Thread.sleep(2000);
-		
-		Assert.assertTrue(comTop.verifySearchSuggestions());
-			
-	}
 	
-	//verify the  search text is added to the search text box if selected
-		@Test (priority=2)
-		public void GL_Main_31() throws InterruptedException {
+		
+		leftPane.clickScreenLock();
+		Thread.sleep(2000);
+		
+		lockscreen= new LockScreenPage(driver);
+	    Assert.assertTrue(lockscreen.verifyNavigationToLockScreen("Lock Screen"));
+	    Thread.sleep(2000);
+	}	
+	
+	//verify Logout Option
+		@Test(priority=5)
+		public void GL_Main_7() throws InterruptedException {
 			login = new LoginPage(driver);
-			comTop =new	CommonPageTopPane(driver);
-			DbPage = new DashboardPage(driver);
-			
 			login.enterUsername(userName);
 			login.enterPassword(password);
 			login.clickLoginBtn();
-			Thread.sleep(2000);
 			
-			comTop.searchTopPane(searchFullText);
+		    leftPane = new CommonPageLeftPane(driver);
+			leftPane.clickLogout();
+			Assert.assertTrue(login.getLoginTitle("Login Form"));
 			Thread.sleep(2000);
-			comTop.clickGo();
-			DbPage.verifyChartTitle();
+		}	
+		
+		
+		//verify the default account dashboards
+		@Test(priority=6)
+		public void GL_Main_10() throws InterruptedException {
+			login = new LoginPage(driver);
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
 			
+			//click on AccountDropdown and select an account
+			leftPane = new CommonPageLeftPane(driver);
+			leftPane.getAccountNameList();
+			leftPane.clickOnAccount();
+			Thread.sleep(1000);
+		    dashboard = new DashboardPage(driver);
+		    Assert.assertTrue(dashboard.verifyNavigationToDashboardPage("Account Level Dashboard"));
+		    
+		}	
+		
+	
+    // verify the defined account dashboards
+	@Test(priority=7)
+		public void GL_Main_11() throws InterruptedException {
+			login = new LoginPage(driver);
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
+			
+			//click on AccountDropdown and select an account
+			leftPane = new CommonPageLeftPane(driver);
+			leftPane.getAccountNameList();
+			leftPane.clickOnAccount();
+			Thread.sleep(1000);
+			leftPane.clickOnAccountName("Affinion");
+		    Thread.sleep(1000);
+		    dashboard = new DashboardPage(driver);
+		    Assert.assertEquals(dashboard.verifyChartTitle(),"Other Bar Chart");
+		}
+		
+	
+	
+		//verify the no dashboard define error with define now button
+		@Test(priority=8)
+		public void GL_Main_12() throws InterruptedException {
+			login = new LoginPage(driver);
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
+			
+			
+			leftPane = new CommonPageLeftPane(driver);
+			leftPane.getAccountNameList();
+			leftPane.clickOnAccount();
+			Thread.sleep(1000);
+			leftPane.clickOnAccountName("John Wiley");
+		    Thread.sleep(1000);
+		    Assert.assertTrue(leftPane.verifyNoDashboardDefineAcc());
+		    
+		    
+		}	
+		
+		
+		//verify the availability of engagements under selected account
+		@Test(priority=10)
+		public void GL_Main_14() throws InterruptedException {
+			login = new LoginPage(driver);
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
+			
+		
+			leftPane = new CommonPageLeftPane(driver);
+			leftPane.getAccountNameList();
+			leftPane.clickOnAccount();
+			Thread.sleep(2000);
+			leftPane.clickOnAccountName("Affinion");
+		    Thread.sleep(2000);
+		    
+		      
+		   
+		    leftPane.getEngagementNameList();
+		    leftPane.clickOnEngagement();
+		    Thread.sleep(1000); 
+		    Assert.assertTrue(leftPane.getEngagementNameList().contains("Loyalty Solutions"));
 		
 		}
 		
-		
-	
-	//verify access denied message
-	@Test (priority=3)
-	public void GL_Main_32() throws InterruptedException {
-		login = new LoginPage(driver);
-		comTop =new	CommonPageTopPane(driver);
-		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
-		
-		comTop.searchTopPane(searchAD);
-	
-		Thread.sleep(2000);
-		comTop.clickGo();
-		Assert.assertTrue(comTop.verifyInvalidAccess());
+			//checking the engagements under default account
+		 @Test(priority=11)
+		public void GL_Main_15() throws InterruptedException {
+			login = new LoginPage(driver);
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
 			
-	}
+
+			leftPane = new CommonPageLeftPane(driver);
+			leftPane.getAccountNameList();
+			leftPane.clickOnAccount();
+			Thread.sleep(2000);
+		    
+		    leftPane.getEngagementNameList();
+		    leftPane.clickOnEngagement();
+		    Thread.sleep(1000); 
+		    Assert.assertTrue(leftPane.getEngagementNameList().contains("AVA"));
 	
-	//verify the first default details if nothing is clicked
-	@Test (priority=4)
-	public void GL_Main_33() throws InterruptedException {
-		login = new LoginPage(driver);
-		comTop =new	CommonPageTopPane(driver);
+		}	
 		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
-		
-		comTop.searchTopPane(searchEmpty);
 	
-		Thread.sleep(2000);
-		comTop.clickGo();
-		Assert.assertTrue(comTop.verifyFirstDefaultDet());
+		//checking the projects under selected engagement
+		@Test(priority=13)
+		public void GL_Main_17() throws InterruptedException {
+			login = new LoginPage(driver);
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
 			
-	}
-	//verify the no search results error message
-	@Test (priority=5)
-	public void GL_Main_34() throws InterruptedException {
-		login = new LoginPage(driver);
-		comTop =new	CommonPageTopPane(driver);
-		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
-		
-		comTop.searchTopPane(searchAPE);
-	    Thread.sleep(2000);
-	  
-		
-		Assert.assertTrue(comTop. verifyNoSearchReults());
+			leftPane = new CommonPageLeftPane(driver);
+			leftPane.getAccountNameList();
+			leftPane.clickOnAccount();
+			Thread.sleep(2000);
+			leftPane.clickOnAccountName("Affinion");
+		    Thread.sleep(2000);
+		    
+		    leftPane.getEngagementNameList();
+		    leftPane.clickOnEngagement();
+		    Thread.sleep(1000); 
+			leftPane.clickOnEngagementName("Loyalty Solutions");
 			
-	}
-	
+			leftPane.getProjectNameList();
+			leftPane.clickOnProject();
+			Thread.sleep(10000);
+		    Assert.assertTrue(leftPane.getProjectNameList().contains("Red Pineapple"));
+			Thread.sleep(5000);
+		   
+		}	
+			
+		//checking the availabilty of default project
+	@Test(priority=14)
+		public void GL_Main_18() throws InterruptedException {
+			login = new LoginPage(driver);
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
+			
+			leftPane = new CommonPageLeftPane(driver);
+			leftPane.getAccountNameList();
+			leftPane.clickOnAccount();
+			Thread.sleep(2000);
+			
+	        leftPane.getEngagementNameList();
+		    leftPane.clickOnEngagement();
+		    Thread.sleep(1000); 
 		
+			
+			leftPane.getProjectNameList();
+			leftPane.clickOnProject();
+			Assert.assertTrue(leftPane.getProjectNameList().contains("Gold Pineapple"));
+			Thread.sleep(1000);
 	
-	
-	
-}
+			
+		
+		}	
+		
+	   //checking the availability of individuals under selected project
+	@Test(priority=15)
+		public void GL_Main_20() throws InterruptedException {
+			login = new LoginPage(driver);
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
+			
+			leftPane = new CommonPageLeftPane(driver);
+			leftPane.getAccountNameList();
+			leftPane.clickOnAccount();
+			Thread.sleep(2000);
+			leftPane.clickOnAccountName("Affinion");
+		    Thread.sleep(2000);
+		    
+		    leftPane.getEngagementNameList();
+		    leftPane.clickOnEngagement();
+		    Thread.sleep(1000); 
+			leftPane.clickOnEngagementName("Loyalty Solutions");
+			
+			leftPane.getProjectNameList();
+			leftPane.clickOnProject();
+			leftPane.clickOnProjectName("Red Pineapple");
+			Thread.sleep(10000);
+		 
+			Thread.sleep(5000);
+			
+			leftPane.getIndividualNameList();
+			leftPane.clickOnIndividual();
+			Assert.assertTrue(!leftPane.getIndividualNameList().contains("abc"));
+			Thread.sleep(1000);
+		}	
+		
+		
+		
+		//checking the individuals under default account
+		@Test(priority=16)
+		public void GL_Main_21() throws InterruptedException {
+			login = new LoginPage(driver);
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
+			
+			
+			leftPane = new CommonPageLeftPane(driver);
+			leftPane.getAccountNameList();
+			leftPane.clickOnAccount();
+			Thread.sleep(2000);
+			
+	        leftPane.getEngagementNameList();
+		    leftPane.clickOnEngagement();
+		    Thread.sleep(1000); 
+		
+			
+			leftPane.getProjectNameList();
+			leftPane.clickOnProject();
+			Thread.sleep(1000);
+			
+			leftPane.getIndividualNameList();
+			leftPane.clickOnIndividual();
+			Thread.sleep(1000);
+			Assert.assertTrue(leftPane.getIndividualNameList().contains("Tonie Falco"));
+		}	
+
+	}	
+
