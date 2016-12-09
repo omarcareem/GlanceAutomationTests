@@ -91,7 +91,7 @@ public class VerifyCommonPageTopPane extends BaseTest {
 			comTop.clickDropDownIcon();
 			Thread.sleep(700);
 		
-
+			
 			comTop.clickSettings();
 			Thread.sleep(5000);
 			

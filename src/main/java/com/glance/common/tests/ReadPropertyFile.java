@@ -132,13 +132,13 @@ public class ReadPropertyFile {
 	
 	public static String verifyUser;
 	
-<<<<<<< HEAD
+
 	public static String user1;
 	
 	public static String newUserName;
 	public static String firstName;
 	public static String lastName;
-	public static String email;
+	//public static String email;
 	public static String newPassword;
 	public static String confirmPassword;
 	public static String role;
@@ -160,7 +160,7 @@ public class ReadPropertyFile {
 
 	
 
-<<<<<<< HEAD
+
 	public static String admin;
 	public static String manager_QA;
 	public static String sConsultant_QA;
@@ -170,11 +170,11 @@ public class ReadPropertyFile {
 	public static String engineer_QA;
 	public static String aEngineer_QA;
 	public static String jEngineer_QA;
-=======
+
 
 	public static int rowCount;
 	public static String columnName;
-=======
+
 	public static String grpName;
     public static String grpNameNew;
     public static String grpNameDeleted;
@@ -190,9 +190,7 @@ public class ReadPropertyFile {
     public static String profileUpdateTitle;
     public static String lblLoginTitle;
     public static String expectedMessageTitleSet;
->>>>>>> shamamaTEST
 
->>>>>>> sachiniTEST
 
 	
 	
@@ -327,10 +325,7 @@ public class ReadPropertyFile {
 		System.out.println(showEntry);
 		enterSearch=getDataRepository().getProperty("enterSearch");
 		System.out.println(enterSearch);
-<<<<<<< HEAD
-=======
 
->>>>>>> sachiniTEST
 		recordInsert=getDataRepository().getProperty("recordInsert");
 		System.out.println(recordInsert);
 		
@@ -412,7 +407,7 @@ public class ReadPropertyFile {
 		System.out.println(UpdatelastName);
 
 		
-<<<<<<< HEAD
+
 		
 		//User management
 		group=getDataRepository().getProperty("group");
@@ -453,7 +448,7 @@ public class ReadPropertyFile {
 				
 			
 
-<<<<<<< HEAD
+
 		validfirstName=getDataRepository().getProperty("validfirstName");
 		System.out.println(validfirstName);		
 		validlastName=getDataRepository().getProperty("validlastName");
@@ -485,14 +480,14 @@ public class ReadPropertyFile {
 		selectTopPaneLogout=getDataRepository().getProperty("selectTopPaneLogout");
 		System.out.println(selectTopPaneLogout);
 		
-=======
+
 		/*rowCount=getDataRepository().getProperty(rowCount);
 		System.out.println(rowCount);*/
 		columnName=getDataRepository().getProperty("columnName");
 		System.out.println(columnName);
->>>>>>> sachiniTEST
 
-=======
+
+
 		accountName=getDataRepository().getProperty("accountName");
 		projectName=getDataRepository().getProperty("projectName");
 		expectedMessageEdit=getDataRepository().getProperty("expectedMessageEdit");
@@ -505,7 +500,7 @@ public class ReadPropertyFile {
 		profileUpdateTitle=getDataRepository().getProperty("profileUpdateTitle");
 		lblLoginTitle=getDataRepository().getProperty("lblLoginTitle");
 		
->>>>>>> shamamaTEST
+
 	}
 
 	

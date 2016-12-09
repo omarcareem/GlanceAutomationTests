@@ -64,7 +64,7 @@ public class GlanceDataProvider {
 		return chartData;
 	}
 	
-<<<<<<< HEAD
+
 	
 	@DataProvider(name="GL_UM_02")
 	public static Object[][] getMUUserName() throws Exception
@@ -174,8 +174,7 @@ public class GlanceDataProvider {
 		return selectDropDownValue;
 		
 	}
-=======
-<<<<<<< HEAD
+
 
 	
 	
@@ -203,8 +202,7 @@ public class GlanceDataProvider {
 		return sortData;
 	}
 	
-=======
->>>>>>> sachiniTEST
+
 	@DataProvider(name="AddEngagementData")
 	public static Object[][] getAddEngagementData() throws Exception
 	{
@@ -310,16 +308,11 @@ public class GlanceDataProvider {
 		}
 		return showEntryData;
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> sachiniTEST
-	
->>>>>>> 63ec7fccdb40aed3ba4f691963db98fc59345963
 
 }
 
-<<<<<<< HEAD
+
 	/*@DataProvider(name="profileUpdateData")
 	public static Object[][] getProfileUpdateData() throws Exception
 	{
@@ -394,5 +387,4 @@ public class GlanceDataProvider {
 
 
 
-=======
->>>>>>> poornimaTEST
+
