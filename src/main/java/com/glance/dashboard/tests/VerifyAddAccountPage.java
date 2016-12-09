@@ -148,11 +148,11 @@ public class VerifyAddAccountPage extends BaseTest {
 		createAccount.createpassword("1234qwer");
 		createAccount.confirmPassword("1234qwer");
 		createAccount.clickSubmitBtn();
-<<<<<<< HEAD
+
 		createAccount.clickpopupOK();
-=======
+
 		createAccount.clickpopupDone();
->>>>>>> poornimaTEST
+
 		createAccount.clickLoginLink();
 
 		// login with new user
@@ -298,8 +298,8 @@ public class VerifyAddAccountPage extends BaseTest {
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 		addAccount.clickClose();
 
-<<<<<<< HEAD
-	}*/
+
+	}
 	
 	@AfterMethod
 	public void deleteUser(){
@@ -316,8 +316,7 @@ public class VerifyAddAccountPage extends BaseTest {
 		
 		userManagement = new UserManagementPage(driver);
 		userManagement.tableDeleteLink("35");
-=======
->>>>>>> poornimaTEST
+
 	}
 
 }
