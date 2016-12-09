@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -27,8 +29,11 @@ public class ExcelReader {
 
 	public String getData(String sheetName, int row, int column) {
 		sheet = wb.getSheet(sheetName);
-
-		String data = sheet.getRow(row).getCell(column).getStringCellValue();
+		XSSFCell cell=sheet.getRow(row).getCell(column);
+		
+		cell.setCellType(1);
+		String data = cell.getStringCellValue();	
+		//String data = sheet.getRow(row).getCell(column).getStringCellValue();
 		return data;
 	}
 	
@@ -47,5 +52,5 @@ public class ExcelReader {
 		int rows = wb.getSheet(sheetName).getPhysicalNumberOfRows();
 		return rows;
 	}
-
+	
 }
