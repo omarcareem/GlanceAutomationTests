@@ -14,6 +14,7 @@ import com.glance.pageobjects.dashboard.DashboardPage;
 import com.glance.pageobjects.userlogin.CreateAccountPage;
 import com.glance.pageobjects.userlogin.LoginPage;
 import com.glance.pageobjects.userlogin.SettingsPage;
+import com.glance.pageobjects.usermanagement.DeleteUser;
 import com.glance.pageobjects.usermanagement.UserManagementPage;
 
 public class VerifyAddAccountPage extends BaseTest {
@@ -27,8 +28,8 @@ public class VerifyAddAccountPage extends BaseTest {
 	DashboardPage dashboard;
 	CommonPageObject commonPage;
 	BaseTest baseTest;
+	DeleteUser deleteUser;
 	UserManagementPage userManagement;
-	
 
 	@BeforeMethod
 	public void login() {
@@ -61,7 +62,7 @@ public class VerifyAddAccountPage extends BaseTest {
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 
 	}
-	
+
 	@Test(priority = 1)
 	public void GL_Settings_AA_02() throws Exception {
 
@@ -69,7 +70,6 @@ public class VerifyAddAccountPage extends BaseTest {
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickOnAddNewAccountLink();
 
-		
 		addAccount = new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 
@@ -109,10 +109,10 @@ public class VerifyAddAccountPage extends BaseTest {
 			System.out.println("New account is added");
 
 		else
-			System.out.println("Account is not added");	
+			System.out.println("Account is not added");
 
 	}
-	
+
 	@Test(priority = 3)
 	public void GL_Settings_AA_03_2() throws Exception {
 
@@ -132,15 +132,15 @@ public class VerifyAddAccountPage extends BaseTest {
 		Assert.assertTrue(leftPane.verifyAdded(accountName));
 
 	}
-	
+
 	@Test(priority = 4)
 	public void GL_Settings_AA_03_3() throws Exception {
-		
-		//logout admin
+
+		// logout admin
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickLogout();
-		
-		//create a user
+
+		// create a user
 		loginPage.navigateCreateAccountPage();
 		createAccount = new CreateAccountPage(driver);
 		createAccount.createUsername("Kavinda");
@@ -148,24 +148,44 @@ public class VerifyAddAccountPage extends BaseTest {
 		createAccount.createpassword("1234qwer");
 		createAccount.confirmPassword("1234qwer");
 		createAccount.clickSubmitBtn();
+<<<<<<< HEAD
 		createAccount.clickpopupOK();
+=======
+		createAccount.clickpopupDone();
+>>>>>>> poornimaTEST
 		createAccount.clickLoginLink();
-		
-		//login with new user
+
+		// login with new user
 		loginPage = new LoginPage(driver);
 		loginPage.enterUsername("Kavinda");
 		loginPage.enterPassword("1234qwer");
 		loginPage.clickLoginBtn();
-		
+
 		// click on add new on left pane
 		leftPane.clickOnAddNewAccountLink();
-		
+
 		addAccount = new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyAccessDeniedMessage("Access Denied!"));
 
+		leftPane.clickLogout();
+
+		loginPage = new LoginPage(driver);
+		loginPage.enterUsername(userName);
+		loginPage.enterPassword(password);
+		loginPage.clickLoginBtn();
+
+		leftPane.clickSettings();
+		settingsPage = new SettingsPage(driver);
+		settingsPage.ClickManageUsersBtn();
+
+		deleteUser = new DeleteUser(driver);
+		deleteUser.selectUserToDelete("Kavinda");
+		deleteUser.deleteUsers();
+		deleteUser.verifyDelete("Kavinda");
+
 	}
 
-		@Test(priority = 5)
+	@Test(priority = 5)
 	public void GL_Settings_AA_04() throws Exception {
 
 		// click on settings icon in left pane
@@ -245,7 +265,7 @@ public class VerifyAddAccountPage extends BaseTest {
 		addAccount.selectSegment(segment);
 		addAccount.clickSubmit();
 		addAccount.goToDashboard();
-		
+
 		// checking navigation back to dashboard page
 		dashboard = new DashboardPage(driver);
 		Assert.assertTrue(dashboard.verifyNavigationToDashboardPage("Account Level Dashboard"));
@@ -266,7 +286,7 @@ public class VerifyAddAccountPage extends BaseTest {
 
 	}
 
-/*	@Test(priority = 9)
+	@Test(priority = 9)
 	public void GL_Settings_AA_07() {
 
 		// click on add new on left pane
@@ -278,6 +298,7 @@ public class VerifyAddAccountPage extends BaseTest {
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 		addAccount.clickClose();
 
+<<<<<<< HEAD
 	}*/
 	
 	@AfterMethod
@@ -295,5 +316,8 @@ public class VerifyAddAccountPage extends BaseTest {
 		
 		userManagement = new UserManagementPage(driver);
 		userManagement.tableDeleteLink("35");
+=======
+>>>>>>> poornimaTEST
 	}
+
 }

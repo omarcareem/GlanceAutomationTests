@@ -43,7 +43,6 @@
 >>>>>>> poornimaTEST
           <include name="testStartUp"/>
           <include name="waitingForPageLoad"/>
-          <include name="GL_Settings_DU_42_3"/>
         </methods>
 <<<<<<< HEAD
 <<<<<<< HEAD

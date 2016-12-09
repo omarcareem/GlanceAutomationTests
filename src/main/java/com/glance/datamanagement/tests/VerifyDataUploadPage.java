@@ -50,8 +50,8 @@ public class VerifyDataUploadPage extends BaseTest {
 		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
-				
-		//check for the record in the table
+
+		// check for the record in the table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataUploadBtn();
 
@@ -60,23 +60,23 @@ public class VerifyDataUploadPage extends BaseTest {
 		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Upload Your Files Here"));
 
 	}
-	
-	/*@Test(priority = 1)
+
+	@Test(priority = 1)
 	public void GL_Settings_DU_42_1() throws IOException, InterruptedException {
 
 		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
-		
-		//check for the record in the table
+
+		// check for the record in the table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
-		
+
 		dataDUPage = new DataDeleteUpdatePage(driver);
 		dataDUPage.selectTable(tableName);
 		dataDUPage.clickSubmit();
 		Assert.assertTrue(dataDUPage.verifyReordExist("8"));
-		
+
 		// click data upload
 		leftPane.clickSettings();
 		settingsPage.clickDataUploadBtn();
@@ -89,16 +89,16 @@ public class VerifyDataUploadPage extends BaseTest {
 		dataUploadPage.clickUpload();
 		Assert.assertTrue(dataUploadPage.verifyRecordsAdded("1 records added to the table cdi"));
 		dataUploadPage.clickDone();
-		
-		//check for the uploaded record
+
+		// check for the uploaded record
 		Thread.sleep(3000);
 		leftPane.clickSettings();
 		settingsPage.clickDataDeleteModifyBtn();
 		dataDUPage.selectTable(tableName);
 		dataDUPage.clickSubmit();
 		Assert.assertTrue(dataDUPage.verifyReordExist("8"));
-		
-	}*/
+
+	}
 
 	@Test(priority = 2)
 	public void GL_Settings_DU_42_2() {
@@ -146,7 +146,7 @@ public class VerifyDataUploadPage extends BaseTest {
 	}
 
 	@Test(priority = 4)
-	public void GL_Settings_DU_42_4() {
+	public void GL_Settings_DU_42_4() throws InterruptedException {
 
 		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
@@ -160,6 +160,7 @@ public class VerifyDataUploadPage extends BaseTest {
 		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Upload Your Files Here"));
 		dataUploadPage.clickUpload();
 		Assert.assertTrue(dataUploadPage.verifyEmptyFields("Please select a file you wish to upload"));
+		Thread.sleep(5000);
 		dataUploadPage.clickOkay();
 
 	}
@@ -180,7 +181,7 @@ public class VerifyDataUploadPage extends BaseTest {
 
 	}
 
-	/*@Test(priority = 6)
+	@Test(priority = 6)
 	public void GL_Settings_DU_43() {
 
 		// click on settings icon in left pane
@@ -194,5 +195,5 @@ public class VerifyDataUploadPage extends BaseTest {
 		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Upload Your Files Here"));
 		dataUploadPage.clickClose();
 
-	}*/
+	}
 }
