@@ -51,7 +51,7 @@ public class VerifyManageGroup extends BaseTest{
 		Thread.sleep(2000);
 		mGroup.clickAddGroup();
 		Thread.sleep(2000);
-		comObj.lastPageNavigation();
+		comObj.pageNavigationString("Last");
 	
 		Assert.assertTrue(mGroup.verifyAdded(grpName));
 		
@@ -164,7 +164,7 @@ public class VerifyManageGroup extends BaseTest{
 		Thread.sleep(2000);
 		settingspage.clickManageGroupsBtn();
 		Thread.sleep(2000);
-		comObj.lastPageNavigation();
+		comObj.pageNavigationString("Last");
         mGroup.clickEdit(grpName);
 		Assert.assertTrue(eGroup.verifyNavigationToEditGroupPage(expectedMessageEdit));  
 		Thread.sleep(2000);
@@ -192,13 +192,13 @@ public class VerifyManageGroup extends BaseTest{
 		Thread.sleep(2000);
 		settingspage.clickManageGroupsBtn();
 		Thread.sleep(2000);
-		comObj.lastPageNavigation();
+		comObj.pageNavigationString("Last");
         mGroup.clickEdit(grpName);
 	    Thread.sleep(2000);
         eGroup.updateGroupName(grpNameNew);
 		Thread.sleep(2000);
 		eGroup.clickUpdateGroupBtn();
-		comObj.lastPageNavigation();
+		comObj.pageNavigationString("Last");
 		Assert.assertTrue(eGroup.verifyUpdated(grpNameNew));
 		comLeftPane.clickLogout();
 		
@@ -225,7 +225,7 @@ public class VerifyManageGroup extends BaseTest{
  		Thread.sleep(2000);
  	 	settingspage.clickManageGroupsBtn();
  		Thread.sleep(2000);
- 		comObj.lastPageNavigation();
+ 		comObj.pageNavigationString("Last");
  		mGroup.clickEdit(grpNameNew);
  		Thread.sleep(1000);
  		eGroup = new EditGroupPage(driver);
@@ -256,7 +256,7 @@ public class VerifyManageGroup extends BaseTest{
 		Thread.sleep(1000);
  		settingspage.clickManageGroupsBtn();
  		Thread.sleep(1000);
- 		comObj.lastPageNavigation();
+ 		comObj.pageNavigationString("Last");
  		mGroup.clickDelete(grpNameNew);
  		Thread.sleep(1000);
  	    

@@ -148,7 +148,7 @@ public class VerifyAddAccountPage extends BaseTest {
 		createAccount.createpassword("1234qwer");
 		createAccount.confirmPassword("1234qwer");
 		createAccount.clickSubmitBtn();
-		createAccount.clickpopupOkay();
+		createAccount.clickpopupOK();
 		createAccount.clickLoginLink();
 		
 		//login with new user
@@ -291,7 +291,7 @@ public class VerifyAddAccountPage extends BaseTest {
 		
 		// click manage users
 		settingsPage = new SettingsPage(driver);
-		settingsPage.clickManageUsersBtn();
+		settingsPage.ClickManageUsersBtn();
 		
 		userManagement = new UserManagementPage(driver);
 		userManagement.tableDeleteLink("35");

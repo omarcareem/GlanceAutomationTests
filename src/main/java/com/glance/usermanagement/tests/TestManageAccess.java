@@ -108,7 +108,7 @@ public class TestManageAccess extends BaseTest {
 		//Go to edit user to assign job role
 		
 				leftPanel.clickSettings();
-				settingPage.clickManageUsersBtn();
+				settingPage.ClickManageUsersBtn();
 				editUser.selectUserToEdit(userNameEdit);
 				editUser.changeJobRole(role);
 				editUser.update();
@@ -128,12 +128,9 @@ public class TestManageAccess extends BaseTest {
 		//Log out from current account
 				topPane.clickDropDownIcon();
 				topPane.clickLogout();
-<<<<<<< HEAD
-				
-=======
-			
+
 		//Log in as the user to whome we gave access
->>>>>>> sajeththaTest
+
 				loginPage.enterUsername(userNameEdit);
 				loginPage.enterPassword(passwordEdit);
 				loginPage.clickLoginBtn();

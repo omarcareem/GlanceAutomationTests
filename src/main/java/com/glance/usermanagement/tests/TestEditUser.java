@@ -59,7 +59,7 @@ public class TestEditUser extends BaseTest {
 		settingPage = new SettingsPage(driver);
 		editUser = new EditUser(driver);
 		
-		settingPage.clickManageUsersBtn();
+		settingPage.ClickManageUsersBtn();
 			
 
 }

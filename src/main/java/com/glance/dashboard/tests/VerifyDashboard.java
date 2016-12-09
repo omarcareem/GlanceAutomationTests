@@ -229,7 +229,7 @@ public class VerifyDashboard extends BaseTest{
 		
 		commonPageLeftPane.clickSettings();
 		SettingsPage settingsPage = new SettingsPage(driver);
-		settingsPage.clickManageUsersBtn();
+		settingsPage.ClickManageUsersBtn();
 		
 		DeleteUser deleteUser = new DeleteUser(driver);
 		deleteUser.selectUserToDelete(userName1);

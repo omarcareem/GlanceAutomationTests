@@ -163,7 +163,7 @@ public class VerifySettingsPage extends BaseTest {
 		leftPanel.clickSettings();
 		
 		//click on Manage users and check
-		settingPage.clickManageUsersBtn();
+		settingPage.ClickManageUsersBtn();
 		userManagement=new UserManagementPage(driver);
 		Assert.assertTrue(userManagement.FindUserDetailsElement("All active users"));
 		
