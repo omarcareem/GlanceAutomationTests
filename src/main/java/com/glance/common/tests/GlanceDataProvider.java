@@ -61,5 +61,115 @@ public class GlanceDataProvider {
 		}
 		return chartData;
 	}
+	
+	
+	@DataProvider(name="GL_UM_02")
+	public static Object[][] getMUUserName() throws Exception
+	{
+		String sheetName="GL_UM_02";
+		String colomName=null;
+		Object[][] sortingColom = null;
+		
+		ExcelReader excelReader = new ExcelReader(path);
+		int rows = excelReader.getRowCount(sheetName);
+		sortingColom = new Object[rows-1][];
+		for(int i=1;i<rows;i++){
+			colomName = excelReader.getData(sheetName, i, 0);
+			
+			
+			
+			sortingColom[i-1]=new Object[]{colomName};
+		}
+		
+		return sortingColom;
+		
+	}
+	
+	@DataProvider(name="GL_UM_08")
+	public static Object[][] getKeyWord() throws Exception
+	{
+		String sheetName="GL_UM_08";
+		String keyWord=null;
+		String expectedsearch = null;
+		Object[][] searchKeyWord = null;
+		
+		ExcelReader excelReader = new ExcelReader(path);
+		int rows = excelReader.getRowCount(sheetName);
+		searchKeyWord = new Object[rows-1][];
+		for(int i=1;i<rows;i++){
+			keyWord = excelReader.getData(sheetName, i, 0);
+			expectedsearch = excelReader.getData(sheetName, i, 1);
+			
+			
+			searchKeyWord[i-1]=new Object[]{keyWord,expectedsearch};
+		}
+		
+		return searchKeyWord;
+		
+	}
+	
+	@DataProvider(name="GL_UM_09_1")
+	public static Object[][] getPagination() throws Exception
+	{
+		String sheetName="GL_UM_09_1";
+		String pagination=null;
+		Object[][] pageNavigation = null;
+		
+		ExcelReader excelReader = new ExcelReader(path);
+		int rows = excelReader.getRowCount(sheetName);
+		pageNavigation = new Object[rows-1][];
+		for(int i=1;i<rows;i++){
+			pagination = excelReader.getData(sheetName, i, 0);
+						
+			
+			pageNavigation[i-1]=new Object[]{pagination};
+		}
+		
+		return pageNavigation;
+		
+	}
+	
+	@DataProvider(name="GL_UM_09_2")
+	public static Object[][] getIntPagination() throws Exception
+	{
+		String sheetName="GL_UM_09_2";
+		int middlePagination =0;
+		Object[][] pageNavigation = null;
+		
+		ExcelReader excelReader = new ExcelReader(path);
+		int rows = excelReader.getRowCount(sheetName);
+		pageNavigation = new Object[rows-1][];
+		for(int i=1;i<rows;i++){
+			middlePagination = excelReader.getIntData(sheetName, i, 0);
+			
+			
+			pageNavigation[i-1]=new Object[]{middlePagination};
+		}
+		
+		return pageNavigation;
+		
+	}
+
+	@DataProvider(name="GL_UM_12")
+	public static Object[][] getdropDownValue() throws Exception
+	{
+		String sheetName="GL_UM_12";
+		String dropDownValue=null;
+		Object[][] selectDropDownValue = null;
+		
+		ExcelReader excelReader = new ExcelReader(path);
+		int rows = excelReader.getRowCount(sheetName);
+		selectDropDownValue = new Object[rows-1][];
+		for(int i=1;i<rows;i++){
+			dropDownValue = excelReader.getData(sheetName, i, 0);
+			
+			
+			
+			selectDropDownValue[i-1]=new Object[]{dropDownValue};
+		}
+		
+		return selectDropDownValue;
+		
+	}
 
 }
