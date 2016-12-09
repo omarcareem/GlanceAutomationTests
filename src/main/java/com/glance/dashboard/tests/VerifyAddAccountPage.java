@@ -27,6 +27,7 @@ public class VerifyAddAccountPage extends BaseTest {
 	DashboardPage dashboard;
 	CommonPageObject commonPage;
 	BaseTest baseTest;
+	DeleteUser deleteUser;
 	UserManagementPage userManagement;
 	
 
@@ -148,7 +149,7 @@ public class VerifyAddAccountPage extends BaseTest {
 		createAccount.createpassword("1234qwer");
 		createAccount.confirmPassword("1234qwer");
 		createAccount.clickSubmitBtn();
-		createAccount.clickpopupOkay();
+		createAccount.clickpopupDone();
 		createAccount.clickLoginLink();
 		
 		//login with new user
@@ -162,6 +163,29 @@ public class VerifyAddAccountPage extends BaseTest {
 		
 		addAccount = new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyAccessDeniedMessage("Access Denied!"));
+		
+		// login
+		loginPage = new LoginPage(driver);
+		loginPage.enterUsername(userName);
+		loginPage.enterPassword(password);
+		loginPage.clickLoginBtn();
+				
+		// click manage users
+		settingsPage = new SettingsPage(driver);
+		settingsPage.clickManageUsersBtn();
+				
+		userManagement = new UserManagementPage(driver);
+		userManagement.tableDeleteLink("35");
+		
+		deleteUser = new DeleteUser(driver);
+
+        deleteUser.selectUserToDelete(userName1);
+
+        deleteUser.deleteUsers();
+
+        deleteUser.verifyDelete(userName1);
+
+
 
 	}
 
@@ -283,17 +307,6 @@ public class VerifyAddAccountPage extends BaseTest {
 	@AfterMethod
 	public void deleteUser(){
 		
-		// login
-		loginPage = new LoginPage(driver);
-		loginPage.enterUsername(userName);
-		loginPage.enterPassword(password);
-		loginPage.clickLoginBtn();
 		
-		// click manage users
-		settingsPage = new SettingsPage(driver);
-		settingsPage.clickManageUsersBtn();
-		
-		userManagement = new UserManagementPage(driver);
-		userManagement.tableDeleteLink("35");
 	}
 }
