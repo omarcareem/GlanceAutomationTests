@@ -10,7 +10,6 @@
           <include name="initializeTest"/>
           <include name="testStartUp"/>
           <include name="waitingForPageLoad"/>
-          <include name="GL_Settings_DU_42_3"/>
         </methods>
       </class> <!-- com.glance.datamanagement.tests.VerifyDataUploadPage -->
     </classes>
