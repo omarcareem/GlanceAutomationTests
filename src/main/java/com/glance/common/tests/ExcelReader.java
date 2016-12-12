@@ -39,9 +39,16 @@ public class ExcelReader {
 	
 	public int getIntData(String sheetName, int row, int column) {
 		sheet = wb.getSheet(sheetName);
-
-		int intData = sheet.getRow(row).getCell(column).getCellType();
+		XSSFCell cell=sheet.getRow(row).getCell(column);	
+		try{
+		String data = cell.getStringCellValue();	
+		int intData = Integer.parseInt(data);
 		return intData;
+		}
+		catch( Exception e){
+			e.printStackTrace();
+			return 0;
+		}
 	}
 
 	public int getRowCount(String sheetName) {

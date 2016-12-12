@@ -93,7 +93,7 @@ public class GlanceDataProvider {
 	{
 		String sheetName="GL_UM_08";
 		String keyWord=null;
-		String expectedsearch = null;
+		int expectedsearch = 0;
 		Object[][] searchKeyWord = null;
 		
 		ExcelReader excelReader = new ExcelReader(path);
@@ -101,7 +101,7 @@ public class GlanceDataProvider {
 		searchKeyWord = new Object[rows-1][];
 		for(int i=1;i<rows;i++){
 			keyWord = excelReader.getData(sheetName, i, 0);
-			expectedsearch = excelReader.getData(sheetName, i, 1);
+			expectedsearch = excelReader.getIntData(sheetName, i, 1);
 			
 			
 			searchKeyWord[i-1]=new Object[]{keyWord,expectedsearch};
