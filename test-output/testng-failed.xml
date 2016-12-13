@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
       <class name="com.glance.usermanagement.tests.ManageUser">
         <methods>
+          <include name="GL_UM_08" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="GL_UM_09_2" invocation-numbers="0 1 2"/>
           <include name="initializeTest"/>
-          <include name="GL_UM_09_1" invocation-numbers="1 3"/>
           <include name="systemLogin"/>
           <include name="systemLogOut"/>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,29 +71,11 @@
           <include name="GL_Main_33"/>
 >>>>>>> shamamaTEST
 >>>>>>> 63ec7fccdb40aed3ba4f691963db98fc59345963
+=======
+>>>>>>> jananiTest
           <include name="testStartUp"/>
-          <include name="GL_Settings_AE_12"/>
         </methods>
-<<<<<<< HEAD
       </class> <!-- com.glance.usermanagement.tests.ManageUser -->
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </class> <!-- userlogin.VerifyProfileUpdatePage -->
->>>>>>> neelamaniTest
-=======
-      </class> <!-- com.glance.dashboard.tests.VerifyAddEngagement -->
->>>>>>> sachiniTEST
-=======
-      </class> <!-- com.glance.usermanagement.tests.TestAddGroupMembership -->
->>>>>>> sajeththaTest
-=======
-      </class> <!-- com.glance.datamanagement.tests.VerifyDataUploadPage -->
->>>>>>> poornimaTEST
-=======
-      </class> <!-- com.glance.commonPage.tests.VerifyCommonPageTopPane -->
->>>>>>> shamamaTEST
->>>>>>> 63ec7fccdb40aed3ba4f691963db98fc59345963
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

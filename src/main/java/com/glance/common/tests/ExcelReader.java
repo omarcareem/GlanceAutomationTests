@@ -1,11 +1,8 @@
 package com.glance.common.tests;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -36,12 +33,22 @@ public class ExcelReader {
 		//String data = sheet.getRow(row).getCell(column).getStringCellValue();
 		return data;
 	}
-	
-	public int getIntData(String sheetName, int row, int column) {
-		sheet = wb.getSheet(sheetName);
 
-		int intData = sheet.getRow(row).getCell(column).getCellType();
+	public String getRawData(String sheetName, int row, int column) throws Exception{
+		sheet = wb.getSheet(sheetName);
+		XSSFCell cell=sheet.getRow(row).getCell(column);
+		return cell.getRawValue();
+	}
+	
+	public int getIntData(String sheetName, int row, int column) throws Exception{
+		String data = getRawData(sheetName,row,column);	
+		try{
+		int intData = Integer.parseInt(data);	
 		return intData;
+		}catch (NumberFormatException e) {
+			// TODO: handle exception
+			return 0;
+		}
 	}
 
 	public int getRowCount(String sheetName) {
