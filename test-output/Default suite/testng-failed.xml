@@ -5,8 +5,7 @@
     <classes>
       <class name="com.glance.usermanagement.tests.ManageUser">
         <methods>
-          <include name="GL_UM_08" invocation-numbers="0 1 2 3 4 5"/>
-          <include name="GL_UM_09_2" invocation-numbers="0 1 2"/>
+          <include name="GL_UM_09_2" invocation-numbers="2"/>
           <include name="initializeTest"/>
           <include name="systemLogin"/>
           <include name="systemLogOut"/>

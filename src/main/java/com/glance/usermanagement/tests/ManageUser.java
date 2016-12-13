@@ -77,14 +77,11 @@ public class ManageUser extends BaseTest {
 	public void GL_UM_09_2(int middlePagination) {
 
 		int rowCount = common.actualRowCount();
-		int pageCount = common.actualPageCount();
-
 		common.selectDropDuwn("10");
 
 		common.pageNavigationMiddle(middlePagination);
 		
-		Assert.assertTrue(common.verifyPageNavigationMiddle(middlePagination,
-				rowCount, pageCount));
+		Assert.assertTrue(common.verifyPageNavigationMiddle(middlePagination,rowCount));
 
 	}
 

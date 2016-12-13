@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite hostname="CMLJAMRASINGHA" name="Default test" tests="4" failures="2" timestamp="7 Dec 2016 11:06:54 GMT" time="13.987" errors="0">
   <testcase name="GL_UM_09_1" time="0.52" classname="com.glance.usermanagement.tests.ManageUser"/>
   <testcase name="GL_UM_09_1" time="0.574" classname="com.glance.usermanagement.tests.ManageUser">
@@ -418,5 +419,32 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
   <testcase name="GL_UM_08" time="2.159" classname="com.glance.usermanagement.tests.ManageUser"/>
   <testcase name="GL_UM_08" time="11.217" classname="com.glance.usermanagement.tests.ManageUser"/>
   <testcase name="GL_UM_08" time="3.443" classname="com.glance.usermanagement.tests.ManageUser"/>
+>>>>>>> jananiTest
+=======
+<testsuite hostname="CMLJAMRASINGHA" name="Default test" tests="24" failures="0" timestamp="13 Dec 2016 17:25:13 GMT" time="54.517" errors="0">
+  <testcase name="GL_UM_02" time="0.423" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_02" time="0.394" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_02" time="0.373" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_02" time="0.465" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_02" time="0.356" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_08" time="0.141" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_08" time="0.133" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_08" time="0.096" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_08" time="0.096" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_08" time="0.133" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_08" time="0.087" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_09_1" time="0.492" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_09_1" time="0.568" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_09_1" time="0.46" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_09_1" time="0.57" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_09_2" time="0.451" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_09_2" time="0.472" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_09_2" time="0.499" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_10" time="10.167" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_11" time="0.245" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_12" time="0.422" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_12" time="0.515" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_12" time="0.585" classname="com.glance.usermanagement.tests.ManageUser"/>
+  <testcase name="GL_UM_12" time="0.501" classname="com.glance.usermanagement.tests.ManageUser"/>
 >>>>>>> jananiTest
 </testsuite> <!-- Default test -->
