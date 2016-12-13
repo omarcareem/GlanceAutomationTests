@@ -1,25 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" total="24" passed="24">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="254008" started-at="2016-12-13T14:12:10Z" finished-at="2016-12-13T14:16:24Z">
+  <suite name="Default suite" duration-ms="54517" started-at="2016-12-13T17:24:18Z" finished-at="2016-12-13T17:25:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="254008" started-at="2016-12-13T14:12:10Z" finished-at="2016-12-13T14:16:24Z">
+    <test name="Default test" duration-ms="54517" started-at="2016-12-13T17:24:18Z" finished-at="2016-12-13T17:25:12Z">
       <class name="com.glance.usermanagement.tests.ManageUser">
-        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="testStartUp" is-config="true" duration-ms="157" started-at="2016-12-13T19:42:09Z" finished-at="2016-12-13T19:42:10Z">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="testStartUp" is-config="true" duration-ms="190" started-at="2016-12-13T22:54:18Z" finished-at="2016-12-13T22:54:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStartUp -->
-        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="initializeTest" is-config="true" duration-ms="7194" started-at="2016-12-13T19:42:10Z" finished-at="2016-12-13T19:42:17Z">
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="initializeTest" is-config="true" duration-ms="5223" started-at="2016-12-13T22:54:18Z" finished-at="2016-12-13T22:54:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogin" is-config="true" duration-ms="1985" started-at="2016-12-13T19:42:18Z" finished-at="2016-12-13T19:42:20Z">
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="2036" started-at="2016-12-13T22:54:24Z" finished-at="2016-12-13T22:54:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogin -->
-        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="GL_UM_08" duration-ms="197632" started-at="2016-12-13T19:42:20Z" data-provider="GL_UM_08" finished-at="2016-12-13T19:45:37Z">
+        <test-method status="PASS" signature="GL_UM_02(java.lang.String)[pri:1, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_02" duration-ms="423" started-at="2016-12-13T22:54:26Z" data-provider="GL_UM_02" finished-at="2016-12-13T22:54:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User ID]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_02 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="152" started-at="2016-12-13T22:54:26Z" finished-at="2016-12-13T22:54:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1111" started-at="2016-12-13T22:54:27Z" finished-at="2016-12-13T22:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_02(java.lang.String)[pri:1, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_02" duration-ms="394" started-at="2016-12-13T22:54:28Z" data-provider="GL_UM_02" finished-at="2016-12-13T22:54:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User Name]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_02 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="52" started-at="2016-12-13T22:54:28Z" finished-at="2016-12-13T22:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1115" started-at="2016-12-13T22:54:28Z" finished-at="2016-12-13T22:54:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_02(java.lang.String)[pri:1, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_02" duration-ms="373" started-at="2016-12-13T22:54:29Z" data-provider="GL_UM_02" finished-at="2016-12-13T22:54:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_02 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="127" started-at="2016-12-13T22:54:30Z" finished-at="2016-12-13T22:54:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1084" started-at="2016-12-13T22:54:30Z" finished-at="2016-12-13T22:54:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_02(java.lang.String)[pri:1, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_02" duration-ms="465" started-at="2016-12-13T22:54:31Z" data-provider="GL_UM_02" finished-at="2016-12-13T22:54:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Last Name]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_02 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="167" started-at="2016-12-13T22:54:31Z" finished-at="2016-12-13T22:54:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1033" started-at="2016-12-13T22:54:31Z" finished-at="2016-12-13T22:54:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_02(java.lang.String)[pri:1, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_02" duration-ms="356" started-at="2016-12-13T22:54:33Z" data-provider="GL_UM_02" finished-at="2016-12-13T22:54:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Job Role]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_02 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="132" started-at="2016-12-13T22:54:33Z" finished-at="2016-12-13T22:54:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="997" started-at="2016-12-13T22:54:33Z" finished-at="2016-12-13T22:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_08" duration-ms="141" started-at="2016-12-13T22:54:34Z" data-provider="GL_UM_08" finished-at="2016-12-13T22:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -35,15 +130,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GL_UM_08 -->
-        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogOut" is-config="true" duration-ms="220" started-at="2016-12-13T19:45:37Z" finished-at="2016-12-13T19:45:38Z">
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="160" started-at="2016-12-13T22:54:34Z" finished-at="2016-12-13T22:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogOut -->
-        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogin" is-config="true" duration-ms="1308" started-at="2016-12-13T19:45:38Z" finished-at="2016-12-13T19:45:39Z">
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1135" started-at="2016-12-13T22:54:34Z" finished-at="2016-12-13T22:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogin -->
-        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="GL_UM_08" duration-ms="7672" started-at="2016-12-13T19:45:39Z" data-provider="GL_UM_08" finished-at="2016-12-13T19:45:46Z">
+        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_08" duration-ms="133" started-at="2016-12-13T22:54:36Z" data-provider="GL_UM_08" finished-at="2016-12-13T22:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -59,15 +154,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GL_UM_08 -->
-        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogOut" is-config="true" duration-ms="165" started-at="2016-12-13T19:45:46Z" finished-at="2016-12-13T19:45:47Z">
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="127" started-at="2016-12-13T22:54:36Z" finished-at="2016-12-13T22:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogOut -->
-        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogin" is-config="true" duration-ms="1166" started-at="2016-12-13T19:45:47Z" finished-at="2016-12-13T19:45:48Z">
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1052" started-at="2016-12-13T22:54:36Z" finished-at="2016-12-13T22:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogin -->
-        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="GL_UM_08" duration-ms="14690" started-at="2016-12-13T19:45:48Z" data-provider="GL_UM_08" finished-at="2016-12-13T19:46:03Z">
+        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_08" duration-ms="96" started-at="2016-12-13T22:54:37Z" data-provider="GL_UM_08" finished-at="2016-12-13T22:54:37Z">
           <params>
             <param index="0">
               <value>
@@ -83,15 +178,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GL_UM_08 -->
-        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogOut" is-config="true" duration-ms="172" started-at="2016-12-13T19:46:03Z" finished-at="2016-12-13T19:46:03Z">
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="138" started-at="2016-12-13T22:54:37Z" finished-at="2016-12-13T22:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogOut -->
-        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogin" is-config="true" duration-ms="1268" started-at="2016-12-13T19:46:03Z" finished-at="2016-12-13T19:46:04Z">
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="972" started-at="2016-12-13T22:54:37Z" finished-at="2016-12-13T22:54:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogin -->
-        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="GL_UM_08" duration-ms="2159" started-at="2016-12-13T19:46:04Z" data-provider="GL_UM_08" finished-at="2016-12-13T19:46:06Z">
+        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_08" duration-ms="96" started-at="2016-12-13T22:54:38Z" data-provider="GL_UM_08" finished-at="2016-12-13T22:54:38Z">
           <params>
             <param index="0">
               <value>
@@ -107,15 +202,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GL_UM_08 -->
-        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogOut" is-config="true" duration-ms="147" started-at="2016-12-13T19:46:06Z" finished-at="2016-12-13T19:46:06Z">
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="73" started-at="2016-12-13T22:54:38Z" finished-at="2016-12-13T22:54:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogOut -->
-        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogin" is-config="true" duration-ms="1084" started-at="2016-12-13T19:46:06Z" finished-at="2016-12-13T19:46:07Z">
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1123" started-at="2016-12-13T22:54:38Z" finished-at="2016-12-13T22:54:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogin -->
-        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="GL_UM_08" duration-ms="11217" started-at="2016-12-13T19:46:07Z" data-provider="GL_UM_08" finished-at="2016-12-13T19:46:19Z">
+        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_08" duration-ms="133" started-at="2016-12-13T22:54:39Z" data-provider="GL_UM_08" finished-at="2016-12-13T22:54:39Z">
           <params>
             <param index="0">
               <value>
@@ -131,15 +226,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GL_UM_08 -->
-        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogOut" is-config="true" duration-ms="140" started-at="2016-12-13T19:46:19Z" finished-at="2016-12-13T19:46:19Z">
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="129" started-at="2016-12-13T22:54:39Z" finished-at="2016-12-13T22:54:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogOut -->
-        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogin" is-config="true" duration-ms="1244" started-at="2016-12-13T19:46:19Z" finished-at="2016-12-13T19:46:20Z">
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="995" started-at="2016-12-13T22:54:40Z" finished-at="2016-12-13T22:54:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogin -->
-        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="GL_UM_08" duration-ms="3443" started-at="2016-12-13T19:46:20Z" data-provider="GL_UM_08" finished-at="2016-12-13T19:46:23Z">
+        <test-method status="PASS" signature="GL_UM_08(java.lang.String, int)[pri:2, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_08" duration-ms="87" started-at="2016-12-13T22:54:41Z" data-provider="GL_UM_08" finished-at="2016-12-13T22:54:41Z">
           <params>
             <param index="0">
               <value>
@@ -155,7 +250,240 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GL_UM_08 -->
-        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@3911c2a7]" name="systemLogOut" is-config="true" duration-ms="184" started-at="2016-12-13T19:46:23Z" finished-at="2016-12-13T19:46:24Z">
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="121" started-at="2016-12-13T22:54:41Z" finished-at="2016-12-13T22:54:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1096" started-at="2016-12-13T22:54:41Z" finished-at="2016-12-13T22:54:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_09_1(java.lang.String)[pri:3, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_09_1" duration-ms="492" started-at="2016-12-13T22:54:42Z" data-provider="GL_UM_09_1" finished-at="2016-12-13T22:54:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_09_1 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="130" started-at="2016-12-13T22:54:42Z" finished-at="2016-12-13T22:54:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1012" started-at="2016-12-13T22:54:43Z" finished-at="2016-12-13T22:54:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_09_1(java.lang.String)[pri:3, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_09_1" duration-ms="568" started-at="2016-12-13T22:54:44Z" data-provider="GL_UM_09_1" finished-at="2016-12-13T22:54:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Next]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_09_1 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="57" started-at="2016-12-13T22:54:44Z" finished-at="2016-12-13T22:54:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1103" started-at="2016-12-13T22:54:44Z" finished-at="2016-12-13T22:54:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_09_1(java.lang.String)[pri:3, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_09_1" duration-ms="460" started-at="2016-12-13T22:54:45Z" data-provider="GL_UM_09_1" finished-at="2016-12-13T22:54:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Last]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_09_1 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="145" started-at="2016-12-13T22:54:46Z" finished-at="2016-12-13T22:54:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1136" started-at="2016-12-13T22:54:46Z" finished-at="2016-12-13T22:54:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_09_1(java.lang.String)[pri:3, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_09_1" duration-ms="570" started-at="2016-12-13T22:54:47Z" data-provider="GL_UM_09_1" finished-at="2016-12-13T22:54:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Previous]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_09_1 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="92" started-at="2016-12-13T22:54:48Z" finished-at="2016-12-13T22:54:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1135" started-at="2016-12-13T22:54:48Z" finished-at="2016-12-13T22:54:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_09_2(int)[pri:4, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_09_2" duration-ms="451" started-at="2016-12-13T22:54:49Z" data-provider="GL_UM_09_2" finished-at="2016-12-13T22:54:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_09_2 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="53" started-at="2016-12-13T22:54:49Z" finished-at="2016-12-13T22:54:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1155" started-at="2016-12-13T22:54:49Z" finished-at="2016-12-13T22:54:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_09_2(int)[pri:4, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_09_2" duration-ms="472" started-at="2016-12-13T22:54:51Z" data-provider="GL_UM_09_2" finished-at="2016-12-13T22:54:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_09_2 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="125" started-at="2016-12-13T22:54:51Z" finished-at="2016-12-13T22:54:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1077" started-at="2016-12-13T22:54:51Z" finished-at="2016-12-13T22:54:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_09_2(int)[pri:4, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_09_2" duration-ms="499" started-at="2016-12-13T22:54:52Z" data-provider="GL_UM_09_2" finished-at="2016-12-13T22:54:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_09_2 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="137" started-at="2016-12-13T22:54:53Z" finished-at="2016-12-13T22:54:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1003" started-at="2016-12-13T22:54:53Z" finished-at="2016-12-13T22:54:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_10()[pri:5, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_10" duration-ms="10167" started-at="2016-12-13T22:54:54Z" finished-at="2016-12-13T22:55:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_10 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="159" started-at="2016-12-13T22:55:04Z" finished-at="2016-12-13T22:55:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1124" started-at="2016-12-13T22:55:04Z" finished-at="2016-12-13T22:55:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_11()[pri:6, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_11" duration-ms="245" started-at="2016-12-13T22:55:05Z" finished-at="2016-12-13T22:55:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_11 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="195" started-at="2016-12-13T22:55:06Z" finished-at="2016-12-13T22:55:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1017" started-at="2016-12-13T22:55:06Z" finished-at="2016-12-13T22:55:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_12(java.lang.String)[pri:7, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_12" duration-ms="422" started-at="2016-12-13T22:55:07Z" data-provider="GL_UM_12" finished-at="2016-12-13T22:55:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_12 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="155" started-at="2016-12-13T22:55:07Z" finished-at="2016-12-13T22:55:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1044" started-at="2016-12-13T22:55:07Z" finished-at="2016-12-13T22:55:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_12(java.lang.String)[pri:7, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_12" duration-ms="515" started-at="2016-12-13T22:55:08Z" data-provider="GL_UM_12" finished-at="2016-12-13T22:55:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[25]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_12 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="52" started-at="2016-12-13T22:55:09Z" finished-at="2016-12-13T22:55:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1065" started-at="2016-12-13T22:55:09Z" finished-at="2016-12-13T22:55:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_12(java.lang.String)[pri:7, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_12" duration-ms="585" started-at="2016-12-13T22:55:10Z" data-provider="GL_UM_12" finished-at="2016-12-13T22:55:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_12 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="122" started-at="2016-12-13T22:55:11Z" finished-at="2016-12-13T22:55:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogOut -->
+        <test-method status="PASS" signature="systemLogin()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogin" is-config="true" duration-ms="1011" started-at="2016-12-13T22:55:11Z" finished-at="2016-12-13T22:55:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemLogin -->
+        <test-method status="PASS" signature="GL_UM_12(java.lang.String)[pri:7, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="GL_UM_12" duration-ms="501" started-at="2016-12-13T22:55:12Z" data-provider="GL_UM_12" finished-at="2016-12-13T22:55:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_UM_12 -->
+        <test-method status="PASS" signature="systemLogOut()[pri:0, instance:com.glance.usermanagement.tests.ManageUser@4dfa3a9d]" name="systemLogOut" is-config="true" duration-ms="140" started-at="2016-12-13T22:55:12Z" finished-at="2016-12-13T22:55:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- systemLogOut -->
