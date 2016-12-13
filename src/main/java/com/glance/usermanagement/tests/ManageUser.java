@@ -49,10 +49,14 @@ public class ManageUser extends BaseTest {
 
 	@Test(dataProvider = "GL_UM_08", dataProviderClass = GlanceDataProvider.class, priority = 2)
 	public void GL_UM_08(String keyWord, int expectedsearch) {
-
-		common.tableSearch(keyWord);
-		System.out.println(keyWord);
-		Assert.assertEquals(manageUser.actualSearchResult(keyWord),expectedsearch);
+		try {
+			common.tableSearch(keyWord);
+			System.out.println(keyWord);
+			Assert.assertEquals(common.actualSearchResult(keyWord),
+					expectedsearch);
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
 	}
 
 	@Test(dataProvider = "GL_UM_09_1", dataProviderClass = GlanceDataProvider.class, priority = 3)
@@ -64,7 +68,8 @@ public class ManageUser extends BaseTest {
 		common.selectDropDuwn("10");
 
 		common.pageNavigationString(pagination);
-		Assert.assertTrue(common.verifyPageNavigationString(pagination,rowCount, pageCount));
+		Assert.assertTrue(common.verifyPageNavigationString(pagination,
+				rowCount, pageCount));
 
 	}
 
@@ -74,10 +79,10 @@ public class ManageUser extends BaseTest {
 		int rowCount = common.actualRowCount();
 		int pageCount = common.actualPageCount();
 
-		String dropDownValue = "10";
-		common.selectDropDuwn(dropDownValue);
+		common.selectDropDuwn("10");
 
 		common.pageNavigationMiddle(middlePagination);
+		
 		Assert.assertTrue(common.verifyPageNavigationMiddle(middlePagination,
 				rowCount, pageCount));
 
@@ -106,9 +111,12 @@ public class ManageUser extends BaseTest {
 	public void GL_UM_12(String dropDownValue) {
 		int actualRawCount = 0;
 		actualRawCount = common.actualRowCount();
+		
 		common.selectDropDuwn(dropDownValue);
+		
 		System.out.println(dropDownValue);
-		Assert.assertEquals(common.actualRowCountDropDown(dropDownValue),common.expectedRowCountDropDown(actualRawCount));
+		Assert.assertEquals(common.actualRowCountDropDown(dropDownValue),
+				common.expectedRowCountDropDown(actualRawCount));
 	}
 
 	@AfterMethod

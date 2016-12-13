@@ -1,7 +1,5 @@
 package com.glance.common.tests;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DataFormatter;
 import org.testng.annotations.DataProvider;
 
 public class GlanceDataProvider {
@@ -164,10 +162,7 @@ public class GlanceDataProvider {
 		int rows = excelReader.getRowCount(sheetName);
 		selectDropDownValue = new Object[rows-1][];
 		for(int i=1;i<rows;i++){
-			dropDownValue = excelReader.getData(sheetName, i, 0);
-			
-			
-			
+			dropDownValue = excelReader.getRawData(sheetName, i, 0);	
 			selectDropDownValue[i-1]=new Object[]{dropDownValue};
 		}
 		

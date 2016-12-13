@@ -10,7 +10,6 @@
           <include name="initializeTest"/>
           <include name="systemLogin"/>
           <include name="systemLogOut"/>
-          <include name="GL_UM_12" invocation-numbers="0 2 3"/>
           <include name="testStartUp"/>
         </methods>
       </class> <!-- com.glance.usermanagement.tests.ManageUser -->
