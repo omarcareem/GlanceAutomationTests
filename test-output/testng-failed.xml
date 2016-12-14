@@ -6,7 +6,9 @@
       <class name="com.glance.commonPage.tests.VerifyCommonPageTopPane">
         <methods>
           <include name="initializeTest"/>
-          <include name="GL_Main_33"/>
+          <include name="GL_Main_34"/>
+          <include name="login"/>
+          <include name="logout"/>
           <include name="testStartUp"/>
         </methods>
       </class> <!-- com.glance.commonPage.tests.VerifyCommonPageTopPane -->
