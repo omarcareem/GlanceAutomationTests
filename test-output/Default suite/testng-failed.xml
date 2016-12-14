@@ -3,28 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.glance.usermanagement.tests.TestDeleteUser">
+      <class name="com.glance.userlogin.tests.VerifyProfileUpdatePage">
         <methods>
-          <include name="GL_Settings_MU_61_verifyCancelDeleteUser"/>
+          <include name="GL_Settings_PU_97"/>
+          <include name="GL_Settings_PU_95"/>
+          <include name="GL_Settings_PU_96"/>
+          <include name="Logout"/>
+          <include name="GL_Settings_PU_93"/>
+          <include name="GL_Settings_PU_94"/>
           <include name="initializeTest"/>
-          <include name="verifyGoToDeleteUserPage"/>
-          <include name="GL_Settings_MU_62_verifyGoBack"/>
-          <include name="GL_Settings_MU_60_verifyDeleteUser"/>
-          <include name="testStartUp"/>
-        </methods>
-      </class> <!-- com.glance.usermanagement.tests.TestDeleteUser -->
-=======
-      <class name="userlogin.VerifyProfileUpdatePage">
-        <methods>
-          <include name="GL_Settings_09"/>
-          <include name="GL_Settings_07"/>
+          <include name="GL_Settings_PU_92"/>
           <include name="LoginAndNavigation"/>
-          <include name="initializeTest"/>
           <include name="testStartUp"/>
         </methods>
-      </class> <!-- userlogin.VerifyProfileUpdatePage -->
->>>>>>> neelamaniTest
+      </class> <!-- com.glance.userlogin.tests.VerifyProfileUpdatePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

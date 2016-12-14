@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import junit.framework.Assert;
 
+import org.testng.annotations.AfterMethod;
 //import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -30,7 +31,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		
 		
 		Thread.sleep(5000);
-		loginPage.enterUsername(userName);
+		loginPage.enterUsername(adminUser);
 		loginPage.enterPassword(password);
 		loginPage.clickLoginBtn();
 	
@@ -45,14 +46,8 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		
 	}
 	
-	/*@AfterMethod
+	@AfterMethod
 	public void Logout() throws InterruptedException{
-		
-		
-		ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
-		
-		profileUpdate.clickUpdateBtn();
-		profileUpdate.clickPopupDoneBtn();
 		
 		CommonPageLeftPane commonLeftPane =new CommonPageLeftPane(driver);
 		Thread.sleep(5000);
@@ -60,8 +55,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		
 		
-	}*/
-	
+	}
 	
 	@Test (priority = 0)
 	public void GL_Settings_PU_92 () throws InterruptedException {
@@ -91,6 +85,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getpopupMsgContent2("Please enter user name in valid length !"));
 		Thread.sleep(5000);
 		profileUpdate.clickPopupOKBtn();
+		
+		Thread.sleep(5000);
+		Assert.assertTrue(profileUpdate.getUserNameValue("admin1"));
+		Thread.sleep(5000);
 	
 	
 		//Invalid username2	
@@ -102,6 +100,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getpopupMsgContent2("Please enter user name in valid length !"));
 		Thread.sleep(5000);
 		profileUpdate.clickPopupOKBtn();
+		
+		Thread.sleep(5000);
+		Assert.assertTrue(profileUpdate.getUserNameValue("admin1"));
+		Thread.sleep(5000);
 		
 		
 		//Invalid user name3
@@ -115,7 +117,25 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		profileUpdate.clickPopupOKBtn();
 		
 		Thread.sleep(5000);
-		profileUpdate.changeUsername(userName);	
+		Assert.assertTrue(profileUpdate.getUserNameValue("admin1"));
+		Thread.sleep(5000);
+		
+		//empty Username
+		Thread.sleep(5000);
+		profileUpdate.changeUsername(updateEmptyUN);
+		Thread.sleep(5000);
+		profileUpdate.clickUpdateBtn();
+		Thread.sleep(5000);
+		Assert.assertTrue(profileUpdate.getpopupMsgContent2("Please enter user name in valid length !"));
+		Thread.sleep(5000);
+		profileUpdate.clickPopupOKBtn();
+		
+		Thread.sleep(5000);
+		Assert.assertTrue(profileUpdate.getUserNameValue("admin1"));
+		Thread.sleep(5000);
+		
+		Thread.sleep(5000);
+		profileUpdate.changeUsername(adminUser);	
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
 		Thread.sleep(5000);
@@ -160,6 +180,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getpopupMsgContent3("You have entered an invalid email address!"));
 		profileUpdate.clickPopupOKBtn();
 		
+		Assert.assertTrue(profileUpdate.getEmailIDValue("admin1@gmail.com"));
 		
 		//ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
 		Thread.sleep(5000);
@@ -167,12 +188,16 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
 		Thread.sleep(5000);
-		Assert.assertTrue(profileUpdate.getpopupMsgContent3("You have entered an invalid email address!"));
-		profileUpdate.clickPopupOKBtn();
+		Assert.assertTrue(profileUpdate.getpopupMsgContent1("Profile details updated successfully"));
+		profileUpdate.clickPopupDoneBtn();
+		
+		settingspage.clickProfileUpdateBtn();
+		
+		Assert.assertTrue(profileUpdate.getEmailIDValue("admin1@gmail.com"));
 		
 		
 		Thread.sleep(5000);
-		profileUpdate.changeEmail(emailAdd);
+		profileUpdate.changeEmail(emailAddErr);
 		Thread.sleep(5000);
 		
 		profileUpdate.clickUpdateBtn();
@@ -255,6 +280,19 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		
 		profileUpdate.clickChangePssword();
 		Thread.sleep(5000);
+		profileUpdate.changeNewPswd(updateEmptyPSW);
+		Thread.sleep(5000);
+		profileUpdate.changeConPassword(updateEmptyConPSW);
+		Thread.sleep(5000);
+		profileUpdate.clickUpdateBtn();
+		Thread.sleep(5000);
+		Assert.assertTrue(profileUpdate.getpopupMsgContent6("Please enter password in valid length !"));
+		Thread.sleep(5000);
+		profileUpdate.clickPopupOKBtn();
+		Thread.sleep(5000);
+		
+		profileUpdate.clickChangePssword();
+		Thread.sleep(5000);
 		profileUpdate.changeNewPswd(password);
 		Thread.sleep(5000);
 		profileUpdate.changeConPassword(password);
@@ -292,8 +330,25 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getlastNameValue("Hewawasam"));
 		
-		
 		Thread.sleep(5000);
+		profileUpdate.changeFirstName(updateEmptyFirstName);
+		Thread.sleep(5000);
+		profileUpdate.changeLastname(UpdateEmptyLastName);
+		Thread.sleep(5000);
+		profileUpdate.clickUpdateBtn();
+		Thread.sleep(5000);
+		Assert.assertTrue(profileUpdate.getpopupMsgContent1("Profile details updated successfully"));
+		Thread.sleep(5000);
+		profileUpdate.clickPopupDoneBtn();
+		
+		
+		settingspage.clickProfileUpdateBtn();
+		Thread.sleep(5000);
+		Assert.assertTrue(profileUpdate.getFirstNameValue("Neelamani"));
+		Thread.sleep(5000);
+		Assert.assertTrue(profileUpdate.getlastNameValue("Hewawasam"));
+		Thread.sleep(5000);
+		
 		profileUpdate.changeFirstName(validfirstName);
 		Thread.sleep(5000);
 		profileUpdate.changeLastname(validlastName);
@@ -318,7 +373,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		profileUpdate.clickchangeImg();
 		profileUpdate.clickChooseImg();
 		Thread.sleep(5000);
-		Runtime.getRuntime().exec("C:\\Users\\nhewawasam\\Desktop\\FileUpload1.exe");
+		Runtime.getRuntime().exec("C:\\Users\\nhewawasam\\Desktop\\FileUpload.exe");
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
 		Assert.assertTrue(profileUpdate.getpopupMsgContent1("Profile details updated successfully"));
@@ -327,12 +382,17 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		
 		SettingsPage settingspage= new SettingsPage(driver);
 		settingspage.clickProfileUpdateBtn();
-		Thread.sleep(5000);
+		
+		//Assert.assertTrue(profileUpdate.getImagePreview("user_images/admin.png"));
+		
+		profileUpdate.clickchangeImg();
 		profileUpdate.clickChooseImg();
 		Thread.sleep(5000);
-		Runtime.getRuntime().exec("C:\\Users\\nhewawasam\\Desktop\\FileUpload.exe");
-		
-		
+		Runtime.getRuntime().exec("C:\\Users\\nhewawasam\\Desktop\\FileUpload1.exe");
+		Thread.sleep(5000);
+		profileUpdate.clickUpdateBtn();
+		profileUpdate.clickPopupDoneBtn();
+		Thread.sleep(5000);
 	}
 
 	
@@ -356,7 +416,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Manager - QA"));
 		Thread.sleep(5000);
 		
-	//	ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
+		
 		profileUpdate.selectJobRole(sConsultant_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -371,7 +431,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Senior Consultant - QA"));
 		Thread.sleep(5000);
 		
-	//	ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
+	
 		profileUpdate.selectJobRole(consultant_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -386,7 +446,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Consultant - QA"));
 		Thread.sleep(5000);
 		
-	//	ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
+	
 		profileUpdate.selectJobRole(aConsultant_QA);
 		Thread.sleep(5000);;
 		profileUpdate.clickUpdateBtn();
@@ -401,7 +461,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Associate Consultant - QA"));
 		Thread.sleep(5000);
 		
-	//	ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
+	
 		profileUpdate.selectJobRole(sEngineer_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -416,7 +476,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Senior Engineer - QA"));
 		Thread.sleep(5000);
 		
-		//ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
+		
 		profileUpdate.selectJobRole(engineer_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -431,7 +491,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Engineer - QA"));
 		Thread.sleep(5000);
 		
-		//ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
+		
 		profileUpdate.selectJobRole(aEngineer_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -447,7 +507,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Associate Engineer - QA"));
 		Thread.sleep(5000);
 		
-		//ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
+		
 		profileUpdate.selectJobRole(jEngineer_QA);
 		profileUpdate.clickUpdateBtn();
 		Assert.assertTrue(profileUpdate.getpopupMsgContent1("Profile details updated successfully"));
@@ -459,6 +519,18 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Junior Engineer - QA"));
 		Thread.sleep(5000);
+		
+		/*profileUpdate.selectJobRole(none);
+		profileUpdate.clickUpdateBtn();
+		Assert.assertTrue(profileUpdate.getpopupMsgContent1("Profile details updated successfully"));
+		profileUpdate.clickPopupDoneBtn();
+		Thread.sleep(5000);
+		
+		settingspage.clickProfileUpdateBtn();
+		
+		Thread.sleep(5000);
+		Assert.assertTrue(profileUpdate.getJobRoleValue("Please select your Job Role"));
+		Thread.sleep(5000);*/
 		
 		Thread.sleep(5000);
 		profileUpdate.selectJobRole(admin);
@@ -472,55 +544,5 @@ public class VerifyProfileUpdatePage extends BaseTest {
 	}
 
 	
-	@Test (priority = 6)
-	public void GL_Settings_PU_98 () throws InterruptedException {
-	
-		
-		
-		ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
-		Thread.sleep(5000);
-		profileUpdate.changeUsername(updateValidUN);
-		Thread.sleep(5000);
-		profileUpdate.clickUpdateBtn();
-		Thread.sleep(5000);
-		profileUpdate.clickPopupDoneBtn();
-		
-		SettingsPage settingspage= new SettingsPage(driver);
-		Assert.assertTrue(settingspage.verifyNavigationToSettingPage("Dashboard Management"));
-		
-		settingspage.clickProfileUpdateBtn();
-		Thread.sleep(5000);
-		profileUpdate.changeUsername(userName);
-		
-				
-	}
-	
-
-
-	
-	
-	@Test (priority = 7)
-	public void GL_Settings_PU_99 () throws InterruptedException {
-		
-		ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
-		Thread.sleep(5000);
-		profileUpdate.changeUsername(updateInvalidUN1);
-		Thread.sleep(5000);
-		profileUpdate.clickUpdateBtn();
-		Thread.sleep(5000);
-	
-		profileUpdate.clickPopupOKBtn();
-		Assert.assertTrue(profileUpdate.getProfileUpdateTitle("Update Login Profile Details"));
-		
-		
-		Thread.sleep(5000);
-		profileUpdate.changeUsername(userName);
-		
-		
-		
-		
-
-				
-	}
 }
 
