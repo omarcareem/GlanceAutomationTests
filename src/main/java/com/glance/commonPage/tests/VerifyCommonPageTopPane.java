@@ -1,6 +1,8 @@
 package com.glance.commonPage.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.glance.common.tests.BaseTest;
@@ -20,48 +22,67 @@ public class VerifyCommonPageTopPane extends BaseTest {
 	SettingsPage settings;
 	
 	
-	//verify the userName in the topPane
+	
+	@BeforeMethod
+	//login
+	public void login() {
+		login = new LoginPage(driver);
+			
+		login.enterUsername(userName);
+		login.enterPassword(password);
+		login.clickLoginBtn();
+	}
+	
+	@AfterMethod
+	//logout
+	public void logout() {
+	 comLeft= new 	CommonPageLeftPane(driver);
+	 
+	 comLeft.clickLogout();
+	}
+	
+
+	/*//verify the userName  in the topPane
 	@Test (priority=0)
 		public void GL_Main_22() throws InterruptedException {
-			login = new LoginPage(driver);
+
 			comTop =new	CommonPageTopPane(driver);
 			
-			login.enterUsername(userName);
-			login.enterPassword(password);
-			login.clickLoginBtn();
-			Thread.sleep(2000);
-			
+		
 		
 			Assert.assertTrue(comTop.verifyUserName());
 			Thread.sleep(2000);
-	     
+	       
 				
 		}
+	//verify the  user Image in the topPane
+	@Test (priority=1)
+	public void GL_Main_22_Sub() throws InterruptedException {
+	
+		comTop =new	CommonPageTopPane(driver);
+		
+	
+	
+        Assert.assertTrue(comTop.verifyUserImage());
+			
+	}
 		
 		//Verify the drop down icon in the top pane
-		@Test(priority=1)
+		@Test(priority=2)
 		public void GL_Main_23() throws InterruptedException {
-			login = new LoginPage(driver);
+	
 			comTop =new	CommonPageTopPane(driver);
 			comLeft = new CommonPageLeftPane(driver);
-			
-			login.enterUsername(userName);
-			login.enterPassword(password);
-			login.clickLoginBtn();
-			Thread.sleep(2000);
-			
+	
 			comTop.clickDropDownIcon();
 			Assert.assertTrue(comTop.verifyDropDownOptions());
 			
 		}
 		
 		//verify navigation to Profile Update Page
-		@Test( priority = 2 )
+		@Test( priority = 3 )
 		public void GL_Main_24() throws InterruptedException{
-			login = new LoginPage(driver);
-			login.enterUsername(userName);
-			login.enterPassword(password);
-			login.clickLoginBtn();
+	
 			
 			
 			comTop = new CommonPageTopPane(driver);
@@ -78,12 +99,9 @@ public class VerifyCommonPageTopPane extends BaseTest {
 		}
 		
 		//verify navigation to Settings Page
-		@Test( priority = 3 )
+		@Test( priority = 4 )
 		public void GL_Main_25() throws InterruptedException{
-			login = new LoginPage(driver);
-			login.enterUsername(userName);
-			login.enterPassword(password);
-			login.clickLoginBtn();
+	
 			
 			
 			
@@ -106,12 +124,9 @@ public class VerifyCommonPageTopPane extends BaseTest {
 		}
 		
 		//verify Logout Option
-		@Test( priority = 4 )
+		@Test( priority = 5)
 		public void GL_Main_26() throws InterruptedException{
-			login = new LoginPage(driver);
-			login.enterUsername(userName);
-			login.enterPassword(password);
-			login.clickLoginBtn();
+	
 			
 			
 			comTop = new CommonPageTopPane(driver);
@@ -121,26 +136,28 @@ public class VerifyCommonPageTopPane extends BaseTest {
 			Assert.assertTrue(login.getLoginTitle(lblLoginTitle));
 			Thread.sleep(700);
 			
+			login = new LoginPage(driver);
+			
+			login.enterUsername(userName);
+			login.enterPassword(password);
+			login.clickLoginBtn();
+			Thread.sleep(1000);
 			   
 	}
 	
 	//verify the pancake icon
-	@Test(priority=5)
+	@Test(priority=6)
 	public void GL_Main_27() throws InterruptedException {
-		login = new LoginPage(driver);
+
 		comTop =new	CommonPageTopPane(driver);
 		comLeft = new CommonPageLeftPane(driver);
 		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
+	
 		comTop.clickPanCakeIcon();
 		Thread.sleep(2000);
 		Assert.assertTrue(comLeft.verifyToggling());
 		Thread.sleep(2000);
-	
+		comTop.clickPanCakeIcon();
 		
 			
 	}
@@ -149,15 +166,11 @@ public class VerifyCommonPageTopPane extends BaseTest {
 	
 	
   //verify the category wise search suggestions if two letters typed
-	@Test (priority=6)
+	@Test (priority=7)
 	public void GL_Main_28() throws InterruptedException {
-		login = new LoginPage(driver);
+
 		comTop =new	CommonPageTopPane(driver);
 		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
 		
 		comTop.searchTwo(searchTwo);
 		Thread.sleep(2000);
@@ -167,17 +180,13 @@ public class VerifyCommonPageTopPane extends BaseTest {
 	}
 	
 	//verify the  search text is added to the search text box if selected from the two words suggestions
-	@Test (priority=7)
+	@Test (priority=8)
 	public void GL_Main_29() throws InterruptedException {
-		login = new LoginPage(driver);
+
 		comTop =new	CommonPageTopPane(driver);
 		DbPage = new DashboardPage(driver);
 		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
+	
 		comTop.selectFromSuggestions(searchTwo);
 		Thread.sleep(2000);
 	    
@@ -185,17 +194,12 @@ public class VerifyCommonPageTopPane extends BaseTest {
 	}
 	
 	//verify dashboards related to the selected entity is displayed
-	@Test (priority=8)
+	@Test (priority=9)
 	public void GL_Main_30() throws InterruptedException {
-		login = new LoginPage(driver);
+	
 		comTop =new	CommonPageTopPane(driver);
 		DbPage = new DashboardPage(driver);
-		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
+	
 		comTop.selectFromSuggestions(searchTwo);
 		Thread.sleep(2000);
 	    
@@ -207,16 +211,13 @@ public class VerifyCommonPageTopPane extends BaseTest {
 	
 	
 	//verify whether dashboards related to the selected entity is displayed in the main page if full text is typed
-	@Test (priority=9)	
+	@Test (priority=10)	
 	public void GL_Main_31() throws InterruptedException {
-			login = new LoginPage(driver);
+	
 			comTop =new	CommonPageTopPane(driver);
 			DbPage = new DashboardPage(driver);
 			
-			login.enterUsername(userName);
-			login.enterPassword(password);
-			login.clickLoginBtn();
-			Thread.sleep(2000);
+		
 			
 			comTop.searchTopPane(searchFullText);
 			Thread.sleep(2000);
@@ -229,65 +230,52 @@ public class VerifyCommonPageTopPane extends BaseTest {
 		
 	
 	//verify access denied message
-	@Test (priority=10)
+	@Test (priority=11)
 	public void GL_Main_32() throws InterruptedException {
-		login = new LoginPage(driver);
+
 		comTop =new	CommonPageTopPane(driver);
 		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
+	
 		
 		comTop.searchTopPane(searchAD);
 	
 		Thread.sleep(2000);
 		comTop.clickGo();
-		Assert.assertTrue(comTop.verifyInvalidAccess());
+		Assert.assertTrue(comTop.verifyInvalidAccess("Access Denied"));
 			
-	}
+	}*/
 	
-	//verify the first default details if nothing is clicked
-	@Test (priority=11)
+	//verify the search field empty error message
+	@Test (priority=12)
 	public void GL_Main_33() throws InterruptedException {
-		login = new LoginPage(driver);
+	
 		comTop =new	CommonPageTopPane(driver);
-		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
 		
 		comTop.searchTopPane(searchEmpty);
 	
 		Thread.sleep(2000);
 		comTop.clickGo();
-		Assert.assertTrue(comTop.verifyFirstDefaultDet());
-			
+		comTop.clickErrorPopUpOk();
+		
+		Assert.assertTrue(comTop.verifySearchEmpty());
+		comTop.clickErrorPopUpOk();	
 	}
+	
 	//verify the no search results error message
-	@Test (priority=12)
+	@Test (priority=13)
 	public void GL_Main_34() throws InterruptedException {
-		login = new LoginPage(driver);
+
 		comTop =new	CommonPageTopPane(driver);
-		
-		login.enterUsername(userName);
-		login.enterPassword(password);
-		login.clickLoginBtn();
-		Thread.sleep(2000);
-		
 		
 		comTop.searchTopPane(searchUnexisting);
 	    Thread.sleep(2000);
+	    comTop.clickGo();
 	  
 		
-		Assert.assertTrue(comTop. verifyNoSearchReults());
+		Assert.assertTrue(comTop. verifyNoSearchResults());
 			
 	}
 	
-		
 	
 	
 	

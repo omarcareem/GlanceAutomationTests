@@ -61,6 +61,7 @@
           <include name="finishTest"/>
           <include name="testLogin"/>
           <include name="initializeTest"/>
+<<<<<<< HEAD
           <include name="testLogout"/>
 <<<<<<< HEAD
           <include name="GL_Settings_AE_11_verify2"/>
@@ -88,6 +89,11 @@
           <include name="initializeTest"/>
           <include name="GL_Settings_PU_92"/>
           <include name="LoginAndNavigation"/>
+=======
+          <include name="GL_Main_34"/>
+          <include name="login"/>
+          <include name="logout"/>
+>>>>>>> shamamaTEST
           <include name="testStartUp"/>
         </methods>
       </class> <!-- com.glance.userlogin.tests.VerifyProfileUpdatePage -->
