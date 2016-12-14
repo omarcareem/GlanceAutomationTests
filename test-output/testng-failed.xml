@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.glance.usermanagement.tests.ManageUser">
         <methods>
           <include name="GL_UM_09_2" invocation-numbers="2"/>
@@ -75,6 +76,22 @@
           <include name="testStartUp"/>
         </methods>
       </class> <!-- com.glance.usermanagement.tests.ManageUser -->
+=======
+      <class name="com.glance.userlogin.tests.VerifyProfileUpdatePage">
+        <methods>
+          <include name="GL_Settings_PU_97"/>
+          <include name="GL_Settings_PU_95"/>
+          <include name="GL_Settings_PU_96"/>
+          <include name="Logout"/>
+          <include name="GL_Settings_PU_93"/>
+          <include name="GL_Settings_PU_94"/>
+          <include name="initializeTest"/>
+          <include name="GL_Settings_PU_92"/>
+          <include name="LoginAndNavigation"/>
+          <include name="testStartUp"/>
+        </methods>
+      </class> <!-- com.glance.userlogin.tests.VerifyProfileUpdatePage -->
+>>>>>>> neelamaniTest
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

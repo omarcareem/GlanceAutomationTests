@@ -11,7 +11,7 @@ import com.glance.pageobjects.userlogin.LostPasswordPage;
 public class VerifyLostPasswordPage extends BaseTest {
 	
 	@Test (priority =0)
-	public void GL_Login_11() {
+	public void GL_Login_10() {
 		
 		LoginPage loginPage=new LoginPage(driver);
 		loginPage.navigateLostPasswordPage();
@@ -26,7 +26,7 @@ public class VerifyLostPasswordPage extends BaseTest {
 	
 		
 	@Test (priority =1)
-	public void GL_Login_12(){
+	public void GL_Login_11(){
 		
 		//Valid Request
 		/*
@@ -54,7 +54,7 @@ public class VerifyLostPasswordPage extends BaseTest {
 	lostPassword.clickPopupOkay();
 	lostPassword.clickBackBtn();
 
-	//Invalid Request2
+	//Invalid Request3
 	
 	loginPage.navigateLostPasswordPage();
 	
@@ -65,12 +65,24 @@ public class VerifyLostPasswordPage extends BaseTest {
 	Assert.assertTrue(lostPassword.getLostPasswordMsgContent("Entered user name or email address do not match !"));
 	lostPassword.clickPopupOkay();
 	lostPassword.clickBackBtn();
+	
+	//Invalid Request4
+	
+	loginPage.navigateLostPasswordPage();
+	
+
+	lostPassword.enterUserName(userNameErr);
+	lostPassword.enterEmailAdd(emailAddErr);
+	lostPassword.clickSubmitBtn();
+	Assert.assertTrue(lostPassword.getLostPasswordMsgContent("Entered user name or email address do not match !"));
+	lostPassword.clickPopupOkay();
+	lostPassword.clickBackBtn();
 
 }
 
 	
 	@Test (priority =4)
-	public void GL_Login_13(){
+	public void GL_Login_12(){
 		
 		LoginPage loginPage=new LoginPage(driver);
 		loginPage.navigateLostPasswordPage();
@@ -86,25 +98,13 @@ public class VerifyLostPasswordPage extends BaseTest {
 	
 	/*
 		@Test (priority =5)
-		public void GL_Login_14 {
+		public void GL_Login_13 {
 		}
 		
 	}*/
 	
 	
 	
-		@Test (priority =6)
-		public void GL_Login_15(){
-			
-			LoginPage loginPage=new LoginPage(driver);
-			loginPage.navigateLostPasswordPage();
-			
-			LostPasswordPage lostPassword = new LostPasswordPage(driver);
-			lostPassword.enterUserName(userName);
-			lostPassword.enterEmailAdd(emailAddErr);
-			lostPassword.clickSubmitBtn();
-			lostPassword.clickPopupOkay();
-			Assert.assertTrue(lostPassword.getLostPasswordTitle("Lost Password"));
-		}
+		
 		
 }

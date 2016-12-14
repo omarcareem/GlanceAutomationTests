@@ -118,6 +118,9 @@ public class ReadPropertyFile {
 	public static String UpdatelastName;
 	public static String validfirstName;
 	public static String validlastName;
+	public static String updateEmptyFirstName;
+	public static String UpdateEmptyLastName;
+	public static String adminUser;
 	
 
 	//User management
@@ -170,6 +173,7 @@ public class ReadPropertyFile {
 	public static String engineer_QA;
 	public static String aEngineer_QA;
 	public static String jEngineer_QA;
+<<<<<<< HEAD
 
 
 	public static int rowCount;
@@ -192,10 +196,12 @@ public class ReadPropertyFile {
     public static String expectedMessageTitleSet;
 
 
+=======
+	public static String none;
+	
+>>>>>>> neelamaniTest
 	
 	
-	public static String selectTopPaneProfile;
-	public static String selectTopPaneLogout;
 	
 	
 	
@@ -367,6 +373,9 @@ public class ReadPropertyFile {
 		System.out.println(newInvalidConPSW2);
 				
 		//profile Update Page Validations
+		adminUser=getDataRepository().getProperty("adminUser");
+		System.out.println(adminUser);
+		
 		updateInvalidUN1=getDataRepository().getProperty("updateInvalidUN1");
 		System.out.println(updateInvalidUN1);
 		upadteInvalidUN2=getDataRepository().getProperty("upadteInvalidUN2");
@@ -453,6 +462,10 @@ public class ReadPropertyFile {
 		System.out.println(validfirstName);		
 		validlastName=getDataRepository().getProperty("validlastName");
 		System.out.println(validlastName);		
+		updateEmptyFirstName=getDataRepository().getProperty("updateEmptyFirstName");
+		System.out.println(updateEmptyFirstName);	
+		UpdateEmptyLastName=getDataRepository().getProperty("UpdateEmptyLastName");
+		System.out.println(UpdateEmptyLastName);	
 		
 		
 		admin=getDataRepository().getProperty("admin");
@@ -473,12 +486,10 @@ public class ReadPropertyFile {
 		System.out.println(aEngineer_QA);		
 		jEngineer_QA=getDataRepository().getProperty("jEngineer_QA");
 		System.out.println(jEngineer_QA);		
+		none=getDataRepository().getProperty("none");
+		System.out.println(none);	
 		
 		
-		selectTopPaneProfile=getDataRepository().getProperty("selectTopPaneProfile");
-		System.out.println(selectTopPaneProfile);
-		selectTopPaneLogout=getDataRepository().getProperty("selectTopPaneLogout");
-		System.out.println(selectTopPaneLogout);
 		
 
 		/*rowCount=getDataRepository().getProperty(rowCount);

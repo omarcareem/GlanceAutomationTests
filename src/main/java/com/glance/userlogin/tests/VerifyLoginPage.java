@@ -58,6 +58,16 @@ public class VerifyLoginPage extends BaseTest {
  		Assert .assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
 		loginPage.clickErrorOK();
 		
+		//Invalid Login3
+		Thread.sleep(1000);
+		loginPage.enterUsername(userNameErr);
+		loginPage.enterPassword(passwordErr);
+		
+		loginPage.clickLoginBtn();
+		Thread.sleep(1000);
+ 		Assert .assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
+		loginPage.clickErrorOK();
+	
 	}
 
 	
@@ -98,25 +108,5 @@ public class VerifyLoginPage extends BaseTest {
 	
 	
 		
-	@Test (priority =5)
-	public void GL_login_04 () throws InterruptedException {
-		
-		LoginPage loginPage=new LoginPage(driver);
-		Thread.sleep(1000);
-		loginPage.enterUsername(userName);
-		loginPage.enterPassword(passwordErr);
-		loginPage.clickLoginBtn();
-		loginPage.clickErrorOK();
-		
-		Assert.assertTrue(loginPage.getLoginTitle("Login Form"));
-
-	
-	
-	
-	
-	}
-
-	
-	
 
 }

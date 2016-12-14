@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testng-results skipped="0" failed="2" total="4" passed="2">
 =======
 <testng-results skipped="0" failed="0" total="6" passed="6">
@@ -497,18 +498,54 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
     <test name="Default test" duration-ms="269807" started-at="2016-12-08T07:35:16Z" finished-at="2016-12-08T07:39:45Z">
       <class name="userlogin.VerifyProfileUpdatePage">
         <test-method status="PASS" signature="testStartUp()[pri:0, instance:userlogin.VerifyProfileUpdatePage@43beaa92]" name="testStartUp" is-config="true" duration-ms="79" started-at="2016-12-08T13:05:16Z" finished-at="2016-12-08T13:05:16Z">
+=======
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="932570" started-at="2016-12-09T13:59:29Z" finished-at="2016-12-09T14:15:02Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="932570" started-at="2016-12-09T13:59:29Z" finished-at="2016-12-09T14:15:02Z">
+      <class name="com.glance.userlogin.tests.VerifyProfileUpdatePage">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="testStartUp" is-config="true" duration-ms="62" started-at="2016-12-09T19:29:29Z" finished-at="2016-12-09T19:29:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStartUp -->
-        <test-method status="PASS" signature="initializeTest()[pri:0, instance:userlogin.VerifyProfileUpdatePage@43beaa92]" name="initializeTest" is-config="true" duration-ms="5732" started-at="2016-12-08T13:05:16Z" finished-at="2016-12-08T13:05:21Z">
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="initializeTest" is-config="true" duration-ms="5216" started-at="2016-12-09T19:29:29Z" finished-at="2016-12-09T19:29:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method status="PASS" signature="LoginAndNavigation()[pri:0, instance:userlogin.VerifyProfileUpdatePage@43beaa92]" name="LoginAndNavigation" is-config="true" duration-ms="7184" started-at="2016-12-08T13:05:21Z" finished-at="2016-12-08T13:05:29Z">
+        <test-method status="PASS" signature="LoginAndNavigation()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="LoginAndNavigation" is-config="true" duration-ms="6772" started-at="2016-12-09T19:29:34Z" finished-at="2016-12-09T19:29:41Z">
+>>>>>>> neelamaniTest
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginAndNavigation -->
+        <test-method status="PASS" signature="GL_Settings_PU_92()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="GL_Settings_PU_92" duration-ms="173449" started-at="2016-12-09T19:29:41Z" finished-at="2016-12-09T19:32:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_PU_92 -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="Logout" is-config="true" duration-ms="20095" started-at="2016-12-09T19:32:34Z" finished-at="2016-12-09T19:32:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method status="PASS" signature="LoginAndNavigation()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="LoginAndNavigation" is-config="true" duration-ms="5978" started-at="2016-12-09T19:32:55Z" finished-at="2016-12-09T19:33:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginAndNavigation -->
+        <test-method status="PASS" signature="GL_Settings_PU_93()[pri:1, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="GL_Settings_PU_93" duration-ms="67383" started-at="2016-12-09T19:33:01Z" finished-at="2016-12-09T19:34:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_PU_93 -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="Logout" is-config="true" duration-ms="10179" started-at="2016-12-09T19:34:08Z" finished-at="2016-12-09T19:34:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method status="PASS" signature="LoginAndNavigation()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="LoginAndNavigation" is-config="true" duration-ms="6158" started-at="2016-12-09T19:34:18Z" finished-at="2016-12-09T19:34:24Z">
           <reporter-output>
           </reporter-output>
 <<<<<<< HEAD
         </test-method> <!-- LoginAndNavigation -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="GL_Settings_07()[pri:5, instance:userlogin.VerifyProfileUpdatePage@43beaa92]" name="GL_Settings_07" duration-ms="256880" started-at="2016-12-08T13:05:29Z" finished-at="2016-12-08T13:09:45Z">
 =======
         <test-method status="PASS" signature="GL_Settings_AE_13()[pri:6, instance:com.glance.dashboard.tests.VerifyAddEngagement@5dd70c4b]" name="GL_Settings_AE_13" duration-ms="785" started-at="2016-12-08T16:47:13Z" finished-at="2016-12-08T16:47:14Z">
@@ -948,6 +985,53 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
           </reporter-output>
         </test-method> <!-- systemLogOut -->
       </class> <!-- com.glance.usermanagement.tests.ManageUser -->
+=======
+        <test-method status="PASS" signature="GL_Settings_PU_94()[pri:2, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="GL_Settings_PU_94" duration-ms="179525" started-at="2016-12-09T19:34:24Z" finished-at="2016-12-09T19:37:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_PU_94 -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="Logout" is-config="true" duration-ms="10152" started-at="2016-12-09T19:37:24Z" finished-at="2016-12-09T19:37:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method status="PASS" signature="LoginAndNavigation()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="LoginAndNavigation" is-config="true" duration-ms="6032" started-at="2016-12-09T19:37:34Z" finished-at="2016-12-09T19:37:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginAndNavigation -->
+        <test-method status="PASS" signature="GL_Settings_PU_95()[pri:3, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="GL_Settings_PU_95" duration-ms="97208" started-at="2016-12-09T19:37:40Z" finished-at="2016-12-09T19:39:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_PU_95 -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="Logout" is-config="true" duration-ms="10142" started-at="2016-12-09T19:39:17Z" finished-at="2016-12-09T19:39:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method status="PASS" signature="LoginAndNavigation()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="LoginAndNavigation" is-config="true" duration-ms="6084" started-at="2016-12-09T19:39:27Z" finished-at="2016-12-09T19:39:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginAndNavigation -->
+        <test-method status="PASS" signature="GL_Settings_PU_96()[pri:4, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="GL_Settings_PU_96" duration-ms="35887" started-at="2016-12-09T19:39:33Z" finished-at="2016-12-09T19:40:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_PU_96 -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="Logout" is-config="true" duration-ms="10174" started-at="2016-12-09T19:40:09Z" finished-at="2016-12-09T19:40:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method status="PASS" signature="LoginAndNavigation()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="LoginAndNavigation" is-config="true" duration-ms="6060" started-at="2016-12-09T19:40:19Z" finished-at="2016-12-09T19:40:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginAndNavigation -->
+        <test-method status="PASS" signature="GL_Settings_PU_97()[pri:5, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="GL_Settings_PU_97" duration-ms="265927" started-at="2016-12-09T19:40:26Z" finished-at="2016-12-09T19:44:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_PU_97 -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.glance.userlogin.tests.VerifyProfileUpdatePage@3bc2c9af]" name="Logout" is-config="true" duration-ms="10136" started-at="2016-12-09T19:44:51Z" finished-at="2016-12-09T19:45:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+      </class> <!-- com.glance.userlogin.tests.VerifyProfileUpdatePage -->
+>>>>>>> neelamaniTest
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
