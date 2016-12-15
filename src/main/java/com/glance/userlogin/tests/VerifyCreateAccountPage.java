@@ -1,6 +1,9 @@
 package com.glance.userlogin.tests;
 
 import junit.framework.Assert;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.glance.common.tests.BaseTest;
@@ -15,60 +18,64 @@ import com.glance.pageobjects.usermanagement.DeleteUser;
 
 public class VerifyCreateAccountPage extends BaseTest {
 
-<<<<<<< HEAD
+	LoginPage loginPage;
+	CreateAccountPage createAccount;
+
 
 	@Test (priority = 0)
 	public void GL_Login_04() throws InterruptedException {
 	
-		LoginPage loginPage=new LoginPage(driver);
+		loginPage=new LoginPage(driver);
 		loginPage.navigateCreateAccountPage();
 		Thread.sleep(5000);
-=======
+	}
+
 	@BeforeMethod
 	public void createAccnvigation() throws InterruptedException {
-		LoginPage loginPage = new LoginPage(driver);
+		loginPage = new LoginPage(driver);
 		loginPage.navigateCreateAccountPage();
 		Thread.sleep(5000);
 	}
 
 	@AfterMethod
 	public void LoginNavigation() {
-		CreateAccountPage createAccount = new CreateAccountPage(driver);
+		createAccount = new CreateAccountPage(driver);
 		createAccount.clickLoginLink();
 	}
 
 	@Test(priority = 0)
 	public void GL_Login_05() throws InterruptedException {
 
->>>>>>> omartest
+
 		Thread.sleep(5000);
-		CreateAccountPage createAccount = new CreateAccountPage(driver);
+		createAccount = new CreateAccountPage(driver);
 		Thread.sleep(5000);
 		Assert.assertTrue(createAccount.getCreateAccTitle("Create Account"));
 		Thread.sleep(5000);
 		createAccount.clickLoginLink();
 	}
 
-<<<<<<< HEAD
+
 	
 	
 	@Test (priority =1)
-	public void GL_Login_05() throws InterruptedException {
+	public void GL_Login_06() throws InterruptedException {
 		
-		LoginPage loginPage=new LoginPage(driver);
+		loginPage=new LoginPage(driver);
 		loginPage.navigateCreateAccountPage();
 		Thread.sleep(5000);
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
+		createAccount=new CreateAccountPage(driver);
+	}
 	
 			//Valid account Creation
-=======
-	@Test(priority = 1)
-	public void GL_Login_06() throws InterruptedException {
 
-		CreateAccountPage createAccount = new CreateAccountPage(driver);
+	@Test(priority = 1)
+	public void GL_Login_07() throws InterruptedException {
+
+		createAccount = new CreateAccountPage(driver);
 
 		// Valid account Creation
->>>>>>> omartest
+
 		Thread.sleep(5000);
 		createAccount.createUsername(newValidUN);
 		createAccount.addemailAdd(newValidEID);
@@ -209,10 +216,10 @@ public class VerifyCreateAccountPage extends BaseTest {
 		Thread.sleep(5000);
 		createAccount.clickpopupOK();
 		Thread.sleep(1000);
-<<<<<<< HEAD
+
 		
 		//Invalid account creation 11
-=======
+
 
 		// Invalid account creation 11
 		/*
@@ -228,14 +235,14 @@ public class VerifyCreateAccountPage extends BaseTest {
 	}
 
 	@Test(priority = 12)
-	public void GL_Login_07() throws InterruptedException {
+	public void GL_Login_08() throws InterruptedException {
 
 		/*
 		 * LoginPage loginPage=new LoginPage(driver);
 		 * loginPage.navigateCreateAccountPage(); Thread.sleep(5000);
 		 */
-		CreateAccountPage createAccount = new CreateAccountPage(driver);
->>>>>>> omartest
+		createAccount = new CreateAccountPage(driver);
+
 		Thread.sleep(5000);
 		createAccount.createUsername(newValidUN);
 		createAccount.addemailAdd(newValidEID);
@@ -246,7 +253,7 @@ public class VerifyCreateAccountPage extends BaseTest {
 		// createAccount.clickpopupOK();
 		createAccount.clickpopupDone();
 		Thread.sleep(5000);
-<<<<<<< HEAD
+
 		Assert.assertTrue(createAccount.getPopupMsg4("The passsword and confirmation password do not match !"));
 		Thread.sleep(5000);
 		createAccount.clickpopupOK();
@@ -259,12 +266,12 @@ public class VerifyCreateAccountPage extends BaseTest {
 
 		
 		@Test (priority = 13)
-		public void GL_Login_06() throws InterruptedException {
+		public void GL_Login_09() throws InterruptedException {
 			
-			LoginPage loginPage=new LoginPage(driver);
+		loginPage=new LoginPage(driver);
 			loginPage.navigateCreateAccountPage();
 			Thread.sleep(5000);
-			CreateAccountPage createAccount=new CreateAccountPage(driver);
+			createAccount=new CreateAccountPage(driver);
 			Thread.sleep(5000);
 			createAccount.createUsername(newValidUN);
 			createAccount.addemailAdd(newValidEID);
@@ -283,9 +290,9 @@ public class VerifyCreateAccountPage extends BaseTest {
 
 	
 		@Test (priority = 14)
-		public void GL_Login_07() throws InterruptedException {
+		public void GL_Login_10() throws InterruptedException {
 			
-			LoginPage loginPage=new LoginPage(driver);
+		loginPage=new LoginPage(driver);
 			
 			Thread.sleep(1000);
 			loginPage.enterUsername(newValidUN);
@@ -303,27 +310,27 @@ public class VerifyCreateAccountPage extends BaseTest {
 	}
 	
 	@Test (priority = 15)
-	public void GL_Login_08() throws InterruptedException {
+	public void GL_Login_11() throws InterruptedException {
 		
-		LoginPage loginPage=new LoginPage(driver);
+	loginPage=new LoginPage(driver);
 		loginPage.navigateCreateAccountPage();
 		Thread.sleep(5000);
 	
-		CreateAccountPage createAccount=new CreateAccountPage(driver);
-=======
+		createAccount=new CreateAccountPage(driver);
+
 		Assert.assertTrue(createAccount.getCreateAccTitle("Create Account"));
 		Thread.sleep(5000);
 		// createAccount.clickLoginLink();
 	}
 
 	@Test(priority = 13)
-	public void GL_Login_08() throws InterruptedException {
+	public void GL_Login_12() throws InterruptedException {
 
 		/*
 		 * LoginPage loginPage=new LoginPage(driver);
 		 * loginPage.navigateCreateAccountPage();
 		 */Thread.sleep(5000);
-		CreateAccountPage createAccount = new CreateAccountPage(driver);
+		createAccount = new CreateAccountPage(driver);
 		Thread.sleep(5000);
 		createAccount.createUsername(newValidUN);
 		createAccount.addemailAdd(newValidEID);
@@ -356,20 +363,20 @@ public class VerifyCreateAccountPage extends BaseTest {
 	 * }
 	 */
 	@Test(priority = 15)
-	public void GL_Login_10() throws InterruptedException {
+	public void GL_Login_13() throws InterruptedException {
 
-		LoginPage loginPage = new LoginPage(driver);
+		loginPage = new LoginPage(driver);
 
 		Thread.sleep(10000);
 		// loginPage.navigateCreateAccountPage();
 		Thread.sleep(5000);
-		CreateAccountPage createAccount = new CreateAccountPage(driver);
->>>>>>> omartest
+		createAccount = new CreateAccountPage(driver);
+
 		createAccount.clickLoginLink();
 		Thread.sleep(5000);
 		Assert.assertTrue(loginPage.getLoginTitle("Login Form"));
 
-<<<<<<< HEAD
+
 		
 		Thread.sleep(5000);
 		loginPage.enterUsername(userName);
@@ -380,7 +387,7 @@ public class VerifyCreateAccountPage extends BaseTest {
 		commonLeftPane.clickSettings();
 		Thread.sleep(5000);
 		SettingsPage settingspage= new SettingsPage(driver);
-		settingspage.clickManageUsersBtn();
+		settingspage.ClickManageUsersBtn();
 		
 		
 		Thread.sleep(5000);
@@ -395,7 +402,7 @@ public class VerifyCreateAccountPage extends BaseTest {
 	}
 	
 	
-=======
+
 		/*
 		 * loginPage.enterUsername(userName); loginPage.enterPassword(password);
 		 * 
@@ -406,7 +413,6 @@ public class VerifyCreateAccountPage extends BaseTest {
 		 * settingspage.clickManageUsersBtn();
 		 */
 
->>>>>>> omartest
-	}
+	
 
 }

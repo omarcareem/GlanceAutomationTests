@@ -53,58 +53,21 @@ public class VerifyLoginPage extends BaseTest {
 		Thread.sleep(1000);
 		Assert.assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
 		loginPage.clickErrorOK();
-<<<<<<< HEAD
-		
-		//Invalid Login3
+
+		// Invalid Login3
 		Thread.sleep(1000);
 		loginPage.enterUsername(userNameErr);
 		loginPage.enterPassword(passwordErr);
-		
+
 		loginPage.clickLoginBtn();
 		Thread.sleep(1000);
- 		Assert .assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
+		Assert.assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
 		loginPage.clickErrorOK();
-	
-=======
 
->>>>>>> omartest
 	}
 
 	/*
-<<<<<<< HEAD
-		
-		@Test (priority =4)
-		
-		public void GL_login_03() throws InterruptedException {
-			
-			
-			for(int i=0; i<5 ;i++){
-			LoginPage loginPage=new LoginPage(driver);
-			Thread.sleep(1000);
-			loginPage.enterUsername(userName);
-			loginPage.enterPassword(passwordErr);
-			
-			loginPage.clickLoginBtn();
-			Assert .assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
-			loginPage.clickErrorOK();
-			}
-			
-			LoginPage loginPage=new LoginPage(driver);
-			Thread.sleep(1000);
-			loginPage.enterUsername(userName);
-			loginPage.enterPassword(passwordErr);
-			
-			loginPage.clickLoginBtn();
-			Assert .assertTrue(loginPage.verifyLoginError("User ID is Locked"));
-			loginPage.clickErrorOK();
-			
-			
-		}
-	*/
-	
-	
-		
-=======
+	 * <<<<<<< HEAD
 	 * 
 	 * @Test (priority =4)
 	 * 
@@ -129,6 +92,32 @@ public class VerifyLoginPage extends BaseTest {
 	 * }
 	 */
 
+	@Test(priority = 4)
+
+	public void GL_login_03() throws InterruptedException {
+
+		for (int i = 0; i < 5; i++) {
+			LoginPage loginPage = new LoginPage(driver);
+			Thread.sleep(1000);
+			loginPage.enterUsername(userName);
+			loginPage.enterPassword(passwordErr);
+
+			loginPage.clickLoginBtn();
+			Assert.assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
+			loginPage.clickErrorOK();
+		}
+
+		LoginPage loginPage = new LoginPage(driver);
+		Thread.sleep(1000);
+		loginPage.enterUsername(userName);
+		loginPage.enterPassword(passwordErr);
+
+		loginPage.clickLoginBtn();
+		Assert.assertTrue(loginPage.verifyLoginError("User ID is Locked"));
+		loginPage.clickErrorOK();
+
+	}
+
 	@Test(priority = 5)
 	public void GL_login_04() throws InterruptedException {
 
@@ -142,6 +131,5 @@ public class VerifyLoginPage extends BaseTest {
 		Assert.assertTrue(loginPage.getLoginTitle("Login Form"));
 
 	}
->>>>>>> omartest
 
 }

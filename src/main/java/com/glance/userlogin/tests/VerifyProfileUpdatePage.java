@@ -1,23 +1,13 @@
 package com.glance.userlogin.tests;
 
 import java.io.IOException;
-
-<<<<<<< HEAD
-
-import junit.framework.Assert;
-
 import org.testng.annotations.AfterMethod;
-=======
 import org.testng.Assert;
->>>>>>> omartest
 //import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.glance.common.tests.BaseTest;
-
 import com.glance.pageobjects.dashboard.CommonPageLeftPane;
-
 import com.glance.pageobjects.userlogin.LoginPage;
 import com.glance.pageobjects.userlogin.ProfileUpdatePage;
 import com.glance.pageobjects.userlogin.SettingsPage;
@@ -40,7 +30,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		settingspage.clickProfileUpdateBtn();
 
 	}
-<<<<<<< HEAD
+
 	
 	@AfterMethod
 	public void Logout() throws InterruptedException{
@@ -53,34 +43,12 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		
 	}
 	
-	@Test (priority = 0)
-	public void GL_Settings_PU_92 () throws InterruptedException {
-		
-		//valid user name
-		ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
-=======
-
-	/*
-	 * @AfterMethod public void Logout() throws InterruptedException{
-	 * 
-	 * 
-	 * ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
-	 * 
-	 * profileUpdate.clickUpdateBtn(); profileUpdate.clickPopupDoneBtn();
-	 * 
-	 * CommonPageLeftPane commonLeftPane =new CommonPageLeftPane(driver);
-	 * Thread.sleep(5000); commonLeftPane.clickLogout(); Thread.sleep(5000);
-	 * 
-	 * 
-	 * }
-	 */
-
 	@Test(priority = 0)
 	public void GL_Settings_PU_92() throws InterruptedException {
 
 		// valid user name
 		ProfileUpdatePage profileUpdate = new ProfileUpdatePage(driver);
->>>>>>> omartest
+
 		Thread.sleep(5000);
 		profileUpdate.changeUsername(updateValidUN);
 		Thread.sleep(5000);
@@ -104,7 +72,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getpopupMsgContent2("Please enter user name in valid length !"));
 		Thread.sleep(5000);
 		profileUpdate.clickPopupOKBtn();
-<<<<<<< HEAD
+
 		
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getUserNameValue("admin1"));
@@ -112,10 +80,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 	
 	
 		//Invalid username2	
-=======
+
 
 		// Invalid username2
->>>>>>> omartest
+
 		Thread.sleep(5000);
 		profileUpdate.changeUsername(upadteInvalidUN2);
 		Thread.sleep(5000);
@@ -124,7 +92,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getpopupMsgContent2("Please enter user name in valid length !"));
 		Thread.sleep(5000);
 		profileUpdate.clickPopupOKBtn();
-<<<<<<< HEAD
+
 		
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getUserNameValue("admin1"));
@@ -132,10 +100,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		
 		
 		//Invalid user name3
-=======
+
 
 		// Invalid user name3
->>>>>>> omartest
+
 		Thread.sleep(5000);
 		profileUpdate.changeUsername(updateExistingUN);
 		Thread.sleep(5000);
@@ -146,7 +114,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		profileUpdate.clickPopupOKBtn();
 
 		Thread.sleep(5000);
-<<<<<<< HEAD
+
 		Assert.assertTrue(profileUpdate.getUserNameValue("admin1"));
 		Thread.sleep(5000);
 		
@@ -166,9 +134,9 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		
 		Thread.sleep(5000);
 		profileUpdate.changeUsername(adminUser);	
-=======
+
 		profileUpdate.changeUsername(userName);
->>>>>>> omartest
+
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
 		Thread.sleep(5000);
@@ -207,21 +175,21 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getpopupMsgContent3("You have entered an invalid email address!"));
 		profileUpdate.clickPopupOKBtn();
-<<<<<<< HEAD
+
 		
 		Assert.assertTrue(profileUpdate.getEmailIDValue("admin1@gmail.com"));
 		
 		//ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
-=======
+
 
 		// ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
->>>>>>> omartest
+
 		Thread.sleep(5000);
 		profileUpdate.changeEmail(updateEmptyEID);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
 		Thread.sleep(5000);
-<<<<<<< HEAD
+
 		Assert.assertTrue(profileUpdate.getpopupMsgContent1("Profile details updated successfully"));
 		profileUpdate.clickPopupDoneBtn();
 		
@@ -230,11 +198,11 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getEmailIDValue("admin1@gmail.com"));
 		
 		
-=======
+
 		Assert.assertTrue(profileUpdate.getpopupMsgContent3("You have entered an invalid email address!"));
 		profileUpdate.clickPopupOKBtn();
 
->>>>>>> omartest
+
 		Thread.sleep(5000);
 		profileUpdate.changeEmail(emailAddErr);
 		Thread.sleep(5000);
@@ -353,7 +321,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Assert.assertTrue(profileUpdate.getFirstNameValue("Neelamani"));
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getlastNameValue("Hewawasam"));
-<<<<<<< HEAD
+
 		
 		Thread.sleep(5000);
 		profileUpdate.changeFirstName(updateEmptyFirstName);
@@ -370,9 +338,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		settingspage.clickProfileUpdateBtn();
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getFirstNameValue("Neelamani"));
-=======
 
->>>>>>> omartest
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getlastNameValue("Hewawasam"));
 		Thread.sleep(5000);
@@ -404,7 +370,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 
 		SettingsPage settingspage = new SettingsPage(driver);
 		settingspage.clickProfileUpdateBtn();
-<<<<<<< HEAD
+
 		
 		//Assert.assertTrue(profileUpdate.getImagePreview("user_images/admin.png"));
 		
@@ -416,13 +382,13 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		profileUpdate.clickUpdateBtn();
 		profileUpdate.clickPopupDoneBtn();
 		Thread.sleep(5000);
-=======
+
 		Thread.sleep(5000);
 		profileUpdate.clickChooseImg();
 		Thread.sleep(5000);
 		Runtime.getRuntime().exec("C:\\Users\\nhewawasam\\Desktop\\FileUpload.exe");
 
->>>>>>> omartest
+
 	}
 
 	@Test(priority = 5)
@@ -444,13 +410,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Manager - QA"));
 		Thread.sleep(5000);
-<<<<<<< HEAD
-		
-		
-=======
+
 
 		// ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
->>>>>>> omartest
+
 		profileUpdate.selectJobRole(sConsultant_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -464,13 +427,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Senior Consultant - QA"));
 		Thread.sleep(5000);
-<<<<<<< HEAD
-		
-	
-=======
+
 
 		// ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
->>>>>>> omartest
+
 		profileUpdate.selectJobRole(consultant_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -484,13 +444,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Consultant - QA"));
 		Thread.sleep(5000);
-<<<<<<< HEAD
-		
-	
-=======
+
 
 		// ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
->>>>>>> omartest
+
 		profileUpdate.selectJobRole(aConsultant_QA);
 		Thread.sleep(5000);
 		;
@@ -505,13 +462,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Associate Consultant - QA"));
 		Thread.sleep(5000);
-<<<<<<< HEAD
-		
-	
-=======
+
 
 		// ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
->>>>>>> omartest
+
 		profileUpdate.selectJobRole(sEngineer_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -525,13 +479,9 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Senior Engineer - QA"));
 		Thread.sleep(5000);
-<<<<<<< HEAD
-		
-		
-=======
 
 		// ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
->>>>>>> omartest
+
 		profileUpdate.selectJobRole(engineer_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -545,13 +495,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Engineer - QA"));
 		Thread.sleep(5000);
-<<<<<<< HEAD
-		
-		
-=======
+
 
 		// ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
->>>>>>> omartest
+
 		profileUpdate.selectJobRole(aEngineer_QA);
 		Thread.sleep(5000);
 		profileUpdate.clickUpdateBtn();
@@ -565,13 +512,10 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Associate Engineer - QA"));
 		Thread.sleep(5000);
-<<<<<<< HEAD
-		
-		
-=======
+
 
 		// ProfileUpdatePage profileUpdate=new ProfileUpdatePage(driver);
->>>>>>> omartest
+
 		profileUpdate.selectJobRole(jEngineer_QA);
 		profileUpdate.clickUpdateBtn();
 		Assert.assertTrue(profileUpdate.getpopupMsgContent1("Profile details updated successfully"));
@@ -583,7 +527,7 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertTrue(profileUpdate.getJobRoleValue("Junior Engineer - QA"));
 		Thread.sleep(5000);
-<<<<<<< HEAD
+
 		
 		/*profileUpdate.selectJobRole(none);
 =======
@@ -621,22 +565,22 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		profileUpdate.clickUpdateBtn();
 		Thread.sleep(5000);
 		profileUpdate.clickPopupDoneBtn();
-<<<<<<< HEAD
+
 		Thread.sleep(5000);
 				
 	}
 
 	
-=======
 
-		SettingsPage settingspage = new SettingsPage(driver);
+
+		/*SettingsPage settingspage = new SettingsPage(driver);
 		Assert.assertTrue(settingspage.verifyNavigationToSettingPage("Dashboard Management"));
 
 		settingspage.clickProfileUpdateBtn();
 		Thread.sleep(5000);
 		profileUpdate.changeUsername(userName);
 
-	}
+	}*/
 
 	@Test(priority = 7)
 	public void GL_Settings_PU_99() throws InterruptedException {
@@ -655,5 +599,5 @@ public class VerifyProfileUpdatePage extends BaseTest {
 		profileUpdate.changeUsername(userName);
 
 	}
->>>>>>> omartest
+
 }

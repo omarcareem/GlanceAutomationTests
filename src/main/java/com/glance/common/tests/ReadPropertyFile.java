@@ -173,7 +173,7 @@ public class ReadPropertyFile {
 	public static String engineer_QA;
 	public static String aEngineer_QA;
 	public static String jEngineer_QA;
-<<<<<<< HEAD
+
 
 
 	public static int rowCount;
@@ -194,16 +194,7 @@ public class ReadPropertyFile {
     public static String profileUpdateTitle;
     public static String lblLoginTitle;
     public static String expectedMessageTitleSet;
-
-
-=======
-	public static String none;
-	
->>>>>>> neelamaniTest
-	
-	
-	
-	
+	public static String none;	
 	
 	 
 	public static Properties getDataRepository() throws IOException {
