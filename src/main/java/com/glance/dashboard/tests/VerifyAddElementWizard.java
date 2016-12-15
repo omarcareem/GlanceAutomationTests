@@ -39,8 +39,10 @@ public class VerifyAddElementWizard extends BaseTest {
 		commonPage.waitForPageLoad(10);
 		
 		 leftPanel= new CommonPageLeftPane(driver);
+		 Thread.sleep(3000);
 		 leftPanel.clickOnAccount();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		 Thread.sleep(5000);
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		leftPanel.clickOnAccountName(accountName);
 		//commonPage.waitForPageLoad(10);
 		dashBoardPage = new DashboardPage(driver);
@@ -48,7 +50,8 @@ public class VerifyAddElementWizard extends BaseTest {
 		dashBoardPage.selectAddNewElement();
 			
 		//commonPage.waitForPageLoad(10);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		AddElementWizardPage wizardPage = new AddElementWizardPage(driver);
 		wizardPage.selectMetric(metric);
 		wizardPage.enterMetricTitle(title);

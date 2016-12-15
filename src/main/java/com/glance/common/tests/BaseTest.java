@@ -73,7 +73,7 @@ public class BaseTest extends ReadPropertyFile {
 
 	}
 	
-	/*@AfterClass(alwaysRun = true)
+	@AfterClass(alwaysRun = true)
 	public void finishTest(){
 		try{
 			if(driver!=null){
@@ -84,6 +84,6 @@ public class BaseTest extends ReadPropertyFile {
 			TestLog.log.info("Unable to quit the driver. "+ex);
 		}
 		
-	}*/
+	}
 
 }

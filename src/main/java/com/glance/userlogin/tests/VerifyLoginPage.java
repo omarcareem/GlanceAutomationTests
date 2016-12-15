@@ -11,33 +11,30 @@ import com.glance.pageobjects.dashboard.DashboardPage;
 import com.glance.pageobjects.userlogin.LoginPage;
 
 public class VerifyLoginPage extends BaseTest {
-	
-	
-		
-	@Test (priority =0)
+
+	@Test(priority = 0)
 	public void GL_Login_01() {
-		LoginPage loginPage=new LoginPage(driver);
+		LoginPage loginPage = new LoginPage(driver);
 		Assert.assertTrue(loginPage.getLoginTitle("Login Form"));
-		}
-		
-	
-	@Test (priority =1)
+	}
+
+	@Test(priority = 1)
 	public void GL_login_02() throws InterruptedException {
-		
-		LoginPage loginPage=new LoginPage(driver);
+
+		LoginPage loginPage = new LoginPage(driver);
 		Thread.sleep(1000);
 		loginPage.enterUsername(userName);
 		loginPage.enterPassword(password);
 		loginPage.clickLoginBtn();
-	
-		DashboardPage dashBoard =new DashboardPage(driver);
+
+		DashboardPage dashBoard = new DashboardPage(driver);
 		Assert.assertTrue(dashBoard.getPageName("Account Level Dashboard"));
-		
-		CommonPageLeftPane commanleft= new CommonPageLeftPane(driver);
+
+		CommonPageLeftPane commanleft = new CommonPageLeftPane(driver);
 		commanleft.clickLogout();
-		
-		//invalid Login 1
-		
+
+		// invalid Login 1
+
 		Thread.sleep(1000);
 		loginPage.enterUsername(userNameErr);
 		loginPage.enterPassword(password);
@@ -45,18 +42,18 @@ public class VerifyLoginPage extends BaseTest {
 		Thread.sleep(1000);
 		Assert.assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
 		loginPage.clickErrorOK();
-		
-		
-		//Invalid Login2
-		
+
+		// Invalid Login2
+
 		Thread.sleep(1000);
 		loginPage.enterUsername(userName);
 		loginPage.enterPassword(passwordErr);
-		
+
 		loginPage.clickLoginBtn();
 		Thread.sleep(1000);
- 		Assert .assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
+		Assert.assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
 		loginPage.clickErrorOK();
+<<<<<<< HEAD
 		
 		//Invalid Login3
 		Thread.sleep(1000);
@@ -68,14 +65,13 @@ public class VerifyLoginPage extends BaseTest {
  		Assert .assertTrue(loginPage.verifyLoginError("Login unsuccessfull. Incorrect Login Credentials"));
 		loginPage.clickErrorOK();
 	
+=======
+
+>>>>>>> omartest
 	}
 
-	
-	
-	
-	
-	
 	/*
+<<<<<<< HEAD
 		
 		@Test (priority =4)
 		
@@ -108,5 +104,44 @@ public class VerifyLoginPage extends BaseTest {
 	
 	
 		
+=======
+	 * 
+	 * @Test (priority =4)
+	 * 
+	 * public void GL_login_03() throws InterruptedException {
+	 * 
+	 * 
+	 * for(int i=0; i<5 ;i++){ LoginPage loginPage=new LoginPage(driver);
+	 * Thread.sleep(1000); loginPage.enterUsername(userName);
+	 * loginPage.enterPassword(passwordErr);
+	 * 
+	 * loginPage.clickLoginBtn(); Assert .assertTrue(loginPage.verifyLoginError(
+	 * "Login unsuccessfull. Incorrect Login Credentials"));
+	 * loginPage.clickErrorOK(); }
+	 * 
+	 * LoginPage loginPage=new LoginPage(driver); Thread.sleep(1000);
+	 * loginPage.enterUsername(userName); loginPage.enterPassword(passwordErr);
+	 * 
+	 * loginPage.clickLoginBtn(); Assert .assertTrue(loginPage.verifyLoginError(
+	 * "User ID is Locked")); loginPage.clickErrorOK();
+	 * 
+	 * 
+	 * }
+	 */
+
+	@Test(priority = 5)
+	public void GL_login_04() throws InterruptedException {
+
+		LoginPage loginPage = new LoginPage(driver);
+		Thread.sleep(1000);
+		loginPage.enterUsername(userName);
+		loginPage.enterPassword(passwordErr);
+		loginPage.clickLoginBtn();
+		loginPage.clickErrorOK();
+
+		Assert.assertTrue(loginPage.getLoginTitle("Login Form"));
+
+	}
+>>>>>>> omartest
 
 }

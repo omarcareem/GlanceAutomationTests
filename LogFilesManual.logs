@@ -1,0 +1,51 @@
+09/12/2016 15:38:50 devpinoyLogger Openning browser
+09/12/2016 15:38:51 devpinoyLogger Chrome browser started
+09/12/2016 15:38:51 devpinoyLogger Maximizing the window
+09/12/2016 15:38:52 devpinoyLogger Navigating to; http://localhost/glance/index.php
+09/12/2016 15:38:53 devpinoyLogger Entering user Name
+09/12/2016 15:38:53 devpinoyLogger Entered user Name asadmin
+09/12/2016 15:38:53 devpinoyLogger Entering Password
+09/12/2016 15:38:53 devpinoyLogger Entered the password asmypass
+09/12/2016 15:38:53 devpinoyLogger Clicking login button
+09/12/2016 15:38:53 devpinoyLogger clicked login button
+09/12/2016 15:38:56 devpinoyLogger Clicking on account
+09/12/2016 15:38:56 devpinoyLogger Clicked on Account
+09/12/2016 15:39:02 devpinoyLogger Element is not defined
+09/12/2016 15:39:02 devpinoyLogger Navigating to add element
+09/12/2016 15:39:02 devpinoyLogger Navigated to add element
+09/12/2016 15:39:07 devpinoyLogger Selecting a metric value
+09/12/2016 15:39:07 devpinoyLogger Selected Other Bar Chart from the drop down
+09/12/2016 15:39:07 devpinoyLogger Entering a metric title
+09/12/2016 15:39:07 devpinoyLogger Entered the Glance Other Bar Chart 1 title
+09/12/2016 15:39:07 devpinoyLogger Entering footer
+09/12/2016 15:39:07 devpinoyLogger Entered the Glance Other bar chart footer 1
+09/12/2016 15:39:07 devpinoyLogger Entering description
+09/12/2016 15:39:07 devpinoyLogger Entered the Glance Other bar chart Description 1
+09/12/2016 15:39:07 devpinoyLogger Clicking on Next button
+09/12/2016 15:39:07 devpinoyLogger Clicked on Next button
+09/12/2016 15:39:08 devpinoyLogger Selecting a data table value
+09/12/2016 15:39:08 devpinoyLogger Selected cdi from the drop down
+09/12/2016 15:39:08 devpinoyLogger Selecting a label column X value
+09/12/2016 15:39:08 devpinoyLogger Selected cdi_id from the drop down
+09/12/2016 15:39:08 devpinoyLogger Selecting a data field value
+09/12/2016 15:39:08 devpinoyLogger Selected cdi_id from the drop down
+09/12/2016 15:39:19 devpinoyLogger Unable to Select a data Series Field. Due to: org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[ChromeDriver: chrome on XP (fc3adb362e0690711b2c19d6684472fc)] -> id: ele_fld_data_series]
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDABKAREEM', ip: '172.22.176.38', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\abkareem\AppData\Local\Temp\scoped_dir14948_18003}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fc3adb362e0690711b2c19d6684472fc
+09/12/2016 15:39:29 devpinoyLogger Unable to Select a chart Series Field. Due to: org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[ChromeDriver: chrome on XP (fc3adb362e0690711b2c19d6684472fc)] -> id: ele_fld_chart_series]
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDABKAREEM', ip: '172.22.176.38', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\abkareem\AppData\Local\Temp\scoped_dir14948_18003}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fc3adb362e0690711b2c19d6684472fc
+09/12/2016 15:39:29 devpinoyLogger Clicking on Next button
+09/12/2016 15:39:29 devpinoyLogger Clicked on Next button
+09/12/2016 15:39:35 devpinoyLogger Saving the new element
+09/12/2016 15:39:35 devpinoyLogger Saved the new element
+09/12/2016 15:39:35 devpinoyLogger Select delete icon
+09/12/2016 15:39:35 devpinoyLogger dashboard will delete
+09/12/2016 15:39:36 devpinoyLogger Confirming deletion of graph
+09/12/2016 15:39:36 devpinoyLogger Delete the graph
