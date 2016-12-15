@@ -3,96 +3,29 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.glance.usermanagement.tests.ManageUser">
-        <methods>
-          <include name="initializeTest"/>
-          <include name="GL_UM_09_1" invocation-numbers="1 3"/>
-          <include name="systemLogin"/>
-          <include name="systemLogOut"/>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <class name="com.glance.usermanagement.tests.TestDeleteUser">
-=======
-      <class name="com.glance.usermanagement.tests.TestAddGroupMembership">
->>>>>>> sajeththaTest
-=======
-      <class name="com.glance.commonPage.tests.VerifyCommonPageTopPane">
->>>>>>> shamamaTEST
-        <methods>
-          <include name="GL_Settings_GM_74_verifyCancelDelete"/>
-          <include name="initializeTest"/>
-<<<<<<< HEAD
-          <include name="GL_Settings_GM_69_verifyAddGroupMembership"/>
-          <include name="GL_Settings_GM_71_verifyAddDuplicateEntries"/>
-          <include name="verifyCancelAddGroupMembership"/>
-          <include name="GL_Settings_GM_72_viewMembers"/>
-          <include name="GL_Settings_GM_70_verifyAddGroupMembershipWithEmptyFields"/>
-          <include name="verifyGoToEditGroupMembership"/>
-          <include name="GL_Settings_GM_73_verifyDeleteGroupMembership"/>
-=======
-      <class name="com.glance.datamanagement.tests.VerifyDataUploadPage">
+      <class name="com.glance.userlogin.tests.VerifySettingsPage">
         <methods>
           <include name="login"/>
-          <include name="GL_Settings_DU_42_4"/>
+          <include name="GL_Settings_MA_75_verifyManageAccessPage"/>
+          <include name="GL_Settings_DU_41_verifyDataUploadPage"/>
+          <include name="GL_Settings_SD_100_verifySessionDump"/>
+          <include name="GL_Settings_AP_14_verifyAddProject"/>
+          <include name="GL_Settings_DS_22_verifyDeleteSearch"/>
+          <include name="GL_Settings_PU_90_verifyProfileUpdate"/>
+          <include name="GL_Settings_AA_01_verifyAddAccount"/>
+          <include name="GL_Settings_AE_09_verifyAddEngagement"/>
+          <include name="GL_Settings_DD_89_verifyRadioBtnLastSelected"/>
+          <include name="GL_Settings_DM_45_verifyDataDeleteModifyPage"/>
           <include name="initializeTest"/>
->>>>>>> poornimaTEST
-          <include name="testStartUp"/>
-          <include name="waitingForPageLoad"/>
-        </methods>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </class> <!-- com.glance.usermanagement.tests.TestDeleteUser -->
-=======
-      <class name="userlogin.VerifyProfileUpdatePage">
-        <methods>
-          <include name="GL_Settings_09"/>
-          <include name="GL_Settings_07"/>
-          <include name="LoginAndNavigation"/>
-          <include name="initializeTest"/>
-=======
-      <class name="com.glance.dashboard.tests.VerifyAddEngagement">
-        <methods>
           <include name="finishTest"/>
-          <include name="testLogin"/>
-          <include name="initializeTest"/>
-          <include name="testLogout"/>
-<<<<<<< HEAD
-          <include name="GL_Settings_AE_11_verify2"/>
->>>>>>> sachiniTEST
-=======
->>>>>>> sachiniTEST
-=======
-          <include name="GL_Main_33"/>
->>>>>>> shamamaTEST
->>>>>>> 63ec7fccdb40aed3ba4f691963db98fc59345963
+          <include name="GL_Settings_MG_79_verifyManageGroupPage"/>
+          <include name="GL_Settings_GM_68_verifyManageGroupmembershipPage"/>
+          <include name="GL_Settings_MU_56_verifyManageUsersPage"/>
+          <include name="verifySocketsPage"/>
+          <include name="GL_Settings_DD_88_verifyRadioBtnCurrentMonth"/>
           <include name="testStartUp"/>
-          <include name="GL_Settings_AE_12"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- com.glance.usermanagement.tests.ManageUser -->
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </class> <!-- userlogin.VerifyProfileUpdatePage -->
->>>>>>> neelamaniTest
-=======
-      </class> <!-- com.glance.dashboard.tests.VerifyAddEngagement -->
->>>>>>> sachiniTEST
-=======
-      </class> <!-- com.glance.usermanagement.tests.TestAddGroupMembership -->
->>>>>>> sajeththaTest
-=======
-      </class> <!-- com.glance.datamanagement.tests.VerifyDataUploadPage -->
->>>>>>> poornimaTEST
-=======
-      </class> <!-- com.glance.commonPage.tests.VerifyCommonPageTopPane -->
->>>>>>> shamamaTEST
->>>>>>> 63ec7fccdb40aed3ba4f691963db98fc59345963
+      </class> <!-- com.glance.userlogin.tests.VerifySettingsPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
