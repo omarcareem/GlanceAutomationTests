@@ -24,7 +24,6 @@ public class VerifyAddAccountPage extends BaseTest {
 	CreateAccountPage createAccount;
 	SettingsPage settingsPage;
 	AddAccountPage addAccount;
-	String accountName;
 	DashboardPage dashboard;
 	CommonPageObject commonPage;
 	BaseTest baseTest;
@@ -42,17 +41,9 @@ public class VerifyAddAccountPage extends BaseTest {
 
 	}
 
-	@BeforeMethod
-	public void waitingForPageLoad() {
-
-		commonPage = new CommonPageObject(driver);
-		commonPage.waitForPageLoad(5);
-	}
-
 	@Test(priority = 0)
 	public void GL_Settings_AA_01() throws Exception {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
@@ -66,8 +57,8 @@ public class VerifyAddAccountPage extends BaseTest {
 	@Test(priority = 1)
 	public void GL_Settings_AA_02() throws Exception {
 
-		// click on add new under account tab
 		leftPane = new CommonPageLeftPane(driver);
+		leftPane.clickSettings();
 		leftPane.clickOnAddNewAccountLink();
 
 		addAccount = new AddAccountPage(driver);
@@ -78,7 +69,6 @@ public class VerifyAddAccountPage extends BaseTest {
 	@Test(priority = 2)
 	public void GL_Settings_AA_03_1() throws Exception {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
@@ -88,13 +78,11 @@ public class VerifyAddAccountPage extends BaseTest {
 		System.out.println(previousCount);
 		settingsPage.clickAddAccountBtn();
 
-		// create an account
 		addAccount = new AddAccountPage(driver);
 
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 
 		addAccount.enterAccountName("Abc");
-		System.out.println(accountName);
 		addAccount.selectSegment(segment);
 		addAccount.clickSubmit();
 		addAccount.addNewEntry();
@@ -116,10 +104,8 @@ public class VerifyAddAccountPage extends BaseTest {
 	@Test(priority = 3)
 	public void GL_Settings_AA_03_2() throws Exception {
 
-		// click on add new on left pane
 		leftPane.clickOnAddNewAccountLink();
 
-		// create an account
 		addAccount = new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 		accountName = RandomNameGenerator.getName();
@@ -128,7 +114,6 @@ public class VerifyAddAccountPage extends BaseTest {
 		addAccount.clickSubmit();
 		addAccount.addNewEntry();
 
-		// check account is added
 		Assert.assertTrue(leftPane.verifyAdded(accountName));
 
 	}
@@ -161,7 +146,6 @@ public class VerifyAddAccountPage extends BaseTest {
 		loginPage.enterPassword("1234qwer");
 		loginPage.clickLoginBtn();
 
-		// click on add new on left pane
 		leftPane.clickOnAddNewAccountLink();
 
 		addAccount = new AddAccountPage(driver);
@@ -188,17 +172,14 @@ public class VerifyAddAccountPage extends BaseTest {
 	@Test(priority = 5)
 	public void GL_Settings_AA_04() throws Exception {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// get previous count of number of accounts
 		settingsPage = new SettingsPage(driver);
 		int previousCount = settingsPage.getCountAddAccount();
 		System.out.println(previousCount);
 		settingsPage.clickAddAccountBtn();
 
-		// create an account
 		addAccount = new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 		accountName = RandomNameGenerator.getName();
@@ -206,14 +187,11 @@ public class VerifyAddAccountPage extends BaseTest {
 		addAccount.selectSegment(segment);
 		addAccount.clickCancel();
 
-		// checking navigation back to settings page
 		Assert.assertTrue(settingsPage.verifyNavigationToSettingPage("Dashboard Management"));
 
-		// get current count of number of accounts
 		int newestCount = settingsPage.getCountAddAccount();
 		System.out.println(newestCount);
 
-		// compare the counts
 		if (newestCount > previousCount)
 			System.out.println("New account is added");
 
@@ -225,15 +203,12 @@ public class VerifyAddAccountPage extends BaseTest {
 	@Test(priority = 6)
 	public void GL_Settings_AA_05() throws Exception {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// click on add account
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickAddAccountBtn();
 
-		// create an account
 		addAccount = new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 		accountName = RandomNameGenerator.getName();
@@ -249,15 +224,12 @@ public class VerifyAddAccountPage extends BaseTest {
 	@Test(priority = 7)
 	public void GL_Settings_AA_06() throws Exception {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// click on add account
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickAddAccountBtn();
 
-		// create an account
 		addAccount = new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 		accountName = RandomNameGenerator.getName();
@@ -266,7 +238,6 @@ public class VerifyAddAccountPage extends BaseTest {
 		addAccount.clickSubmit();
 		addAccount.goToDashboard();
 
-		// checking navigation back to dashboard page
 		dashboard = new DashboardPage(driver);
 		Assert.assertTrue(dashboard.verifyNavigationToDashboardPage("Account Level Dashboard"));
 
@@ -275,11 +246,9 @@ public class VerifyAddAccountPage extends BaseTest {
 	@Test(priority = 8)
 	public void GL_Settings_AA_08() {
 
-		// click on add new on left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickOnAddNewAccountLink();
 
-		// create an account
 		addAccount = new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 		addAccount.clickCollapseExpand();
@@ -289,33 +258,13 @@ public class VerifyAddAccountPage extends BaseTest {
 	@Test(priority = 9)
 	public void GL_Settings_AA_07() {
 
-		// click on add new on left pane
 		leftPane = new CommonPageLeftPane(driver);
+		leftPane.clickSettings();
 		leftPane.clickOnAddNewAccountLink();
 
-		// create an account
 		addAccount = new AddAccountPage(driver);
 		Assert.assertTrue(addAccount.verifyNavigationToAddAccountPage("Account"));
 		addAccount.clickClose();
-
-
-	}
-	
-	@AfterMethod
-	public void deleteUser(){
-		
-		// login
-		loginPage = new LoginPage(driver);
-		loginPage.enterUsername(userName);
-		loginPage.enterPassword(password);
-		loginPage.clickLoginBtn();
-		
-		// click manage users
-		settingsPage = new SettingsPage(driver);
-		settingsPage.ClickManageUsersBtn();
-		
-		userManagement = new UserManagementPage(driver);
-		userManagement.tableDeleteLink("35");
 
 	}
 
