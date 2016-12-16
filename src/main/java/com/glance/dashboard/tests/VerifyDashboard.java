@@ -67,7 +67,6 @@ public class VerifyDashboard extends BaseTest{
 		commonPageLeftPane.clickEngagement();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		commonPageLeftPane.clickOnEngagementName(engagementName1);
-		dashBoardPage = new DashboardPage(driver);
 		Assert.assertTrue(dashBoardPage.getPageName("Engagement Level Dashboard"));
 		commonPageLeftPane.clickGlanceIcon();
 		
@@ -75,14 +74,14 @@ public class VerifyDashboard extends BaseTest{
 		commonPageLeftPane.clickProject();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		commonPageLeftPane.clickOnProjectName(projectName1);
-		dashBoardPage = new DashboardPage(driver);
-		Assert.assertTrue(dashBoardPage.getPageName("Project Level Dashboard"));
+		dashBoardPage.verifyNavigationToAccessDeniedPage("Access Denied!");
 		commonPageLeftPane.clickGlanceIcon();
 		
 		commonPage.waitForPageLoad(10);
 		commonPageLeftPane.clickIndividual();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
+		commonPageLeftPane.clickOnProjectName(individualName1);
+		
 	}
 	
 	@Test (priority=1)
@@ -244,12 +243,10 @@ public class VerifyDashboard extends BaseTest{
 		dashBoardPage = new DashboardPage(driver);
 		Assert.assertTrue(dashBoardPage.getPageName("Account Level Dashboard"));
 		
-		commonPage = new CommonPageObject(driver);
-		commonPage.waitForPageLoad(10);
-		
 		commonPageLeftPane= new CommonPageLeftPane(driver);
+		Thread.sleep(3000);
 		commonPageLeftPane.clickOnAccount();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		commonPageLeftPane.clickOnAccountName(accountName4);
 		Assert.assertTrue(dashBoardPage.verifyElementMessage());
 		

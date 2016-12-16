@@ -75,11 +75,10 @@ public class VerifyDeleteSearchResults extends BaseTest {
 
 		deleteSearchRecordPage.tableSearch(enterSearch);
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		//Assert.assertTrue(deleteSearchRecordPage.verifyEmptySearch("No matching records found"));
-
+		
 	}
 
-	@Test(dataProvider = "ShowEntryData", dataProviderClass = GlanceDataProvider.class)
+	@Test(dataProvider = "GL_UM_12", dataProviderClass = GlanceDataProvider.class)
 	public void GL_Settings_DSR_30(String showEntry) throws Exception {
 
 		deleteSearchRecordPage = new DeleteSearchRecordPage(driver);

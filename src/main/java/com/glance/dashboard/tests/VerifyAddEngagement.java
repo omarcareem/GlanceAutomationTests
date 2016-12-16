@@ -95,10 +95,6 @@ public class VerifyAddEngagement extends BaseTest {
 		addEngagementPage.selectAddNewEntry();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 
-		
-		//CommonPageObject commonPage = new CommonPageObject(driver);
-		//commonPage.waitForPageLoad(10);
-		
 		engagementName = RandomNameGenerator.getName();
 		addEngagementPage.enterEngagementName(engagementName);
 		addEngagementPage.selectAccount(accountName1);
@@ -139,10 +135,6 @@ public class VerifyAddEngagement extends BaseTest {
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		addEngagementPage.clickCancel();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-
-		//verify page titles
-		/*String[] expectedValues = {"Dashboard Management", "Data Management", "User Management", "Personalizations", "Maintenance"};
-		Assert.assertEquals(addEngagementPage.verifyChartTitle(),expectedValues);*/
 
 	}
 
