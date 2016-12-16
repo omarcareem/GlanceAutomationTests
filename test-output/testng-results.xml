@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" total="10" passed="10">
   <reporter-output>
   </reporter-output>
@@ -168,6 +169,41 @@
           </reporter-output>
         </test-method> <!-- finishTest -->
       </class> <!-- com.glance.dashboard.tests.VerifyDeleteSearchResults -->
+=======
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="60283" started-at="2016-12-16T09:53:25Z" finished-at="2016-12-16T09:54:26Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="60283" started-at="2016-12-16T09:53:25Z" finished-at="2016-12-16T09:54:26Z">
+      <class name="com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage">
+        <test-method status="PASS" signature="testStartUp()[pri:0, instance:com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage@754ba872]" name="testStartUp" is-config="true" duration-ms="314" started-at="2016-12-16T15:23:25Z" finished-at="2016-12-16T15:23:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStartUp -->
+        <test-method status="PASS" signature="initializeTest()[pri:0, instance:com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage@754ba872]" name="initializeTest" is-config="true" duration-ms="21021" started-at="2016-12-16T15:23:25Z" finished-at="2016-12-16T15:23:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage@754ba872]" name="login" is-config="true" duration-ms="547" started-at="2016-12-16T15:23:46Z" finished-at="2016-12-16T15:23:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="GL_Settings_DM_54()[pri:8, instance:com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage@754ba872]" name="GL_Settings_DM_54" duration-ms="7163" started-at="2016-12-16T15:23:47Z" finished-at="2016-12-16T15:23:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_DM_54 -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage@754ba872]" name="login" is-config="true" duration-ms="31020" started-at="2016-12-16T15:23:54Z" finished-at="2016-12-16T15:24:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="GL_Settings_DM_53()[pri:9, instance:com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage@754ba872]" name="GL_Settings_DM_53" duration-ms="513" started-at="2016-12-16T15:24:25Z" finished-at="2016-12-16T15:24:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GL_Settings_DM_53 -->
+      </class> <!-- com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage -->
+>>>>>>> poornimaTEST
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

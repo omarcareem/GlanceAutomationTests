@@ -37,25 +37,15 @@ public class VerifyDataUploadPage extends BaseTest {
 
 	}
 
-	@BeforeMethod
-	public void waitingForPageLoad() {
-
-		commonPage = new CommonPageObject(driver);
-		commonPage.waitForPageLoad(5);
-	}
-
 	@Test(priority = 0)
 	public void GL_Settings_DU_41() throws Exception {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// check for the record in the table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataUploadBtn();
 
-		// check navigation to data upload page
 		dataUploadPage = new DataUploadPage(driver);
 		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Upload Your Files Here"));
 
@@ -64,11 +54,9 @@ public class VerifyDataUploadPage extends BaseTest {
 	@Test(priority = 1)
 	public void GL_Settings_DU_42_1() throws IOException, InterruptedException {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// check for the record in the table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 
@@ -103,15 +91,12 @@ public class VerifyDataUploadPage extends BaseTest {
 	@Test(priority = 2)
 	public void GL_Settings_DU_42_2() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// click data upload
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataUploadBtn();
 
-		// select table
 		dataUploadPage = new DataUploadPage(driver);
 		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Upload Your Files Here"));
 		dataUploadPage.selectDataTable(tableName);
@@ -125,15 +110,12 @@ public class VerifyDataUploadPage extends BaseTest {
 	@Test(priority = 3)
 	public void GL_Settings_DU_42_3() throws IOException, InterruptedException {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// click data upload
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataUploadBtn();
 
-		// select table
 		dataUploadPage = new DataUploadPage(driver);
 		Assert.assertTrue(dataUploadPage.verifyNavigationToDataUploadPage("Upload Your Files Here"));
 		dataUploadPage.selectFileUploadArea();
@@ -148,11 +130,9 @@ public class VerifyDataUploadPage extends BaseTest {
 	@Test(priority = 4)
 	public void GL_Settings_DU_42_4() throws InterruptedException {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// click data upload
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataUploadBtn();
 
@@ -168,11 +148,9 @@ public class VerifyDataUploadPage extends BaseTest {
 	@Test(priority = 5)
 	public void GL_Settings_DU_44() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// click data upload
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataUploadBtn();
 		dataUploadPage = new DataUploadPage(driver);
@@ -184,11 +162,9 @@ public class VerifyDataUploadPage extends BaseTest {
 	@Test(priority = 6)
 	public void GL_Settings_DU_43() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// click data upload
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataUploadBtn();
 		dataUploadPage = new DataUploadPage(driver);

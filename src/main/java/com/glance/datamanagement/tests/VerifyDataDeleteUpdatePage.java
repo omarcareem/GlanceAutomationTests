@@ -33,21 +33,12 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 
 	}
 
-	@BeforeMethod
-	public void waitingForPageLoad() {
-
-		commonPage = new CommonPageObject(driver);
-		commonPage.waitForPageLoad(5);
-	}
-
 	@Test(priority = 0)
 	public void GL_Settings_DM_45() throws Exception {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// check for the record in the table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 
@@ -59,11 +50,9 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 	@Test(priority = 1)
 	public void GL_Settings_DM_46() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// select table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 
@@ -77,11 +66,9 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 	@Test(priority = 2)
 	public void GL_Settings_DM_47() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// select table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 
@@ -96,11 +83,9 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 	@Test(priority = 3)
 	public void GL_Settings_DM_48() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// select table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 
@@ -120,11 +105,9 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 	@Test(priority = 4)
 	public void GL_Settings_DM_49() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// select table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 
@@ -144,11 +127,9 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 	@Test(priority = 5)
 	public void GL_Settings_DM_51() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// select table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 
@@ -164,11 +145,9 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 	@Test(priority = 6)
 	public void GL_Settings_DM_52() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// select table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 
@@ -185,19 +164,15 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 		dataDUPage.actualPage();
 		dataDUPage.lastPageNavigation();
 		dataDUPage.actualPage();
-		// dataDUPage.middlePageNavigation();
-		// dataDUPage.actualPage();
 		dataDUPage.pageCount();
 	}
 
 	@Test(priority = 7)
 	public void GL_Settings_DM_55() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// select table
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 
@@ -217,11 +192,9 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 	@Test(priority = 8)
 	public void GL_Settings_DM_54() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// click delete upload button
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 		dataDUPage = new DataDeleteUpdatePage(driver);
@@ -233,11 +206,9 @@ public class VerifyDataDeleteUpdatePage extends BaseTest {
 	@Test(priority = 9)
 	public void GL_Settings_DM_53() {
 
-		// click on settings icon in left pane
 		leftPane = new CommonPageLeftPane(driver);
 		leftPane.clickSettings();
 
-		// click delete upload button
 		settingsPage = new SettingsPage(driver);
 		settingsPage.clickDataDeleteModifyBtn();
 		dataDUPage = new DataDeleteUpdatePage(driver);

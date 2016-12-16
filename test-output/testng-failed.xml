@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.glance.dashboard.tests.VerifyDeleteSearchResults">
         <methods>
           <include name="GL_Settings_DSR_32"/>
@@ -15,6 +16,18 @@
           <include name="testStartUp"/>
         </methods>
       </class> <!-- com.glance.dashboard.tests.VerifyDeleteSearchResults -->
+=======
+      <class name="com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage">
+        <methods>
+          <include name="GL_Settings_DM_55"/>
+          <include name="initializeTest"/>
+          <include name="login"/>
+          <include name="GL_Settings_DM_48"/>
+          <include name="GL_Settings_DM_49"/>
+          <include name="testStartUp"/>
+        </methods>
+      </class> <!-- com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage -->
+>>>>>>> poornimaTEST
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
