@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.glance.dashboard.tests.VerifyAddElementWizard">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="runAfterTest"/>
+        </methods>
+      </class> <!-- com.glance.dashboard.tests.VerifyAddElementWizard -->
+      <class name="com.glance.dashboard.tests.VerifyDashboard">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="GL_Settings_DB_40"/>
+          <include name="testLogin"/>
+          <include name="GL_Settings_DB_36"/>
+          <include name="GL_Settings_DB_37"/>
+          <include name="testLogout"/>
+          <include name="GL_Settings_DB_39"/>
+        </methods>
+      </class> <!-- com.glance.dashboard.tests.VerifyDashboard -->
+      <class name="com.glance.userlogin.tests.VerifyLockScreen">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="GL_Main_09_verifyPassword"/>
+        </methods>
+      </class> <!-- com.glance.userlogin.tests.VerifyLockScreen -->
+      <class name="com.glance.userlogin.tests.VerifyLostPasswordPage">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="GL_Login_12"/>
+        </methods>
+      </class> <!-- com.glance.userlogin.tests.VerifyLostPasswordPage -->
+      <class name="com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage">
+        <methods>
+          <include name="GL_Settings_DM_55"/>
+          <include name="initializeTest"/>
+          <include name="login"/>
+          <include name="GL_Settings_DM_48"/>
+          <include name="GL_Settings_DM_49"/>
+        </methods>
+      </class> <!-- com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage -->
+      <class name="com.glance.dashboard.tests.VerifyAddEngagement">
+        <methods>
+          <include name="testLogin"/>
+          <include name="initializeTest"/>
+          <include name="testLogout"/>
+        </methods>
+      </class> <!-- com.glance.dashboard.tests.VerifyAddEngagement -->
+      <class name="com.glance.usermanagement.tests.VerifyManageGroup">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="GL_Settings_MG_84"/>
+          <include name="GL_Settings_MG_80"/>
+          <include name="GL_Settings_MG_86"/>
+          <include name="GL_Settings_MG_83"/>
+          <include name="GL_Settings_MG_85"/>
+        </methods>
+      </class> <!-- com.glance.usermanagement.tests.VerifyManageGroup -->
+      <class name="com.glance.dashboard.tests.VerifyDeleteSearch">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="testLogout"/>
+          <include name="testLogin"/>
+        </methods>
+      </class> <!-- com.glance.dashboard.tests.VerifyDeleteSearch -->
+      <class name="com.glance.dashboard.tests.VerifyDeleteSearchResults">
+        <methods>
+          <include name="GL_Settings_DSR_32"/>
+          <include name="initializeTest"/>
+          <include name="testLogin"/>
+          <include name="testLogout"/>
+        </methods>
+      </class> <!-- com.glance.dashboard.tests.VerifyDeleteSearchResults -->
+      <class name="com.glance.dashboard.tests.VerifyAddAccountPage">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="login"/>
+          <include name="testStartUp"/>
+        </methods>
+      </class> <!-- com.glance.dashboard.tests.VerifyAddAccountPage -->
+      <class name="com.glance.userlogin.tests.VerifySettingsPage">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="login"/>
+          <include name="GL_Settings_SD_100_verifySessionDump"/>
+        </methods>
+      </class> <!-- com.glance.userlogin.tests.VerifySettingsPage -->
+      <class name="com.glance.userlogin.tests.VerifyCreateAccountPage">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="GL_Login_08"/>
+          <include name="LoginNavigation"/>
+          <include name="GL_Login_10"/>
+          <include name="createAccnvigation"/>
+        </methods>
+      </class> <!-- com.glance.userlogin.tests.VerifyCreateAccountPage -->
+      <class name="com.glance.dashboard.tests.VerifyAddProject">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="login"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- com.glance.dashboard.tests.VerifyAddProject -->
+      <class name="com.glance.datamanagement.tests.VerifyDataUploadPage">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="login"/>
+          <include name="GL_Settings_DU_42_1"/>
+          <include name="GL_Settings_DU_42_3"/>
+        </methods>
+      </class> <!-- com.glance.datamanagement.tests.VerifyDataUploadPage -->
+      <class name="com.glance.usermanagement.tests.TestGroupMembership">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="verifyGoToEditGroupMembership"/>
+        </methods>
+      </class> <!-- com.glance.usermanagement.tests.TestGroupMembership -->
+      <class name="com.glance.usermanagement.tests.TestManageAccess">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="verifyGoToEditGroupMembership"/>
+        </methods>
+      </class> <!-- com.glance.usermanagement.tests.TestManageAccess -->
+      <class name="com.glance.userlogin.tests.VerifyLoginPage">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="GL_login_03"/>
+        </methods>
+      </class> <!-- com.glance.userlogin.tests.VerifyLoginPage -->
+      <class name="com.glance.usermanagement.tests.ManageUser">
+        <methods>
+          <include name="GL_UM_08" invocation-numbers="5"/>
+          <include name="initializeTest"/>
+          <include name="systemLogin"/>
+          <include name="systemLogOut"/>
+        </methods>
+      </class> <!-- com.glance.usermanagement.tests.ManageUser -->
+      <class name="com.glance.usermanagement.tests.TestEditUser">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="verifyGoToEditUserPage"/>
+        </methods>
+      </class> <!-- com.glance.usermanagement.tests.TestEditUser -->
+      <class name="com.glance.userlogin.tests.VerifyProfileUpdatePage">
+        <methods>
+          <include name="GL_Settings_PU_93"/>
+          <include name="LoginAndNavigation"/>
+          <include name="initializeTest"/>
+          <include name="GL_Settings_PU_96"/>
+          <include name="GL_Settings_PU_94"/>
+          <include name="GL_Settings_PU_97"/>
+          <include name="GL_Settings_PU_95"/>
+          <include name="Logout"/>
+        </methods>
+      </class> <!-- com.glance.userlogin.tests.VerifyProfileUpdatePage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

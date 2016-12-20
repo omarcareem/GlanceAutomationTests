@@ -7,13 +7,20 @@ import java.io.InputStream;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
 public class ReadPropertyFile {
 
 
 	public static String driverCommonPath=System.getProperty("user.dir")+ "/";	
+	public static String reportPath;
 	public static WebDriver driver;
+	public static ExtentReports report;
+	public static ExtentTest test;
 	public static String chromeDriverPath;
 	public static String ieDriverPath;
 	public static String geckoDriverPath;
@@ -214,6 +221,7 @@ public class ReadPropertyFile {
 		chromeDriverPath = driverCommonPath+ getDataRepository().getProperty("chromeDriverPath");
 		ieDriverPath = driverCommonPath+ getDataRepository().getProperty("ieDriverPath");
 		geckoDriverPath = driverCommonPath+ getDataRepository().getProperty("geckoDriverPath");
+		reportPath=driverCommonPath+getDataRepository().getProperty("extentReport");
 		userName=getDataRepository().getProperty("userName");
 		System.out.println(userName);
 		password=getDataRepository().getProperty("password");
@@ -502,8 +510,22 @@ public class ReadPropertyFile {
 		profileUpdateTitle=getDataRepository().getProperty("profileUpdateTitle");
 		lblLoginTitle=getDataRepository().getProperty("lblLoginTitle");
 		
-
+		report = new ExtentReports(reportPath, true);
+				
+				//(reportPath, true);
+		
 	}
+	
+	@AfterSuite
+    protected void afterSuite() {
+		
+		report.flush();
+		//driver.close();
+		//driver.get(reportPath);
+		report.close();
+		
+    }
+
 
 	
 	

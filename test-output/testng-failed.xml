@@ -3,31 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.glance.dashboard.tests.VerifyDeleteSearchResults">
+      <class name="com.glance.dashboard.tests.VerifyAddElementWizard">
         <methods>
-          <include name="GL_Settings_DSR_32"/>
+          <include name="initializeTest"/>
+          <include name="commonTestFinish"/>
           <include name="finishTest"/>
-          <include name="GL_Settings_DSR_33"/>
-          <include name="testLogout"/>
-          <include name="GL_Settings_DSR_34"/>
-          <include name="initializeTest"/>
-          <include name="testLogin"/>
+          <include name="runAfterTest"/>
+          <include name="afterSuite"/>
+          <include name="TC01_verifyAddNewDashboardElement" invocation-numbers="0 1 2"/>
           <include name="testStartUp"/>
         </methods>
-      </class> <!-- com.glance.dashboard.tests.VerifyDeleteSearchResults -->
-=======
-      <class name="com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage">
-        <methods>
-          <include name="GL_Settings_DM_55"/>
-          <include name="initializeTest"/>
-          <include name="login"/>
-          <include name="GL_Settings_DM_48"/>
-          <include name="GL_Settings_DM_49"/>
-          <include name="testStartUp"/>
-        </methods>
-      </class> <!-- com.glance.datamanagement.tests.VerifyDataDeleteUpdatePage -->
->>>>>>> poornimaTEST
+      </class> <!-- com.glance.dashboard.tests.VerifyAddElementWizard -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
