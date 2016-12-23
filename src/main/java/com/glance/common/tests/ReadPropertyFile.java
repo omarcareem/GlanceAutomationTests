@@ -82,11 +82,14 @@ public class ReadPropertyFile {
 	public static String deleteType;
 	public static String typeID;
 	public static String typeName;
+	public static String typeID2;
+	public static String typeName2;
 	public static String sqlQuery;
+	public static String sqlQuery2;
 	
 	public static String showEntry;
 	public static String enterSearch;
-	public static String recordInsert;
+	public static String enterSearch2;
 	
 	public static String emailAdd;
 	public static String emailAddErr;
@@ -185,8 +188,11 @@ public class ReadPropertyFile {
 
 	public static int rowCount;
 	public static String columnName;
+	public static String columnName2;
+	public static String columnName3;
 
-	public static String grpName;
+
+    public static String grpName;
     public static String grpNameNew;
     public static String grpNameDeleted;
     public static String accountName3;
@@ -201,7 +207,8 @@ public class ReadPropertyFile {
     public static String profileUpdateTitle;
     public static String lblLoginTitle;
     public static String expectedMessageTitleSet;
-	public static String none;	
+    public static String none;               
+    
 	
 	 
 	public static Properties getDataRepository() throws IOException {
@@ -281,6 +288,7 @@ public class ReadPropertyFile {
 		expectedMessageLastName=getDataRepository().getProperty("expectedMessageLastName");
 		System.out.println(expectedMessageLastName);
 		
+
 		accountName1=getDataRepository().getProperty("accountName2");
 		System.out.println(accountName2);
 		DeliveryMethod=getDataRepository().getProperty("DeliveryMethod");
@@ -323,17 +331,26 @@ public class ReadPropertyFile {
 		System.out.println(typeID);
 		typeName=getDataRepository().getProperty("typeName");
 		System.out.println(typeName);
+		typeID2=getDataRepository().getProperty("typeID2");
+		System.out.println(typeID2);
+		typeName2=getDataRepository().getProperty("typeName2");
+		System.out.println(typeName2);
 		sqlQuery=getDataRepository().getProperty("sqlQuery");
 		System.out.println(sqlQuery);
+		sqlQuery2=getDataRepository().getProperty("sqlQuery2");
+		System.out.println(sqlQuery2);
 		
 		showEntry=getDataRepository().getProperty("showEntry");
 		System.out.println(showEntry);
 		enterSearch=getDataRepository().getProperty("enterSearch");
 		System.out.println(enterSearch);
+		enterSearch2=getDataRepository().getProperty("enterSearch2");
+		System.out.println(enterSearch2);
+		columnName2=getDataRepository().getProperty("columnName2");
+		System.out.println(columnName2);
+		columnName3=getDataRepository().getProperty("columnName3");
+		System.out.println(columnName3);
 
-		recordInsert=getDataRepository().getProperty("recordInsert");
-		System.out.println(recordInsert);
-		
 		
 		//LoginValidation
 		userNameErr=getDataRepository().getProperty("userNameErr");
@@ -498,18 +515,21 @@ public class ReadPropertyFile {
 
 
 
-		accountName=getDataRepository().getProperty("accountName");
-		projectName=getDataRepository().getProperty("projectName");
-		expectedMessageEdit=getDataRepository().getProperty("expectedMessageEdit");
-		searchTwo=getDataRepository().getProperty("searchTwo");
-		searchFullText=getDataRepository().getProperty("searchFullText");
-		searchUnexisting=getDataRepository().getProperty("searchUnexisting");
-		searchEmpty=getDataRepository().getProperty("searchEmpty");
-		searchAD=getDataRepository().getProperty("searchAD");	
-		expectedMessage=getDataRepository().getProperty("expectedMessage");
-		profileUpdateTitle=getDataRepository().getProperty("profileUpdateTitle");
-		lblLoginTitle=getDataRepository().getProperty("lblLoginTitle");
-		
+		 accountName=getDataRepository().getProperty("accountName");
+         projectName=getDataRepository().getProperty("projectName");
+         expectedMessageEdit=getDataRepository().getProperty("expectedMessageEdit");
+         searchTwo=getDataRepository().getProperty("searchTwo");
+         searchFullText=getDataRepository().getProperty("searchFullText");
+         searchUnexisting=getDataRepository().getProperty("searchUnexisting");
+         searchEmpty=getDataRepository().getProperty("searchEmpty");
+         searchAD=getDataRepository().getProperty("searchAD");           
+         expectedMessage=getDataRepository().getProperty("expectedMessage");
+         profileUpdateTitle=getDataRepository().getProperty("profileUpdateTitle");
+         lblLoginTitle=getDataRepository().getProperty("lblLoginTitle");
+         grpName=getDataRepository().getProperty("grpName");
+         grpNameNew=getDataRepository().getProperty("grpNameNew");
+         grpNameDeleted=getDataRepository().getProperty("lblLoginTitle");
+         
 		report = new ExtentReports(reportPath, true);
 				
 				//(reportPath, true);

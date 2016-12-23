@@ -1,98 +1,447 @@
-20/12/2016 13:51:04 devpinoyLogger Openning browser
-20/12/2016 13:51:11 devpinoyLogger Chrome browser started
-20/12/2016 13:51:11 devpinoyLogger Maximizing the window
-20/12/2016 13:51:11 devpinoyLogger Navigating to; http://localhost/glance/index.php
-20/12/2016 13:51:13 devpinoyLogger Entering user Name
-20/12/2016 13:51:13 devpinoyLogger Entered user Name asadmin
-20/12/2016 13:51:13 devpinoyLogger Entering Password
-20/12/2016 13:51:13 devpinoyLogger Entered the password asmypass
-20/12/2016 13:51:13 devpinoyLogger Clicking login button
-20/12/2016 13:51:13 devpinoyLogger clicked login button
-20/12/2016 13:51:18 devpinoyLogger Clicking on account
-20/12/2016 13:51:18 devpinoyLogger Clicked on Account
-20/12/2016 13:51:24 devpinoyLogger Before taking screen shot
-20/12/2016 13:51:24 devpinoyLogger Created imgage file
-20/12/2016 13:51:24 devpinoyLogger Saving file
-20/12/2016 13:51:24 devpinoyLogger Entering user Name
-20/12/2016 13:51:34 devpinoyLogger Could not enter user name org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"login_id"}
+23/12/2016 15:04:34 devpinoyLogger Openning browser
+23/12/2016 15:04:39 devpinoyLogger Chrome browser started
+23/12/2016 15:04:39 devpinoyLogger Maximizing the window
+23/12/2016 15:04:40 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:04:47 devpinoyLogger Entering user Name
+23/12/2016 15:04:48 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:04:48 devpinoyLogger Entering Password
+23/12/2016 15:04:48 devpinoyLogger Entered the password asmypass
+23/12/2016 15:04:48 devpinoyLogger Clicking login button
+23/12/2016 15:04:48 devpinoyLogger clicked login button
+23/12/2016 15:04:48 devpinoyLogger Navigating to settings page
+23/12/2016 15:04:56 devpinoyLogger Navigated
+23/12/2016 15:04:56 devpinoyLogger Clicking on Add Account Button
+23/12/2016 15:04:57 devpinoyLogger Clicked on Add Account Button
+23/12/2016 15:04:57 devpinoyLogger Logging out from the system
+23/12/2016 15:04:58 devpinoyLogger Logged out
+23/12/2016 15:04:58 devpinoyLogger Openning browser
+23/12/2016 15:04:59 devpinoyLogger Chrome browser started
+23/12/2016 15:04:59 devpinoyLogger Maximizing the window
+23/12/2016 15:04:59 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:05:05 devpinoyLogger Entering user Name
+23/12/2016 15:05:05 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:05:05 devpinoyLogger Entering Password
+23/12/2016 15:05:05 devpinoyLogger Entered the password asmypass
+23/12/2016 15:05:05 devpinoyLogger Clicking login button
+23/12/2016 15:05:05 devpinoyLogger clicked login button
+23/12/2016 15:05:09 devpinoyLogger Clicking on account
+23/12/2016 15:05:09 devpinoyLogger Clicked on Account
+23/12/2016 15:05:25 devpinoyLogger Could not retrieve the element message. Due to: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1"}
   (Session info: chrome=55.0.2883.87)
   (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.16 seconds
+Command duration or timeout: 10.09 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'CMDABKAREEM', ip: '172.22.176.38', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\abkareem\AppData\Local\Temp\scoped_dir27528_17754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6d42531d8251c90fdb62a6fb5e88ea11
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir14624_15163}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e98612b9d0338a0c7f991d25b5d5415f
+*** Element info: {Using=xpath, value=//h1}
+23/12/2016 15:05:25 devpinoyLogger Before taking screen shot
+23/12/2016 15:05:26 devpinoyLogger Created imgage file
+23/12/2016 15:05:26 devpinoyLogger Saving file
+23/12/2016 15:05:26 devpinoyLogger Entering user Name
+23/12/2016 15:05:36 devpinoyLogger Could not enter user name org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"login_id"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir14624_15163}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e98612b9d0338a0c7f991d25b5d5415f
 *** Element info: {Using=id, value=login_id}
-20/12/2016 13:51:34 devpinoyLogger Entering Password
-20/12/2016 13:51:44 devpinoyLogger Could not enter password. org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"pwd"}
+23/12/2016 15:05:36 devpinoyLogger Entering Password
+23/12/2016 15:05:46 devpinoyLogger Could not enter password. org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"pwd"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir14624_15163}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e98612b9d0338a0c7f991d25b5d5415f
+*** Element info: {Using=id, value=pwd}
+23/12/2016 15:05:46 devpinoyLogger Clicking login button
+23/12/2016 15:05:56 devpinoyLogger Could not click login. org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"valEncrpt"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir14624_15163}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e98612b9d0338a0c7f991d25b5d5415f
+*** Element info: {Using=id, value=valEncrpt}
+23/12/2016 15:05:59 devpinoyLogger Clicking on account
+23/12/2016 15:05:59 devpinoyLogger Clicked on Account
+23/12/2016 15:06:14 devpinoyLogger Could not retrieve the element message. Due to: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir14624_15163}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e98612b9d0338a0c7f991d25b5d5415f
+*** Element info: {Using=xpath, value=//h1}
+23/12/2016 15:06:14 devpinoyLogger Before taking screen shot
+23/12/2016 15:06:14 devpinoyLogger Created imgage file
+23/12/2016 15:06:14 devpinoyLogger Saving file
+23/12/2016 15:06:14 devpinoyLogger Entering user Name
+23/12/2016 15:06:25 devpinoyLogger Could not enter user name org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"login_id"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir14624_15163}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e98612b9d0338a0c7f991d25b5d5415f
+*** Element info: {Using=id, value=login_id}
+23/12/2016 15:06:25 devpinoyLogger Entering Password
+23/12/2016 15:06:35 devpinoyLogger Could not enter password. org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"pwd"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir14624_15163}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e98612b9d0338a0c7f991d25b5d5415f
+*** Element info: {Using=id, value=pwd}
+23/12/2016 15:06:35 devpinoyLogger Clicking login button
+23/12/2016 15:06:45 devpinoyLogger Could not click login. org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"valEncrpt"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir14624_15163}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e98612b9d0338a0c7f991d25b5d5415f
+*** Element info: {Using=id, value=valEncrpt}
+23/12/2016 15:06:48 devpinoyLogger Clicking on account
+23/12/2016 15:06:48 devpinoyLogger Clicked on Account
+23/12/2016 15:07:03 devpinoyLogger Could not retrieve the element message. Due to: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir14624_15163}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e98612b9d0338a0c7f991d25b5d5415f
+*** Element info: {Using=xpath, value=//h1}
+23/12/2016 15:07:03 devpinoyLogger Before taking screen shot
+23/12/2016 15:07:04 devpinoyLogger Created imgage file
+23/12/2016 15:07:04 devpinoyLogger Saving file
+23/12/2016 15:07:05 devpinoyLogger Openning browser
+23/12/2016 15:07:06 devpinoyLogger Chrome browser started
+23/12/2016 15:07:06 devpinoyLogger Maximizing the window
+23/12/2016 15:07:06 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:07:10 devpinoyLogger Openning browser
+23/12/2016 15:07:11 devpinoyLogger Chrome browser started
+23/12/2016 15:07:11 devpinoyLogger Maximizing the window
+23/12/2016 15:07:11 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:07:15 devpinoyLogger Entering user Name
+23/12/2016 15:07:15 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:07:15 devpinoyLogger Entering Password
+23/12/2016 15:07:15 devpinoyLogger Entered the password asmypass
+23/12/2016 15:07:15 devpinoyLogger Clicking login button
+23/12/2016 15:07:16 devpinoyLogger clicked login button
+23/12/2016 15:07:24 devpinoyLogger Logging out from the system
+23/12/2016 15:07:25 devpinoyLogger Logged out
+23/12/2016 15:07:25 devpinoyLogger Openning browser
+23/12/2016 15:07:27 devpinoyLogger Chrome browser started
+23/12/2016 15:07:27 devpinoyLogger Maximizing the window
+23/12/2016 15:07:27 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:07:30 devpinoyLogger Entering user Name
+23/12/2016 15:07:30 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:07:30 devpinoyLogger Entering Password
+23/12/2016 15:07:30 devpinoyLogger Entered the password asmypass
+23/12/2016 15:07:30 devpinoyLogger Clicking login button
+23/12/2016 15:07:30 devpinoyLogger clicked login button
+23/12/2016 15:07:30 devpinoyLogger Navigating to settings page
+23/12/2016 15:07:32 devpinoyLogger Navigated
+23/12/2016 15:07:32 devpinoyLogger Clicking on Delete Records Button
+23/12/2016 15:07:32 devpinoyLogger Clicked on Delete Records Button
+23/12/2016 15:07:32 devpinoyLogger click on search tab
+23/12/2016 15:07:32 devpinoyLogger navigate to search tab
+23/12/2016 15:07:32 devpinoyLogger select Type from the drop down list
+23/12/2016 15:07:33 devpinoyLogger selected value will appear in the Type field
+23/12/2016 15:07:33 devpinoyLogger click on search button
+23/12/2016 15:07:33 devpinoyLogger This will navigate to Delete Search Record page
+23/12/2016 15:07:33 devpinoyLogger Logging out from the system
+23/12/2016 15:07:33 devpinoyLogger Logged out
+23/12/2016 15:07:33 devpinoyLogger Entering user Name
+23/12/2016 15:07:33 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:07:33 devpinoyLogger Entering Password
+23/12/2016 15:07:33 devpinoyLogger Entered the password asmypass
+23/12/2016 15:07:33 devpinoyLogger Clicking login button
+23/12/2016 15:07:33 devpinoyLogger clicked login button
+23/12/2016 15:07:33 devpinoyLogger Navigating to settings page
+23/12/2016 15:07:34 devpinoyLogger Navigated
+23/12/2016 15:07:34 devpinoyLogger Clicking on Delete Records Button
+23/12/2016 15:07:34 devpinoyLogger Clicked on Delete Records Button
+23/12/2016 15:07:34 devpinoyLogger click on search tab
+23/12/2016 15:07:34 devpinoyLogger navigate to search tab
+23/12/2016 15:07:34 devpinoyLogger select Type from the drop down list
+23/12/2016 15:07:34 devpinoyLogger selected value will appear in the Type field
+23/12/2016 15:07:34 devpinoyLogger click on search button
+23/12/2016 15:07:34 devpinoyLogger This will navigate to Delete Search Record page
+23/12/2016 15:07:34 devpinoyLogger select the dropdwn list
+23/12/2016 15:07:35 devpinoyLogger drop down will appear
+23/12/2016 15:07:35 devpinoyLogger Selecting an entry
+23/12/2016 15:07:35 devpinoyLogger Selected 10 from the drop down
+23/12/2016 15:07:35 devpinoyLogger verify selection
+23/12/2016 15:07:35 devpinoyLogger get selection from drop down
+23/12/2016 15:07:35 devpinoyLogger get actual row count
+23/12/2016 15:07:35 devpinoyLogger verify selection
+23/12/2016 15:07:35 devpinoyLogger get table row count
+23/12/2016 15:07:35 devpinoyLogger get page number count
+23/12/2016 15:07:35 devpinoyLogger get page count
+23/12/2016 15:07:35 devpinoyLogger Logging out from the system
+23/12/2016 15:07:35 devpinoyLogger Logged out
+23/12/2016 15:07:35 devpinoyLogger Entering user Name
+23/12/2016 15:07:35 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:07:35 devpinoyLogger Entering Password
+23/12/2016 15:07:35 devpinoyLogger Entered the password asmypass
+23/12/2016 15:07:35 devpinoyLogger Clicking login button
+23/12/2016 15:07:35 devpinoyLogger clicked login button
+23/12/2016 15:07:35 devpinoyLogger Navigating to settings page
+23/12/2016 15:07:36 devpinoyLogger Navigated
+23/12/2016 15:07:36 devpinoyLogger Clicking on Delete Records Button
+23/12/2016 15:07:36 devpinoyLogger Clicked on Delete Records Button
+23/12/2016 15:07:36 devpinoyLogger click on search tab
+23/12/2016 15:07:36 devpinoyLogger navigate to search tab
+23/12/2016 15:07:36 devpinoyLogger select Type from the drop down list
+23/12/2016 15:07:36 devpinoyLogger selected value will appear in the Type field
+23/12/2016 15:07:36 devpinoyLogger click on search button
+23/12/2016 15:07:36 devpinoyLogger This will navigate to Delete Search Record page
+23/12/2016 15:07:36 devpinoyLogger select the dropdwn list
+23/12/2016 15:07:36 devpinoyLogger drop down will appear
+23/12/2016 15:07:36 devpinoyLogger Selecting an entry
+23/12/2016 15:07:36 devpinoyLogger Selected 25 from the drop down
+23/12/2016 15:07:36 devpinoyLogger verify selection
+23/12/2016 15:07:37 devpinoyLogger get selection from drop down
+23/12/2016 15:07:37 devpinoyLogger get actual row count
+23/12/2016 15:07:37 devpinoyLogger verify selection
+23/12/2016 15:07:37 devpinoyLogger get table row count
+23/12/2016 15:07:37 devpinoyLogger get page number count
+23/12/2016 15:07:37 devpinoyLogger get page count
+23/12/2016 15:07:37 devpinoyLogger Logging out from the system
+23/12/2016 15:07:37 devpinoyLogger Logged out
+23/12/2016 15:07:37 devpinoyLogger Entering user Name
+23/12/2016 15:07:37 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:07:37 devpinoyLogger Entering Password
+23/12/2016 15:07:37 devpinoyLogger Entered the password asmypass
+23/12/2016 15:07:37 devpinoyLogger Clicking login button
+23/12/2016 15:07:37 devpinoyLogger clicked login button
+23/12/2016 15:07:37 devpinoyLogger Navigating to settings page
+23/12/2016 15:07:38 devpinoyLogger Navigated
+23/12/2016 15:07:38 devpinoyLogger Clicking on Delete Records Button
+23/12/2016 15:07:38 devpinoyLogger Clicked on Delete Records Button
+23/12/2016 15:07:38 devpinoyLogger click on search tab
+23/12/2016 15:07:38 devpinoyLogger navigate to search tab
+23/12/2016 15:07:38 devpinoyLogger select Type from the drop down list
+23/12/2016 15:07:38 devpinoyLogger selected value will appear in the Type field
+23/12/2016 15:07:38 devpinoyLogger click on search button
+23/12/2016 15:07:38 devpinoyLogger This will navigate to Delete Search Record page
+23/12/2016 15:07:38 devpinoyLogger select the dropdwn list
+23/12/2016 15:07:38 devpinoyLogger drop down will appear
+23/12/2016 15:07:38 devpinoyLogger Selecting an entry
+23/12/2016 15:07:38 devpinoyLogger Selected 50 from the drop down
+23/12/2016 15:07:38 devpinoyLogger verify selection
+23/12/2016 15:07:38 devpinoyLogger get selection from drop down
+23/12/2016 15:07:38 devpinoyLogger get actual row count
+23/12/2016 15:07:38 devpinoyLogger verify selection
+23/12/2016 15:07:38 devpinoyLogger get table row count
+23/12/2016 15:07:38 devpinoyLogger get page number count
+23/12/2016 15:07:38 devpinoyLogger get page count
+23/12/2016 15:07:38 devpinoyLogger Logging out from the system
+23/12/2016 15:07:39 devpinoyLogger Logged out
+23/12/2016 15:07:39 devpinoyLogger Entering user Name
+23/12/2016 15:07:39 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:07:39 devpinoyLogger Entering Password
+23/12/2016 15:07:39 devpinoyLogger Entered the password asmypass
+23/12/2016 15:07:39 devpinoyLogger Clicking login button
+23/12/2016 15:07:39 devpinoyLogger clicked login button
+23/12/2016 15:07:39 devpinoyLogger Navigating to settings page
+23/12/2016 15:07:39 devpinoyLogger Navigated
+23/12/2016 15:07:39 devpinoyLogger Clicking on Delete Records Button
+23/12/2016 15:07:39 devpinoyLogger Clicked on Delete Records Button
+23/12/2016 15:07:39 devpinoyLogger click on search tab
+23/12/2016 15:07:39 devpinoyLogger navigate to search tab
+23/12/2016 15:07:39 devpinoyLogger select Type from the drop down list
+23/12/2016 15:07:40 devpinoyLogger selected value will appear in the Type field
+23/12/2016 15:07:40 devpinoyLogger click on search button
+23/12/2016 15:07:40 devpinoyLogger This will navigate to Delete Search Record page
+23/12/2016 15:07:40 devpinoyLogger select the dropdwn list
+23/12/2016 15:07:40 devpinoyLogger drop down will appear
+23/12/2016 15:07:40 devpinoyLogger Selecting an entry
+23/12/2016 15:07:40 devpinoyLogger Selected 100 from the drop down
+23/12/2016 15:07:40 devpinoyLogger verify selection
+23/12/2016 15:07:40 devpinoyLogger get selection from drop down
+23/12/2016 15:07:40 devpinoyLogger get actual row count
+23/12/2016 15:07:40 devpinoyLogger verify selection
+23/12/2016 15:07:40 devpinoyLogger get table row count
+23/12/2016 15:07:40 devpinoyLogger get page number count
+23/12/2016 15:07:40 devpinoyLogger get page count
+23/12/2016 15:07:40 devpinoyLogger Logging out from the system
+23/12/2016 15:07:40 devpinoyLogger Logged out
+23/12/2016 15:07:40 devpinoyLogger Openning browser
+23/12/2016 15:07:42 devpinoyLogger Chrome browser started
+23/12/2016 15:07:42 devpinoyLogger Maximizing the window
+23/12/2016 15:07:42 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:07:45 devpinoyLogger Entering user Name
+23/12/2016 15:07:45 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:07:45 devpinoyLogger Entering Password
+23/12/2016 15:07:45 devpinoyLogger Entered the password asmypass
+23/12/2016 15:07:45 devpinoyLogger Clicking login button
+23/12/2016 15:07:45 devpinoyLogger clicked login button
+23/12/2016 15:07:45 devpinoyLogger Navigating to settings page
+23/12/2016 15:07:48 devpinoyLogger Navigated
+23/12/2016 15:07:49 devpinoyLogger Logging out from the system
+23/12/2016 15:07:49 devpinoyLogger Logged out
+23/12/2016 15:07:49 devpinoyLogger Openning browser
+23/12/2016 15:07:50 devpinoyLogger Chrome browser started
+23/12/2016 15:07:50 devpinoyLogger Maximizing the window
+23/12/2016 15:07:50 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:07:54 devpinoyLogger Entering user Name
+23/12/2016 15:07:54 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:07:54 devpinoyLogger Entering Password
+23/12/2016 15:07:55 devpinoyLogger Entered the password asmypass
+23/12/2016 15:07:55 devpinoyLogger Clicking login button
+23/12/2016 15:07:55 devpinoyLogger clicked login button
+23/12/2016 15:07:55 devpinoyLogger Navigating to settings page
+23/12/2016 15:07:56 devpinoyLogger Navigated
+23/12/2016 15:07:56 devpinoyLogger Clicking on Add Engagement Button
+23/12/2016 15:07:56 devpinoyLogger Clicked on Add Engagement Button
+23/12/2016 15:07:56 devpinoyLogger Logging out from the system
+23/12/2016 15:07:56 devpinoyLogger Logged out
+23/12/2016 15:07:56 devpinoyLogger Openning browser
+23/12/2016 15:07:59 devpinoyLogger Chrome browser started
+23/12/2016 15:07:59 devpinoyLogger Maximizing the window
+23/12/2016 15:07:59 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:08:03 devpinoyLogger Entering user Name
+23/12/2016 15:08:03 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:08:03 devpinoyLogger Entering Password
+23/12/2016 15:08:03 devpinoyLogger Entered the password asmypass
+23/12/2016 15:08:03 devpinoyLogger Clicking login button
+23/12/2016 15:08:03 devpinoyLogger clicked login button
+23/12/2016 15:08:03 devpinoyLogger Navigating to settings page
+23/12/2016 15:08:05 devpinoyLogger Navigated
+23/12/2016 15:08:07 devpinoyLogger Getting the Count Of total Manage Groups
+23/12/2016 15:08:07 devpinoyLogger Got the Count Of total Manage Groups
+23/12/2016 15:08:07 devpinoyLogger Clicking on Manage Groups Button
+23/12/2016 15:08:07 devpinoyLogger Clicked on Manage Groups Button
+23/12/2016 15:08:07 devpinoyLogger Typing on Group Name input field
+23/12/2016 15:08:08 devpinoyLogger Typed on Group Name input field
+23/12/2016 15:08:10 devpinoyLogger choosing File to input Group Image
+23/12/2016 15:08:10 devpinoyLogger chosed File to input Group Image
+23/12/2016 15:08:10 devpinoyLogger Before taking screen shot
+23/12/2016 15:08:10 devpinoyLogger Created imgage file
+23/12/2016 15:08:10 devpinoyLogger Saving file
+23/12/2016 15:08:10 devpinoyLogger Openning browser
+23/12/2016 15:08:14 devpinoyLogger Chrome browser started
+23/12/2016 15:08:14 devpinoyLogger Maximizing the window
+23/12/2016 15:08:14 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:08:16 devpinoyLogger Entering user Name
+23/12/2016 15:08:17 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:08:17 devpinoyLogger Entering Password
+23/12/2016 15:08:17 devpinoyLogger Entered the password asmypass
+23/12/2016 15:08:17 devpinoyLogger Clicking login button
+23/12/2016 15:08:17 devpinoyLogger clicked login button
+23/12/2016 15:08:17 devpinoyLogger Clicking glance icon
+23/12/2016 15:08:18 devpinoyLogger Clicked
+23/12/2016 15:08:19 devpinoyLogger Logging out from the system
+23/12/2016 15:08:19 devpinoyLogger Logged out
+23/12/2016 15:08:19 devpinoyLogger Openning browser
+23/12/2016 15:08:21 devpinoyLogger Chrome browser started
+23/12/2016 15:08:21 devpinoyLogger Maximizing the window
+23/12/2016 15:08:21 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:08:25 devpinoyLogger Entering user Name
+23/12/2016 15:08:25 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:08:25 devpinoyLogger Entering Password
+23/12/2016 15:08:25 devpinoyLogger Entered the password asmypass
+23/12/2016 15:08:25 devpinoyLogger Clicking login button
+23/12/2016 15:08:26 devpinoyLogger clicked login button
+23/12/2016 15:08:26 devpinoyLogger Navigating to settings page
+23/12/2016 15:08:27 devpinoyLogger Navigated
+23/12/2016 15:08:27 devpinoyLogger Clicking on Delete Records Button
+23/12/2016 15:08:27 devpinoyLogger Clicked on Delete Records Button
+23/12/2016 15:08:27 devpinoyLogger Logging out from the system
+23/12/2016 15:08:27 devpinoyLogger Logged out
+23/12/2016 15:08:27 devpinoyLogger Openning browser
+23/12/2016 15:08:30 devpinoyLogger Chrome browser started
+23/12/2016 15:08:30 devpinoyLogger Maximizing the window
+23/12/2016 15:08:30 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:08:33 devpinoyLogger Entering user Name
+23/12/2016 15:08:33 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:08:33 devpinoyLogger Entering Password
+23/12/2016 15:08:33 devpinoyLogger Entered the password asmypass
+23/12/2016 15:08:33 devpinoyLogger Clicking login button
+23/12/2016 15:08:33 devpinoyLogger clicked login button
+23/12/2016 15:08:33 devpinoyLogger Navigating to settings page
+23/12/2016 15:08:34 devpinoyLogger Navigated
+23/12/2016 15:08:34 devpinoyLogger Clicking on Data Delete/Modify Button
+23/12/2016 15:08:34 devpinoyLogger Clicked on Data Delete/Modify Button
+23/12/2016 15:08:35 devpinoyLogger Logging out from the system
+23/12/2016 15:08:35 devpinoyLogger Logged out
+23/12/2016 15:08:35 devpinoyLogger Entering user Name
+23/12/2016 15:08:35 devpinoyLogger Entered user Name asadmin
+23/12/2016 15:08:35 devpinoyLogger Entering Password
+23/12/2016 15:08:35 devpinoyLogger Entered the password asmypass
+23/12/2016 15:08:35 devpinoyLogger Clicking login button
+23/12/2016 15:08:35 devpinoyLogger clicked login button
+23/12/2016 15:08:35 devpinoyLogger Navigating to settings page
+23/12/2016 15:08:35 devpinoyLogger Navigated
+23/12/2016 15:08:35 devpinoyLogger Clicking on Data Delete/Modify Button
+23/12/2016 15:08:36 devpinoyLogger Clicked on Data Delete/Modify Button
+23/12/2016 15:08:36 devpinoyLogger Select a table from drop down list
+23/12/2016 15:08:36 devpinoyLogger Selected a table from drop down list
+23/12/2016 15:08:36 devpinoyLogger Clicking the submit button
+23/12/2016 15:08:36 devpinoyLogger Clicked the submit button
+23/12/2016 15:08:36 devpinoyLogger check dropdown exist
+23/12/2016 15:08:46 devpinoyLogger Could not find dropdownorg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@name='data_table_length']"}
   (Session info: chrome=55.0.2883.87)
   (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 10.07 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'CMDABKAREEM', ip: '172.22.176.38', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CMDMITTRN2', ip: '172.28.32.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\abkareem\AppData\Local\Temp\scoped_dir27528_17754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6d42531d8251c90fdb62a6fb5e88ea11
-*** Element info: {Using=id, value=pwd}
-20/12/2016 13:51:44 devpinoyLogger Clicking login button
-20/12/2016 13:51:54 devpinoyLogger Could not click login. org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"valEncrpt"}
-  (Session info: chrome=55.0.2883.87)
-  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'CMDABKAREEM', ip: '172.22.176.38', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\abkareem\AppData\Local\Temp\scoped_dir27528_17754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6d42531d8251c90fdb62a6fb5e88ea11
-*** Element info: {Using=id, value=valEncrpt}
-20/12/2016 13:51:57 devpinoyLogger Clicking on account
-20/12/2016 13:51:57 devpinoyLogger Clicked on Account
-20/12/2016 13:52:03 devpinoyLogger Before taking screen shot
-20/12/2016 13:52:03 devpinoyLogger Created imgage file
-20/12/2016 13:52:03 devpinoyLogger Saving file
-20/12/2016 13:52:03 devpinoyLogger Entering user Name
-20/12/2016 13:52:13 devpinoyLogger Could not enter user name org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"login_id"}
-  (Session info: chrome=55.0.2883.87)
-  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'CMDABKAREEM', ip: '172.22.176.38', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\abkareem\AppData\Local\Temp\scoped_dir27528_17754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6d42531d8251c90fdb62a6fb5e88ea11
-*** Element info: {Using=id, value=login_id}
-20/12/2016 13:52:13 devpinoyLogger Entering Password
-20/12/2016 13:52:23 devpinoyLogger Could not enter password. org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"pwd"}
-  (Session info: chrome=55.0.2883.87)
-  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'CMDABKAREEM', ip: '172.22.176.38', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\abkareem\AppData\Local\Temp\scoped_dir27528_17754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6d42531d8251c90fdb62a6fb5e88ea11
-*** Element info: {Using=id, value=pwd}
-20/12/2016 13:52:23 devpinoyLogger Clicking login button
-20/12/2016 13:52:33 devpinoyLogger Could not click login. org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"valEncrpt"}
-  (Session info: chrome=55.0.2883.87)
-  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'CMDABKAREEM', ip: '172.22.176.38', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\abkareem\AppData\Local\Temp\scoped_dir27528_17754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6d42531d8251c90fdb62a6fb5e88ea11
-*** Element info: {Using=id, value=valEncrpt}
-20/12/2016 13:52:36 devpinoyLogger Clicking on account
-20/12/2016 13:52:36 devpinoyLogger Clicked on Account
-20/12/2016 13:52:42 devpinoyLogger Before taking screen shot
-20/12/2016 13:52:42 devpinoyLogger Created imgage file
-20/12/2016 13:52:42 devpinoyLogger Saving file
-20/12/2016 13:52:43 devpinoyLogger Logging out from the system
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\STHAVA~1\AppData\Local\Temp\scoped_dir16908_18571}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: c4c063adfd4d105130eb7e440f10ed83
+*** Element info: {Using=xpath, value=//select[@name='data_table_length']}
+23/12/2016 15:08:46 devpinoyLogger verify selection
+23/12/2016 15:19:52 devpinoyLogger Before taking screen shot
+23/12/2016 15:19:55 devpinoyLogger Openning browser
+23/12/2016 15:19:56 devpinoyLogger Chrome browser started
+23/12/2016 15:19:56 devpinoyLogger Maximizing the window
+23/12/2016 15:19:56 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:19:58 devpinoyLogger Openning browser
+23/12/2016 15:19:59 devpinoyLogger Chrome browser started
+23/12/2016 15:19:59 devpinoyLogger Maximizing the window
+23/12/2016 15:19:59 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:19:59 devpinoyLogger Openning browser
+23/12/2016 15:20:01 devpinoyLogger Chrome browser started
+23/12/2016 15:20:01 devpinoyLogger Maximizing the window
+23/12/2016 15:20:01 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:20:05 devpinoyLogger Openning browser
+23/12/2016 15:20:06 devpinoyLogger Chrome browser started
+23/12/2016 15:20:06 devpinoyLogger Maximizing the window
+23/12/2016 15:20:06 devpinoyLogger Navigating to; http://localhost/glance/index.php
+23/12/2016 15:20:09 devpinoyLogger Openning browser
+23/12/2016 15:20:10 devpinoyLogger Chrome browser started
+23/12/2016 15:20:10 devpinoyLogger Maximizing the window
+23/12/2016 15:20:10 devpinoyLogger Navigating to; http://localhost/glance/index.php

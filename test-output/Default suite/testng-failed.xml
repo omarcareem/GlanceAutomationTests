@@ -3,17 +3,31 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.glance.dashboard.tests.VerifyAddElementWizard">
+      <class name="com.glance.commonPage.tests.VerifyCommonPageLeftPane">
         <methods>
+          <include name="GL_Main_05"/>
+          <include name="GL_Main_04"/>
+          <include name="GL_Main_15"/>
+          <include name="GL_Main_18"/>
+          <include name="GL_Main_17"/>
+          <include name="GL_Main_03_Sub"/>
           <include name="initializeTest"/>
           <include name="commonTestFinish"/>
           <include name="finishTest"/>
-          <include name="runAfterTest"/>
-          <include name="afterSuite"/>
-          <include name="TC01_verifyAddNewDashboardElement" invocation-numbers="0 1 2"/>
+          <include name="GL_Main_10"/>
+          <include name="GL_Main_21"/>
+          <include name="GL_Main_20"/>
+          <include name="GL_Main_12"/>
+          <include name="GL_Main_11"/>
+          <include name="GL_Main_03"/>
+          <include name="GL_Main_14"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="GL_Main_02"/>
           <include name="testStartUp"/>
+          <include name="GL_Main_7"/>
         </methods>
-      </class> <!-- com.glance.dashboard.tests.VerifyAddElementWizard -->
+      </class> <!-- com.glance.commonPage.tests.VerifyCommonPageLeftPane -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
